@@ -630,7 +630,7 @@ func Compact(n int64) string {
 }
 
 func flags(r *Report, now time.Time, staleDays, driftLimit int) []Flag {
-	var out []Flag
+	out := []Flag{}
 	add := func(code, level, format string, args ...any) {
 		out = append(out, Flag{Code: code, Level: level, Message: fmt.Sprintf(format, args...)})
 	}

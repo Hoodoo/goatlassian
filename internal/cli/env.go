@@ -91,7 +91,7 @@ are down. While running, serve records a metrics snapshot every
 			}
 			cancel()
 		}
-		srv := web.New(st, a.cfg, a.home)
+		srv := web.New(st, a.cfg, a.home, host)
 		if every > 0 {
 			go srv.SnapshotLoop(every)
 		}
