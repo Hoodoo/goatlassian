@@ -58,3 +58,50 @@ Before stopping, close completed work or update both work.attention and work.att
 Schedule/someday defer work; deadlines don’t. kata deadline <ref> <date-or-time> sets deadline_on without changing readiness.
 Reached schedules and deadlines use notify.* for the current owner, or the author when unowned; clear with kata notify <ref> --to <recipient> --clear.
 <!-- END KATA -->
+
+<!-- OPENWIKI:START -->
+## Repository wiki (owcli)
+
+owcli maintains openwiki/: an engineering wiki whose statements are grounded
+by Claims (repo:// evidence that owcli rechecks against the source).
+
+- Read just in time, not at task start: `owcli search "<question>" [--path <src>]`,
+  then `owcli read <ref>` (`--wiki <id>` for a result from another wiki of
+  a workspace). Source and tests stay authoritative. On "workspace_required",
+  ask the user which workspace to use.
+- Write the wiki only inside a run. Never edit openwiki/ by hand, and never
+  touch .claims/, .run.json, .run-snapshots/, or index.md files.
+- Run steps print JSON with a "next" hint; errors are {"error":{"code","message"}}.
+  invalid_input means fix your input and retry the same step.
+- Write plan and submit JSON to a file outside the repository (a file in the
+  repo counts as a source change) and pass it with --file.
+
+~~~dot
+digraph owcli {
+  rankdir=TB; node [shape=box];
+  done   [shape=diamond label="Just merged code into the default branch?"];
+  check  [label="owcli check on the default branch (read-only, no model)"];
+  ok     [shape=diamond label="exit 0?"];
+  begin  [label="owcli run begin update\n(owcli run begin init for a new wiki)"];
+  plan   [label="status planning: research changedPaths and claimIssues pages;\nowcli run plan --file /tmp/plan.json"];
+  next   [label="owcli run next"];
+  write  [label="status pending: research seedPaths, read the page if existing;\nwrite exactly job.path with OKF front matter"];
+  submit [label="owcli run submit <jobId> --file /tmp/claims.json\nnew Claims without id; each claimsRequiringAttention entry:\nconfirm, revise (same id), or retract"];
+  skip   [label="cannot complete the page: owcli run skip <jobId>"];
+  finish [label="status complete: owcli run finish"];
+  done -> check -> ok;
+  ok -> begin [label="no: stale or unresolved Claims, broken links"];
+  begin -> plan  [label="planning"];
+  begin -> next  [label="generating (resumed)"];
+  plan -> next -> write -> submit -> next;
+  write -> skip -> next;
+  next -> finish;
+}
+~~~
+
+The wiki documents the default branch: update it after a merge, not on work
+branches (begin warns when you are elsewhere), unless the user asks. A "noop"
+begin means the wiki is current: stop. External wikis are committed to their
+own history automatically at finish.
+Full procedure, JSON formats, and the page and Claim standards: `owcli quickstart`.
+<!-- OPENWIKI:END -->
