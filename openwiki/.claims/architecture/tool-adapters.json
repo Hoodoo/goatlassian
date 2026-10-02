@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:ef54e5c6fb0d06387a7f4b04d5038a3ec1047175f6a1e616223ec45633a3c703",
+  "claims": [
+    {
+      "id": "claim_91af4a6f6b9670419ff8bb149ccc4cae",
+      "statement": "Exec.Run includes the command's stderr, trimmed to 300 characters, in the error it returns.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L31-L52",
+          "version": "repo-lines-v1:sha256:aca22d59e654997ab854e0b8e69bedd55480d06994df026b390dcbfefe3d19ed:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2NThiYjNlYTBlMjVkZDA3NjQ0NWM1MTZmODAyODFjYzI3NThjNzc0NDA0ZTI0ZGFkOTNiYzQ3N2ZjNGY2ZmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYzODRiYzk2MTAzNWY1NWVhM2RhN2M4ZmM5ZDE1YjI4ZjQxMzVmMzIxMjYyOGU1NTI2OWNjNDg5MmFhMDU5NmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI3OWJkYjQ4OGUxZDYzY2ZmYmI1MGVkZGQ0ZjBjNzM2NzcwNzFjNzYwZmNmODcwMTlhOGE4Njk0MmZlMGQ3ZTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4909165fcf796a84cf218df446db7faf",
+      "statement": "kata is collected with daemon status, projects list, projects show per project, and list --all --status all --limit 0, all with --json.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L180-L180",
+          "version": "repo-lines-v1:sha256:b64f689813561085f133e737b5e234a9b1a9492c35782d34ae667651401cf3bd:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjY0ZjY4OTgxMzU2MTA4NWYxMzNlNzM3YjVlMjM0YTliMWE5NDkyYzM1NzgyZDM0YWU2Njc2NTE0MDFjZjNiZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjY0ZjY4OTgxMzU2MTA4NWYxMzNlNzM3YjVlMjM0YTliMWE5NDkyYzM1NzgyZDM0YWU2Njc2NTE0MDFjZjNiZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2RjMGIxOWRjZjEwZDExZmU1MTI4ZWE1Nzg4NzVkZTcxNzE2YmIwZDY2YjczYzM3M2M1ZjI3Njc5NmExMjMyYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTZlZDBjMjFkNWM5NTk3YWM1YmQ4ZWYwZTE0OGI5YTFkMDZkYWM1Y2FkMjUwMDJhMzFiM2UwNzNlMWQ4OWNmNCJ9"
+        },
+        {
+          "resource": "repo://internal/sources/sources.go#L190-L190",
+          "version": "repo-lines-v1:sha256:ea1c4e7cde2b55d528a8a46b61e30c8ccf9fbc477278e13157dc6b69e3dbe781:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWExYzRlN2NkZTJiNTVkNTI4YThhNDZiNjFlMzBjOGNjZjlmYmM0NzcyNzhlMTMxNTdkYzZiNjllM2RiZTc4MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWExYzRlN2NkZTJiNTVkNTI4YThhNDZiNjFlMzBjOGNjZjlmYmM0NzcyNzhlMTMxNTdkYzZiNjllM2RiZTc4MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzJmNTU2Yjc4NjA2ZmQ4YTBjY2Y3YjMzNDlmMTEzMjAyMzczYmIzMTNmYWEzMDJkZGM0YmI0ZGM4YTYxNWExZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTZlZDBjMjFkNWM5NTk3YWM1YmQ4ZWYwZTE0OGI5YTFkMDZkYWM1Y2FkMjUwMDJhMzFiM2UwNzNlMWQ4OWNmNCJ9"
+        },
+        {
+          "resource": "repo://internal/sources/sources.go#L206-L206",
+          "version": "repo-lines-v1:sha256:9cb571ebf86c4368fece52783226c6a5b6325c812e66f891f258c08e6251f84f:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWNiNTcxZWJmODZjNDM2OGZlY2U1Mjc4MzIyNmM2YTViNjMyNWM4MTJlNjZmODkxZjI1OGMwOGU2MjUxZjg0ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWNiNTcxZWJmODZjNDM2OGZlY2U1Mjc4MzIyNmM2YTViNjMyNWM4MTJlNjZmODkxZjI1OGMwOGU2MjUxZjg0ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTM5ZWYyNzI2ZmQzMjRmOTU2M2NhMzk4NGJiNmRhNDE5ZTJhYWI4MDIwYWMwNjUzYjJmMGFhZjRmZWI4NzJkMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzIyZGJhNmFlNTQyYTE3ZTQ5YjBlNzZkMTMzNDk0MTI5ZGRjY2M1NTM0ZTdjM2MxZDgxZjNkNmVkMDIyMGYzMSJ9"
+        },
+        {
+          "resource": "repo://internal/sources/sources.go#L222-L222",
+          "version": "repo-lines-v1:sha256:dc59733c5d010830018c67843501ce99ed145626187b0303269bdd5c4ecb3928:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGM1OTczM2M1ZDAxMDgzMDAxOGM2Nzg0MzUwMWNlOTllZDE0NTYyNjE4N2IwMzAzMjY5YmRkNWM0ZWNiMzkyOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGM1OTczM2M1ZDAxMDgzMDAxOGM2Nzg0MzUwMWNlOTllZDE0NTYyNjE4N2IwMzAzMjY5YmRkNWM0ZWNiMzkyOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTFkOGQ1NmMwODdkYTIzMTY4MmUxZTNkMzVjYjU3MzdkNGIyN2RkZTMyYzJjODA4MWFhMjk4MDcwNDAxN2U2NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzA0NzBlZTE3ZDA1MjZjN2EzNTdlYmJhOTk4OTY1MzYxZTdmMjA3YTcwNjc1N2M1ZGY1MDI3MWQwZTQwYjc2YSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_625d766fad515d686df096f7b7b68751",
+      "statement": "kata aliases with a local:// identity become project paths and aliases of kind git become remotes.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L209-L216",
+          "version": "repo-lines-v1:sha256:08c3b6e0c68df2819a13f5392d83644aa02cf22074c34fbf522e801a1afad220:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGM5Mzk0NDIyYWQ0NjNmZDQwYzVhYTE5MTU1NjY4ODY0NDI3MDFmYjJhYjUxMmZmMTQ4MmEyNmYxYjI4MDhkMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTY4MDZmMTU1YzVhYzFhZTI3MjJjYTA2ZjJhYzljYWRjYjg4MWI5MTIzY2I2MjRhM2MxMDQ3NWI0NDQ5ZGMyZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2ViMzc3ODJjOWNmYWZjMDk0OGEwZTcxMzIwMzE0ZWRiN2NmOTZmMTk5OWI2ZjM5Y2E3NjExNjE3ZTNmNDZiZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGJhMjE3MjhlM2E2YjMyMmJhMGEzMzI1MWFlOGQ1YTY3YWI1ZmU5MTE3ZWI0OTE5MzE3ZGIyZjczZDljYTA5MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_dc0b41384174c42040930c3c21431a69",
+      "statement": "A kata project link is the daemon web URL followed by /kata?scope= and the project UID.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L151-L156",
+          "version": "repo-lines-v1:sha256:9d81b6d6894e60f1cffb254020e5beff22d121856efd50b43b667e3d91e7dd24:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTE3NTcyMmFjNGZmNmMwZjVhOWNiZDQ4YmZhZGE4ODUwZmEzZTE0NmJjZDk3M2VlYWE5YmRkNmYzNTY0MzM1MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjQxMmQ2ZGU5MGYzZDdlODAwZmVkYjVjZTZmMTlmZTcyMTA2ZDhiYzA1OTU4NWJjYzdlMjhhMzYzMzcyYjRmMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTVkZWJkYzk4ZjU5ZmFjZTUyNWZiZDk4YjllMjU1NmFmZWI5MmVkMjBlYzZjOGUyZmFjYjVjMTYyNjNmYjA1OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_aa3e5443ad1e21df007f5f1fbb67b8d2",
+      "statement": "kata deadlines are kept as strings because kata may store a date or a time.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L130-L130",
+          "version": "repo-lines-v1:sha256:bc9f004f368bdb07b691a19067f839b22f9ab878b701a38107faf0e4afe4b39f:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmM5ZjAwNGYzNjhiZGIwN2I2OTFhMTkwNjdmODM5YjIyZjlhYjg3OGI3MDFhMzgxMDdmYWYwZTRhZmU0YjM5ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmM5ZjAwNGYzNjhiZGIwN2I2OTFhMTkwNjdmODM5YjIyZjlhYjg3OGI3MDFhMzgxMDdmYWYwZTRhZmU0YjM5ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGJkOWU2ZmEyMTZmNDlmNzBmMzk1MDZhMTFlN2Q4Mjg0YjQ3NWEzYjQxODUzYTVjMTIzMThkMWFmODQxYzRjOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGIyYTM1ZWEzODMzNjU2YzA5Yzg4ZDhkNjU0ZDU1YjA2NDEwNzMzOTU3YjhmYjBhNTNhYmY1YWZlNWQxZTgzMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4adc22dab9585b3867e4016df80272d8",
+      "statement": "owcli is collected with owcli wikis --json.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L290-L295",
+          "version": "repo-lines-v1:sha256:27dd514c881718e20ed707b01fca27f23c24a23769d6667fe14c446611dd2f8f:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWM1NmI4NzE5NzRjODk4YzNjMjRkNDhkNzljNTY1YjBmMjBhZTdmYzVlMDQ1YzE0ZDNjNzNhZDc3MGJmZWY3ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTJjZjE5NmMzMjJhY2ZiNjMzNjdkZTU2Yzc3MzVjMzBmY2JhYzJkZWUzZDM2NmFmNTBlZTVlMmE1N2M5ODgyNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTYzMWI2ZTJjYTA3ZDhiYWYwZWI0NGU3NDlkYmY0OTBiMzkyZTNhNTM0ZWY2MTAyMjc3MTE0NmNkZjlhZjFhMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMThhMzA3OGUwMmUwNjdiYTU3Y2VjYzA3ZThjYzI0NDU2ZmNmNWQxNDI1ZWQyMzQzYzAyZTk1ODc1NzBmNzljYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_fe01bc153361eebdadeee272d6bb9e9d",
+      "statement": "bossman sessions are collected with bossman --json ls -n 0.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L350-L355",
+          "version": "repo-lines-v1:sha256:2b56beb272da04a4169ae5b025c4574ca3e9120c5efcaa45a3dfd1f3364fefd2:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ5ZTY5YTczMjJlYzEyODVhOTY1ZGQ4OTIxMDkwMTUyMzAyODk0M2U0ZWZmYzhiYjNlMGExNWY1M2Y1OGE0NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTAwNDgwYzNlOTI5MGI5ZjZiNzA2NjU0ZGQ2NTk1OGRhZjY2M2FiOTExYzFlOTFjYmJmMDY2NTE5NGIxZjdiZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzYyNmQyMDhjZTZmOTgyYmUzZDA5OTgyMjI5YjBiMjYwZmU1NjAxYjY1NjBjMTcxMDZhMDdmNjg3YmIwYTA2ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjg0YzI3MzQ1YTJlN2UyYzFjNjJiMzZiY2ZlNmNiMDc2MmE4MjYyNDBmYWFiMmQ0MzA0NzU4MGNmYTM5YTBjZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c7c0f4fb71f640411dbd1c3603fd207f",
+      "statement": "A session's token count is input plus cache write plus cache read plus output.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L337-L337",
+          "version": "repo-lines-v1:sha256:b092128e7f8ba47f39b527986dfab29c8a445b0737b9dd65546d7f6295c2f849:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjA5MjEyOGU3ZjhiYTQ3ZjM5YjUyNzk4NmRmYWIyOWM4YTQ0NWIwNzM3YjlkZDY1NTQ2ZDdmNjI5NWMyZjg0OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjA5MjEyOGU3ZjhiYTQ3ZjM5YjUyNzk4NmRmYWIyOWM4YTQ0NWIwNzM3YjlkZDY1NTQ2ZDdmNjI5NWMyZjg0OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWQ4M2E1NjEwNTk5Yzk5YTU4NTEwOTYxMTlhMTUwMzNlOWM5NWIyODQ4MTUzMzhhMDIwMzc1ZGM0ODMzYjQ3YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTYzNjMzMDNmMDcyNWM4YzU2MmJhMTJlMDcyNDYwNDZlY2QxMTAzNjY2NzQ0N2VkNjYxNzRlOWQyNDkzYmJlMiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a009b33d9c251c99fdf21401efc36122",
+      "statement": "bossman links use #/s/<key> for one session and #/?project=<path> for a directory; owcli links use #scope=<kind>:<id>.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L359-L371",
+          "version": "repo-lines-v1:sha256:817027c576053b93e630a204a7a0d0608952736008a6e0bcf28c5f230b30cee1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkMTJkZDMyZGQ1YTJlNDk2MzE4NWVjNzQzMjYwZjdmY2ExNGRkNjBiMTY3YTJiYmVkNTRhOTkzNDc3ZDEzNmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY4NGMyNzM0NWEyZTdlMmMxYzYyYjM2YmNmZTZjYjA3NjJhODI2MjQwZmFhYjJkNDMwNDc1ODBjZmEzOWEwY2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI0MmRiMjkzYjY3YzgxZjZjM2IyYzA0Y2Y3MTAyMzYxNWI1MzY2MTM2NTgwYzMwOWFjZDg4M2RlZTc5ODFmYjEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d6b5214616a5bfad1dd7dc89737e5bc7",
+      "statement": "RemoteIdentity reduces git remote URLs to a lower-cased host/path form without credentials or .git suffix.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L387-L404",
+          "version": "repo-lines-v1:sha256:8a5eebb78a5b22fbfe6235194409ec5dd5c5d721e55a045e9ce3415f82626e8e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2OWI0MWQ1MzcxNDMzOThmZjdhNDUxNTQ2NDhjMDEyMDkzMTdjYmZmZGNmZjYzMTk2ZTJlMzRhMTVlNTZiYzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRiODA3OGYwMDEzNjBhYjFhNjdkYjBhMzA3NTU1ZTM1NWNjMTc4N2YyZGNhNGIxZjkzYTg2NTA2MjQ4NTQxZjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYzZTlkZDVkMjc0MDZhMTM1NTc1ZTQ4MzJmNjdlN2E2ZjZiOGIyMmQ1YzU3MDY5MDhjNjI0ZTAzNGU1MDUzZDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNlNzE3NTIzZjlhY2QzOTQ0NDM1YzEzNDA5NDI5YTJkMjM1MmYwYWNmMDFkNmE2MGUyYTQ4OWMyYjkwN2EyY2EifQ"
+        },
+        {
+          "resource": "repo://internal/sources/sources_test.go#L5-L18",
+          "version": "repo-lines-v1:sha256:31abe750dc52aae4fbab919ca91a021f5bbfc12d7d8f6456106cad3c8fac9ca2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1ZjdiOGRhN2Y0NDY3NTYwZDhmZGJhNDBhNDMxODdjNjJiNGUyZjkzZmQ3MDI4MzkyZDQ3ODM2ZDM0MzlmNzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3ZmU4ZTFhNWIxMzQ2MWI5MzUwYzdjNWY5YWFkMTViZGUwYzA0NmViZTlkNjE2YjI2NjQzN2ZhYWM5MmRhMmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJmZTcxZDFjOWVlMWE3NWNhODMwZjkwNGZjNjM0ZjZiOGNlMTJmNjM0OTY0MTU0YmFjZmJlODRlYzgwZDE0ZmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_dd4444902a7b0ad8186c0bb5c6e2a0d5",
+      "statement": "Git status counts dirty paths from status --porcelain and ahead/behind from rev-list --left-right --count against the upstream.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L464-L480",
+          "version": "repo-lines-v1:sha256:72a211f980661f2d1c99d258478deb8ae6ed5612f4ec2bccff878288b241601a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1ZmIyYjg4Njk5ZTQwZWYxZDk1MjQ3NDE3N2M2MDNkNmEzZGVkMTJhYjE3ZmIxMzMzMDU0OTk5YWNkNzUwODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3Y2RhODJkYTYwNjIzOGUwNWU2MjM5OTU2OWM1ZWUwMzk5MzQxOTY0OGFlNWQ0M2EyYmY4Y2Q2MzQ3ZjgyNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgwOWU5YzM3OTA3NGEzMjFjMTI2ZDc0MzgzYzNjNTRiZjQyNDAwZWU1MGE5MGM3ZGI2YmQ4OTJjMWZkZjA1ZDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFlNTdkMmNlNzZmNjNhMTZlYjExZGRhNGZhZmFjOGQ5NjIxZTVkYWQ3YjEwN2Q2Nzk4YmRiOGZmZjFjZjg4NjgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_06383144c77571297e04720216438236",
+      "statement": "Git status also reads the origin remote, recent commit count, local branch count, and branches not merged into HEAD.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L481-L491",
+          "version": "repo-lines-v1:sha256:c0d7631d063ca52abf3e0242c44e302b4bebc48a8df573005d8043d088561c63:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmNTM2ZTdjOTA2YmY2YzhmZTViOGNjNGYzNDk0NTEzM2IxNTM5ZTM4YjYwMmQ5NzMyZmRhMTgyNjcwYzZmYjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhMGM5MWQ1OGZhZWE1NmQ0NmIzMmU5ZDI2M2QxZmMxMGVmY2MxNGE5Njk4NzgxNDhkOGE2YWE0Mjk0MDdiZDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiMmY3MDU0MGU0MDY2N2ExY2ZkMDdiZjMwN2YxMWY0ZTBmMTE5ZTRmYWNmN2U1YjRiZjQwZDc3NDBjZWZiY2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3YWEzNTBlYmU4MjIyZmUyZTViYmIyYzhiMTc1NGEzNmViZGM3N2NkNzg0MzFmZGEyNzhmY2ExOWUxYzk2ODIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_83527c1aba2977b8cecf977326a44e95",
+      "statement": "CommitsSince returns -1 when the revision cannot be counted.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L496-L508",
+          "version": "repo-lines-v1:sha256:4a88c2be88dee7ae49d7e8a186bdca974d6d9e9aa7e8d638b6648ff6f3afe63c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViNjU0ZGU1OTY4NGJlNDU5ZDZkMTY3ZmY3NmRkN2NkOGIyODZjYzA2NGJkMjkyNTBmZmQ2ODdlMDRjYWEyYzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBhMWVmNjRmOGY5OTkyODRlZDA5YjVjZDQ3OTFlZTJlZDZmOTM3ZGQxY2QxYzFkNWNiMjYxNDAwYjkyYjdmNjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZlZjkxOTA1NWI3YTY4ODBmOGU0NDRjNGQ4ZWNjMGE4Y2RhMGIwY2YyZDNkYjI1ZWIzMDgxNWNlYWNjODRjZTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_df81f669e24134d0a295777c67b842b5",
+      "statement": "ForDir matches a kata project when one of its paths is inside the repository root or one of its git remotes equals the repository's origin identity.",
+      "evidence": [
+        {
+          "resource": "repo://internal/discover/discover.go#L63-L83",
+          "version": "repo-lines-v1:sha256:bd85c82b8c61ebe4eabbf4cbe70967be771d15f2524acc8e869366eecb57378c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3MjA1NWVlZmU3N2JjNzkzYzNjNjc2M2U2Y2NkMWM5ZGY2Y2Q2NjIwNTBkNzY5OTZjNzk2ZjFmZGQ5MzQxZDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0ZWZjNDk0MThkMjZkY2YxMjliMjJhNmFhMjExMDhjZWVjMzc2NzdhMzJkMDhlOWQ1ZmVlMzVkZGE2NmJiOWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUxODhkZmRjMjM3ZTg2NWQyMmYzZTdkMGE0N2E0ZTdiMzQxMzY3ZGUxYjQ4YzY2ZjJiOTM2ZTE5N2Y5Mzg1MWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZiMWViZjQ3OGI1N2E2YjRkNjdlNzVhMjgwOTk3ZjRlOTlhZGI3Mzc4MWY5M2VlODllNWUxNzczODBmZWYwMjgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e53b89c57acdcf2da8e06b38d3102dcd",
+      "statement": "ForDir proposes a sessions component on the root when it is a git repository or has sessions.",
+      "evidence": [
+        {
+          "resource": "repo://internal/discover/discover.go#L104-L106",
+          "version": "repo-lines-v1:sha256:ebe096bc45736cf9a7cbf97b6aed2bb449e35d6c93284d2a0c98ce2767583227:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGViNGJiNzAyYzI1ZDk5NGU2ZjJhMTNlM2U5NmI1NzkwYmJhMDUwZDA3OTZmODQ1MjlmMzcyODhmYjEyMzlkOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdjZGE4MmRhNjA2MjM4ZTA1ZTYyMzk5NTY5YzVlZTAzOTkzNDE5NjQ4YWU1ZDQzYTJiZjhjZDYzNDdmODI2MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTQwNzM4M2YyYjcxYmJkZjlkOWJmMmZkZTcyZDE4MDVhYTFkMzFlNDY3ZmQ1ZTI2ODlhYWU3NGY2N2RjZDA0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjczZmE0MzM0NzkwMzgxMjAzOTlkMGFlZTU1ZmZhMjJmNzNiOTVhNDM5OTJkNzVjOWM2MWU2ZWNjZTk2ODYzNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_69fb32314fee2723b2eecca2d6ea86ba",
+      "statement": "A directory is covered by a project that has a git component on it or a sessions component containing it.",
+      "evidence": [
+        {
+          "resource": "repo://internal/discover/discover.go#L112-L127",
+          "version": "repo-lines-v1:sha256:b701ea12fb9e1f8110d07b5097dbba88d09bfa0dff5b5de9bf12d6098e893097:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkMDFjYmU3NmNhM2U5OTk4NDRiNmZiMzZkNDM1NjE0NDI0NzVhNGQ0YTM0NDVhMmI4Mjc3YjI2MGI1YWVlNDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc4OGI5ZmVhZjU0NTgxMTdhNDZlYzdjZmQ1NDA4M2RjNWVkNDJjZDJmNGIzYWQyODEyMDhlOTA2OTgxNDZmMTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk3OTU1N2ZhMTNlYjkwYjY2YWI5MzZjMzdjNWIzMDQ2MmU5NGZkNjcyZWYxZjBhMDU5ZDc4Y2M5ZGZlZGZhYjkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9a63c0ac345234fcc9e36c388dd6746f",
+      "statement": "Adopt creates the project only when the slug does not exist; otherwise it attaches the components to the existing project.",
+      "evidence": [
+        {
+          "resource": "repo://internal/discover/discover.go#L184-L202",
+          "version": "repo-lines-v1:sha256:1f53192e544301be65c37920536998d97ffa86d4c42d35b3a02be11c55c10f6c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEyMjkyNzI0NmEyYmYwMDJmZjM5YjJmNWE0N2IxMmRkMTU4Y2FiYjgwZTg1M2U1NzI4NDdjYWY1NzgxYWI1MTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlhMWY1YTQ5NzMwMWRkYjNhYmMwMjZiMTY2NTg3NjU0ODIwNzc0MjY4ZDQ4ODBlYmZkOWViN2IzNDU3YTU5OTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE1ZTA5NTk0ZTZmNDk1MWY4ZWRkNTA1NWIyNmU5MmU4OWY5MGNkNjQyYjZjODg0N2FjMDk2NmU5OWVlMTdjMjYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1a8a43978954f5a17b99c659e847ac4c",
+      "statement": "Normalize resolves git refs to the repository top level, kata names to UIDs, session prefixes to unique keys, and wiki or workspace names to IDs, failing on unknown references.",
+      "evidence": [
+        {
+          "resource": "repo://internal/discover/discover.go#L211-L283",
+          "version": "repo-lines-v1:sha256:5f912c327d38c1a3d57ebeda123fcbf6b088af359e777499eef3d59c92b8434c:eyJzZWxlY3RlZExpbmVDb3VudCI6NzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxOTU4ZGNmMWE2ZWY1ZGJiYzg5YjIwMDYwMzNjMjEzMTU3NGM4YTc4ZDBiZjc4YTVlOTljZWY5NWMxOTI0MzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzMGFlOWIwNDQzN2E2ODRjY2YxNjBkZjU3ZGE3YWMxYjcyNmFkOTEyNGRjYjM4NzhlNDBjYTUxOWY4MmVmYTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjViYWVhMTI3OGU1MmUyMzBmOTFkMTRiZWJhMGMzYzQ4MTI5MjhiYzA5ZTVjYWYzOGRiZmE4YTNlYjUxMzFjMjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAxMmFmOGU0ZDhjZTE1ZjY1MWI0YzY3MmYyNzk3NWQ5MzFjZDA1YWM3ZWE2ZGU1NjE4MTQ4N2E1ODdmZDVkNDYifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "owcli/ff31f70",
+    "at": "2026-10-02T20:21:12.058Z"
+  }
+}

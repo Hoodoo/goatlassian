@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:ff70a934c4e9bf94e3060fe26df98251473dfc632343900970040d55d480d35a",
+  "claims": [
+    {
+      "id": "claim_0b0d7483542916f7b1a2050e66ce3832",
+      "statement": "Components of a kind without an adapter get their label or a 'no adapter' message as summary, and an open link when the ref is an http or https URL.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L293-L301",
+          "version": "repo-lines-v1:sha256:f3f80333bbeb991ebfc6dead439058ee21412fe9d6983e6917625f55ddd86064:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTBkNzMyMjk1YWI0MzlkYWEwOTViOTE4M2NjNzRlNmI0ZjVkNmI4ZGRkNmMzNTQwMzBhMzExMmU3MmIzMmIxNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdjZGE4MmRhNjA2MjM4ZTA1ZTYyMzk5NTY5YzVlZTAzOTkzNDE5NjQ4YWU1ZDQzYTJiZjhjZDYzNDdmODI2MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDIxZDdjYmQ2NzlhYWE5MDE3ODBiNWQ2M2ZhMTJlZGRjMWU0OTQyMWM0NTU3MTNhNDk5OTRlNDIyZTFiNTQ5MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTY5NGU2NGFkYmY5YWNkYzJlMGFhMDg5MjE5OTNiMWNmMTNkYjg2NWY5MjA0NGQ3OGI4YWI4YWE2NmYzNmQxNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_aba5de192fd13748c711672c6fa287d9",
+      "statement": "Known kinds are declared as constants in the store package and listed in KnownKinds.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L42-L57",
+          "version": "repo-lines-v1:sha256:35721fb052f8eb8b4b24fe7c4c31f5736a09fcb22b3c369aa1a80cf16ef4d20f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmMzQ1MDI1N2E5MjA5YWEwZWI1ZDk0OTdmZWM0MDIxMzU0NDU2Zjc4YzE0NjE1MmQ3ZmQ5NTk2NDE3NzBlYmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYzYjQ3NTMwNmY2ODFjNDI5NjE2NzMwZTg0ZGRiYmY3M2M5ODhmMzJmZjA4ZjhhYTk4ODVhZjA2YWNhODEwOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFjMzc1MTkyMmYwMjEwYThlNzA1NzBiNjIxY2NhMzc0NjhkZjE2ODFhYjdkMjBjODFlYmM5MDM5MmM3MDQwMjQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f28f321aa93d1fa01a1ea991ecc6d705",
+      "statement": "The web UI's attach form shows a per-kind ref placeholder from REF_HINT.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/static/app.js#L423-L431",
+          "version": "repo-lines-v1:sha256:88f87ef8d3ed0abf1e8c35890afc3f0ad506a1d1643bae289460a99f7eb8cb66:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzVmYWMyZDMyNmQ3OTZiNDNmZDM0M2M2N2Q3YmZlNjA4NTIxZDliZTkyMDFjYmM5YjBhMWYwZTBhY2Q4NjJlNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWExZDFhNjMzOTAyMjljNzk4MzQ3ZTgzYTA0MDU0NDFjOTQwMDAzNTI4NGFkMTY4YzFiZjZjZGYxZDcwYTM3MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDk0ZmMwYzE3M2QxZWMzZmM1MDFkN2RmYTkyODU1MDFjNTI3Y2ZiNDcxMjU4M2RhM2NjMzYxODA1NjZiNGJlMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDEzNzlhY2IwYTA1MzUzMTNlYTIxN2FlMmU2ODhiYThhMmEyYzYwNDVjMGQ2OWJhNzlmOTJlYjIyN2I3ZTRmZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_52c4a13dd30cf826a5e699fb536b3c25",
+      "statement": "describe dispatches each component to a kind-specific describer.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L274-L292",
+          "version": "repo-lines-v1:sha256:9f408adbf183482c563b18c3f024cc9a8efb4fe74fbc0fa4a2a6bb71ed7d720c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ5MTgzNzc5NGUzNzNiMGEwNzExOWE1MzBmOWMxZWJiZTczNmFiZGIzNjk2YzVkMzA3YThhMjNkMDM4ZmQ1MWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdhNWVkZGUwMzdjOTI5OWI5MjQ4ZDlmZjMzODhjY2NhODNlYzk0OTRhZjAxZjFiODU3OGJhMWFlZjRhYmE1YmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc2ODVmYWM3MGE2ZGJmMjU1NTM2YzA2ZWNlMDA4Y2E2ODdhZWY2MDIxY2MyMmU1ZmRlMDc1YjUxNWMwNzBhZGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJiMDM5Y2U5MGYyNzQ0YTBhNzBlMGMzNjI5MmQ0YTJiODI2ODRjZmE3ZjA3NTYyMmFkYTg3NTJlZDIwMjQ0ZjIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f58f7c7c4bebdef5d172c5dfa1d71105",
+      "statement": "Collect starts each tool's collector in its own goroutine tracked by a WaitGroup.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L68-L77",
+          "version": "repo-lines-v1:sha256:9d098302bf41fdbdadd409903878c1bd6a12172e5e740919be81ee57108f1c1e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhNzI5NTQ2NTRmOTk2NmRmZTk2M2ViNWNhOGMxODY0ZmQxZTc3OTFlMTU2NWRiY2ZiYWIzZDNlMDgxY2IyNWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE1YmUyYTczZWZkMjM4ZDFiYmNjMWM1OGQ0Yjc0Yjg4NTQ4ZDhkZmI2YzEzMTZkMjc3NDFhODIxYjA1YzFjY2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEzNzllY2Q0YmVmNTEyMDkxOGNlZDJjMDAwYmIzMGZhMGZlOGJjYjVjNjYwNTEzN2QwYzAzYmU0ZmEyZWQ5OTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e5fa9210d956021c5c3622688e55b20d",
+      "statement": "The fake runner answers exact command lines from a table, falls back to the longest matching prefix key ending in *, and fails unknown commands.",
+      "evidence": [
+        {
+          "resource": "repo://internal/testutil/fake.go#L10-L30",
+          "version": "repo-lines-v1:sha256:942c3f95036aa372db044d7d963dabaeaebe832b10bb96886cd28b70935ecbd0:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5MDRhYzIzZTE3ZmYwNTI1Mzc4NGQ3NzNlZGY2NGNiYmU5ZDRjOTVkMGU5MDAzZjgwODRlNWZhMjc4NjA3NGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRkNWRlNjczOTBjZTMyYmZmZWYwZGU5NjRjMWM3MjAwOTk1ZDY4Y2EzZWVjYWRlYjNkZDA5Yjg3MmE1NGViNzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4f36e7da6e11889924696ecaceabd9f3",
+      "statement": "make check runs go vet and go test; make install builds and installs to ~/.local/bin.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L1-L22",
+          "version": "repo-lines-v1:sha256:7aa00d2a599ee11fde9487d3129975dc357e65328976bf29011afd320d242664:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4ODdkNDVmOTlmN2Q5NzI4YjU0ZGFkYzk4Nzk3N2Y3YmFjYTc3MDVmYWZiOTdiZTc4MWJkMTlkMzkyOGE5MDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlNzM3NjllZmQ0NjBjZDM3MzYzMjZmZmZjNzZkZGZjZjdkM2I0YmM0ZmM0MDhiYTg4NDdkYjYzZjA4YzQwZTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "owcli/ff31f70",
+    "at": "2026-10-02T20:24:52.432Z"
+  }
+}

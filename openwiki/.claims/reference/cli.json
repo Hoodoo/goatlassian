@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:d4c045015f6f3da01a178b2d9f6048ba6bdc05bd1000e26e31d2a9310105503c",
+  "claims": [
+    {
+      "id": "claim_f3a5bbc3dead84cfc416e46b857ab6f1",
+      "statement": "Errors are printed as 'goatlassian: <message>' and the process exits with status 1.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/cli.go#L32-L39",
+          "version": "repo-lines-v1:sha256:705625fbc9912d67b83676d4d1494adc50195447af8d5408c5b7a78994691e5d:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDhkNDkxNGIzMjdjNTFiMzE2OWIxYWYyZjNlOTE3NjZiYThmZDJhYjM1YjEyOGMwNWU3MGI0M2YyNjgxY2JjZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTZmNzAzOWY4NjE2NzBkNWMyMmI3NDdlYjYyNjA0N2QwYzIzM2RjNDdhYWMxNGQ3YWZjYmUzMDQyZWIyOTE5ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWJmMmNmNTU1N2Y0MDdiZGQxZDBkZDIwNGVkZDIyYzcwYjhhM2I3MzdiYTYyYjEwN2ZlMTI4NGMyNDRmMjZiYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4b3b85ddc71ce88f5645c4bc8cf6b6c9",
+      "statement": "--home and --json are persistent flags available on every command.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/cli.go#L70-L71",
+          "version": "repo-lines-v1:sha256:7a49ce067935bcb03105601dcff8a7e45a8f262fbda674b4e58c37c5f107460d:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGUzNDQ0OWFhOWNiMTg4YmFjMzViM2U3MjNjNGNiZDA1ZTRhNzMyNGFhNjRjNTU5MTc2Yjk4ZDIzN2QzZDNkNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTE5NzllZDIyYjEwZjJhMmQzOTdkOTMwZTk4ODRmYWIxNDc5Mzg0OTYzM2NkZmEwYTFlNDJjODkyMTZmOWFkNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzhlN2Q2NmVhMzg3OTgyYzlkNThkODZiZmNmY2NmOTU1MjhiOGU1MDEwZTRhZDAyMWIyM2EyMjFiN2E1MDBiYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzMwNjBjODNjY2Q5MjIwMWFhM2YzYmQyYjcyYjBiMGViZTk5MWFjNTY2ZDAwZDFiNDhlNTI2YjE0MTFkMDg0ZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b8e6e4eaa8f85e218dbc838e9982abab",
+      "statement": "Help groups commands as Reporting, Projects and components, and Environment.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/cli.go#L72-L88",
+          "version": "repo-lines-v1:sha256:eebac117b411398bb0a1e1800c995e4caf8b7b59a815e8ba91e8695279c4f8d6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhOGE0MzdkNTg4YzhiZTVjMzY2NzkwOTEyYjU1M2M0YWFjZGRlMWFmYjlhNjNlM2I1NTJiZjJmOTVjNTE3ZjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3Y2RhODJkYTYwNjIzOGUwNWU2MjM5OTU2OWM1ZWUwMzk5MzQxOTY0OGFlNWQ0M2EyYmY4Y2Q2MzQ3ZjgyNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk5ZmNhNmM3NTJlNTQwYTAzYjVhNjRiZmZiM2QzOGY2Y2UyYTY2ZTFhOTFkNmE0NTQwZGJiZTVlNjdjZjI4MDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwOTViMzBiNzM0YzkyM2MzZjMyZGZiMzcxMjg3MTQxMmU2M2VkMDkxYmM4MTdlYTM5OWM2YzcxOWQyODU1NjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3e6079cfaad47ee00788c903b6d397d3",
+      "statement": "status accepts --all, --state, --tag, --sort (default health), and --record.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/report.go#L74-L78",
+          "version": "repo-lines-v1:sha256:7e8e401129fefa035cc4a5241c23e6cd3a71e9e3055760e7f72f1ad45a86c655:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmI4YjVkMWJiODc3MWU2MmM5YjA0MGY5YTIwYWI3YTQ0NWE0NjdmYzMxMDhhYzM1NDJlYTM5OGM4YmRkYjc5MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTdhZGFhYzRiNmExZjZiM2ExNGIwYTg2OWNhNDNjNzkxZGMxNTRjZTVkZjcyZDJmMjE5YmNhOWQ3OTRlNGMyMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGJlNzMxODZmZTA5NTEzODBhNmFiYmQ4ODA1MjM0ZTZkZWIyNWZhNDRmMDkxMzcyOTdiZmEyYmI3NTNmOGEyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmYwMjhlNjk4NmE0OTA3YTJlM2UwMDJiMzQ1MDEzZDE1ZTFhOTBhNzg0MDc3NTIyZjMwMjJhOGMwZjQwNTI0ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8fe3d2fa12696ba3488cd25a416cebd5",
+      "statement": "status prints project, state, health, activity, open, attention, recently closed, sessions, cost, recent cost, tokens, wiki drift, and flags.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/report.go#L109-L109",
+          "version": "repo-lines-v1:sha256:5d91f232f82bdf2427ea3ef018b13c9623a2a205b212c471787e7d0530849faa:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQ5MWYyMzJmODJiZGYyNDI3ZWEzZWYwMThiMTNjOTYyM2EyYTIwNWIyMTJjNDcxNzg3ZTdkMDUzMDg0OWZhYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQ5MWYyMzJmODJiZGYyNDI3ZWEzZWYwMThiMTNjOTYyM2EyYTIwNWIyMTJjNDcxNzg3ZTdkMDUzMDg0OWZhYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTM0MzdlYjQxZDg1NjAyNzg4Nzk2NGJlNjgyYTczZTg5ZDAwZDIwOWQ4YTdlOTQ4NmI4ZDAwMTMwOWIzYWJiMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzdhOTFjODhhZjQ0ZWY0YWYyMmNlODg3ZTVkNTQwODdiMzk3NzVkMGUwMWYxMmUwMzQyODUxZjU0NTM2OGZmMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_470201046c483e7f3412cd6b2ad11299",
+      "statement": "Tools that cannot be read produce a warning per tool on stderr.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/cli.go#L117-L123",
+          "version": "repo-lines-v1:sha256:e0ab0373a0c5598ef039d2f7f385a65ed205518e0cb26cde8899b98d2dc436d6:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWI3ZDEwN2ViNzdiYmJkODQxOTI1YTYwOGM3NTk3M2I0MDc4YTlkNGZiMmJmMTk2NDY4NjVjY2IyMzI3Y2U0MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2NkMDY1MjllODc3MGNlM2VjYzQ3YzlhNDNiZWY3ODJhZjBkZWE1OGYyODNiYTc1NTcxMjFkNTI0ZGY4NWIzMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjBkYWVjMDU2NzJjNDJlYjljNDg3MzA1MTFiODU4N2M3ZWY2NzM2ZWViOTI1YThiZmYyYmMxNzg2ODE3YzQ2MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3c634c01d085bd6441c54f01a64cb932",
+      "statement": "project answers to the aliases projects and p.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/projects.go#L21-L21",
+          "version": "repo-lines-v1:sha256:48ebd9dffd5890a03d60c407bab2f72329bc08d3ba1406de536799ba27d2b750:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDhlYmQ5ZGZmZDU4OTBhMDNkNjBjNDA3YmFiMmY3MjMyOWJjMDhkM2JhMTQwNmRlNTM2Nzk5YmEyN2QyYjc1MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDhlYmQ5ZGZmZDU4OTBhMDNkNjBjNDA3YmFiMmY3MjMyOWJjMDhkM2JhMTQwNmRlNTM2Nzk5YmEyN2QyYjc1MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTRmNDRjNTU1NzdmMWQ1N2I3OGZmMGY4ZmE1Y2E4YmU3MTg1MzQwM2U1ZGVlMWU5N2Y3YzFkMjgxNzkzNWYyYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjhjNTZkMzAyMWYwZjE4Y2M2MjYyZTU2MDc4YzFiNzViNTAxMGEwY2I3NDkyZDhhNmFlOGFlMWIwNGM3MmI4NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_930aeec5b371191cb897afc7a6dbd022",
+      "statement": "project rm refuses to delete without --yes and suggests archiving instead.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/projects.go#L202-L206",
+          "version": "repo-lines-v1:sha256:ff06610ce4afcea886e103d2d4574c0975c1c30500fe490f1e2aa8f455932794:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDNkZjI4Y2E2Y2VhNzI4YjgzNjk3ZWNkMTQxMzMwNjBkNzViNjA1OWQzYmMwYzY4ZmRmNzYwOGJiYzg0MWFkYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRlZmM0OTQxOGQyNmRjZjEyOWIyMmE2YWEyMTEwOGNlZWMzNzY3N2EzMmQwOGU5ZDVmZWUzNWRkYTY2YmI5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmY2MTM1MDM5ZmVhMWYwZmFiYWY2NWE1NGU1Yzc3M2ZhOWRiYjUyNDM1NzhlNDRiNTRjN2FmMjE0ZjQyMjFlZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmQ2MmY5OWM2NzI0MTU1MTQ3NjI1NmRkNzE1YzA5ZWQ0MmM1MDVhNjRiODJhNzliNTJiOTI3OWM5M2I1M2RlZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_07ec05663544afb9aa407af900ea6404",
+      "statement": "attach takes --label, repeatable --attr key=value, and --raw to skip resolving the ref through the tools.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/projects.go#L243-L245",
+          "version": "repo-lines-v1:sha256:a9ddf3fa82f732cdcf300feeb68f7860ec8ae3a3d49a067aa0f6414b9053bfca:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWQ3ZjdjOGM5MTFlOTM2OGEwZmFmODc4NGU1YjMxZTQ3OTc3ODA1YTQ1MjhkODVjOWFiM2Q5ZjE2MjhhMjQ5YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjI0M2E0MDFiNmNmNzIwNzM0OWI2OTlmN2JmYjlmMDA2MDY4M2Y4YmQ5YWU4M2NmMjczMjg1YTkyNGUyNGM1ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDQyMjcyMGY1YTY5ZjMzZTMxNjU0OTQ5NDg4MzNjOTFmMGJkY2EzNjRlNjNmNzcxZjRlMDY5Mzg0YmViNTZmNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmVmNTllZDRmNThiMjkxNzFiNTYyZGUyYTA4NWQyZDM1NDIxZTIxODk0NjI4YmRiZTU3Mjc0ZGY3ODY0MGZlZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1a628fdd6f44744672d9871434272ac8",
+      "statement": "adopt takes --slug, --name, --description, --tag, and --dry-run.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/projects.go#L354-L358",
+          "version": "repo-lines-v1:sha256:0b866bba9edf7130670bc88a0104fbe9bba04a4adc951598129bc9aa46e49273:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjI1ODliYzkyMTRhNmQ4YWEwNzU0MGVhZjQwNjE5YWIxYzhmMjNkM2M3MDVkNThlN2IwYjljYmQ4MzM5NDIxNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzlkZjdlODhlMjA1NDlmOGU0YTk3NDlhZDExZWVlOWRjZjQ3OTI5MWUxODRlYjE0YmEzMjA5ZTMyYTg0NmMxNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmIyZTFkZTk5ZTUxNTlhMTc4NTFiOWM3YTFhZGNjMDg1ZjMwZjI3ODQ1ZGNhMDdkNDUyYWZiYmRhMjJkOGFjOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTgwODMzZWM1ZWYyOTdlYjkxYTZkYmMxOGU5OTBiYjlkZjYzNDZiMzgwNTAxNjBmNTRiM2FiZDM0YjAyYTAxMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4b4935f1400c8f84b520399c6ca75415",
+      "statement": "discover takes --all, --missing, and --adopt.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/projects.go#L417-L419",
+          "version": "repo-lines-v1:sha256:77e854cc2dce13db90f1fddc97b1617e8b5b9c1ef4e92c2eda51046833f6acf9:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDExZDQ1N2Y2MzI4YTliZWI2YzkxYjA0Mjg4ZjRkNTA3MmRkZGNkZjc4MGNjNGE2MmVkYjMxNDIxMDhjZWI5ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzliN2MzYTYwODI1NGIyMzFiZDNlNWU5YjMzNzQxNzk2MGZhZTI4N2UzZGNiNGQwODdmZTc2NTNiNWY2M2M5NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWI4MWE4ODk3NGVmMWI4YTc4ZTg4OWNlYWM5NDUxYWQ4YmE3NGU5NDc1ZjQ0OWU4ODQzMGU0MTYxYzBjYTQwOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTkzN2ZlZTg5ZWFlNzFlZWVjZTI1YTk4ZTA2NWVkZWFiMzYyZWE2ZjVhNTYxNzBiNDZjMzgwYjE4M2Y4NzliMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3f614b35665c639fec25b36c26daa8c4",
+      "statement": "log shows 50 entries by default.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/projects.go#L320-L320",
+          "version": "repo-lines-v1:sha256:68ed2eaef6c004aeef816e4d4f1fd23381cbff1dd51c14ad1ff91b7f1ffbba1b:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjhlZDJlYWVmNmMwMDRhZWVmODE2ZTRkNGYxZmQyMzM4MWNiZmYxZGQ1MWMxNGFkMWZmOTFiN2YxZmZiYmExYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjhlZDJlYWVmNmMwMDRhZWVmODE2ZTRkNGYxZmQyMzM4MWNiZmYxZGQ1MWMxNGFkMWZmOTFiN2YxZmZiYmExYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTM1OGEyYjdiYTdhM2JjNjFkY2JlN2UyN2E3YjllOWI5Nzg1MWE0YjIyZjhlNmJlZWNlNTQyMzhmMWM5YWIxMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTMzMDY2NGM0NzM1OTRjMzk2ZmFlYWQyOTRiY2I4ZmQ1YzcyYjM2MjliNTAzMzNiODY3NGNmMjMwNTkyYzNiMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3bbed8018a7f02d0779b251a9f6c954b",
+      "statement": "history looks back 90 days by default.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/report.go#L254-L254",
+          "version": "repo-lines-v1:sha256:4c346e148498fb327e7486fd1df0896a4458783afaa59f13de220d369ba2c211:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGMzNDZlMTQ4NDk4ZmIzMjdlNzQ4NmZkMWRmMDg5NmE0NDU4NzgzYWZhYTU5ZjEzZGUyMjBkMzY5YmEyYzIxMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGMzNDZlMTQ4NDk4ZmIzMjdlNzQ4NmZkMWRmMDg5NmE0NDU4NzgzYWZhYTU5ZjEzZGUyMjBkMzY5YmEyYzIxMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmJmYTA3MDllNTQzYjU2YTA2MDg3NTc4YTY2NjYzNTk3YmFmZTM3NmQzNDUxZTY0NmJhMDMwZmFlNjQ1ZjhmMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTMzMDY2NGM0NzM1OTRjMzk2ZmFlYWQyOTRiY2I4ZmQ1YzcyYjM2MjliNTAzMzNiODY3NGNmMjMwNTkyYzNiMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_be185fb6693adc64d5fe3f6bc2f1dde6",
+      "statement": "serve takes --addr (default 127.0.0.1:7799), --open, --services, and --snapshot-every (default 6h).",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/env.go#L75-L78",
+          "version": "repo-lines-v1:sha256:5d4bbd6caaf307245009a9e345c90fb8dc1f4d1317fa1c92a4094d4e86414d49:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWViOTYwNTkzODhlZDExZTE4ZDg1ZmRkMDVhMGYyYjI5M2MxNDYyNzVmMWIxYzdlM2ZmZjYxOGZjZmU1MTJiNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDViNDIxOTAxZmRkMDQyNjM5MTA3MjZjMWNjYjM1NzViOTczZjcyYzlhYzc4YTU3ZDRlZDQ4NGU5NmFhOGQyNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2Q1ZTFhMGQxNmM0MmRmODI4ZGFmMDk5YTIyNWM2MzE3NDBlOTEyN2JjY2Q1YjRmYTQ3ZTlhNTI3MjgyYjMwOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjYzNTMwMzQzZTRjNDRiNDMyM2E1ZTU2MmQzM2RlZmNkOGMyN2RhY2JmOGM3ZWQxZTdiMjgyNDQxYmI3YWExNyJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "owcli/ff31f70",
+    "at": "2026-10-02T20:24:19.254Z"
+  }
+}

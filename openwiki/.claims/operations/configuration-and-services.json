@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:a3dc8f2cda826ab0e55a1a237a03ec8b31750470480afb9126faffe620e34856",
+  "claims": [
+    {
+      "id": "claim_da07d37a84a7d270b2918e09920d2bbe",
+      "statement": "The data directory is the --home flag, else GOATLASSIAN_HOME, else XDG_DATA_HOME/goatlassian, else ~/.local/share/goatlassian.",
+      "evidence": [
+        {
+          "resource": "repo://internal/config/config.go#L54-L71",
+          "version": "repo-lines-v1:sha256:e503802f0c9d74009dd8746fd49275642755ed552357db8cab2b4e34c3f40807:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdhNDkzZDM5ZTIwYmVlNjdlNDcyYjgzYjg5MmZjZTlkNjJjMTgwZmZmZTE3YzZlM2NjZmYwYjhjN2JjNjVmNmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyOTY0MDc5YzNjNWM4MTUyMGVmMzNhMmI5ZDJlMTVhMWI4NGQ3MjgwZGI4NTkwZGNkNjU3NDdlM2UwMTJhNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4YTIzZjYxYjYyYjQ5NjI4M2QwN2UyYjQzMDgwMmU1M2QwYzhjNDliNTUxODZhYjAzMzUzYWVlY2RlYmIyYWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e5af5b0f18d8aecb2793e919123823cc",
+      "statement": "Defaults are stale_days 14, wiki_drift_commits 10, recent_days 30, owcli at http://127.0.0.1:4321, and bossman at http://127.0.0.1:7788.",
+      "evidence": [
+        {
+          "resource": "repo://internal/config/config.go#L41-L52",
+          "version": "repo-lines-v1:sha256:54cafb9af401b99f9f72fadf42ed620d53331b30932165617cbb4cad6345ba2b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyOTM0M2JjNWEzODgzMDE1NzdkZjUxZjBjOTk5M2I3N2Q2ZmZlMzcxNjE5YTJkZWU3YWY4ZTkwMzM3NmZlNDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI3MTdkYTY2MTJlN2YwZGZhYzc5YjdmYzVlY2UyYTY1YzUxZTI0ZjYzNDE4YjQ3N2MyYTUzNWI2OTM1ZDNmMzQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFmNWI4MDMxNWE3ZDEzN2E0MzZkNTNlN2NlNjg5MjQ5MGRlYTc1Y2M4MzI3MjdhYTBiYjkxM2ZlNDllY2U3YjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_228a2337b286f9af72c99e4e8b137ca3",
+      "statement": "Load decodes config.toml over the defaults, tolerates a missing file, and restores defaults for zero or empty values.",
+      "evidence": [
+        {
+          "resource": "repo://internal/config/config.go#L74-L102",
+          "version": "repo-lines-v1:sha256:4d31cef0893f4154c4b038a1e0c9dc84d7a9d9f637953643bd85210d76fc2cef:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhNzIzZmYzODMxNDlmYzU1ZGM2NDcwMWI5ZTVhMjhjMmEzZDk1MzIwMjI2ZmU4N2IzM2RmOGJmOTAxZjdlYmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4YTA5MzdhOTE5MGYwZTc1YTg1ODkwYjFlNDM2YzYwZWE4OWQ0NDExZTE0MmM1MDdhNzkzYTZmZmQyODlhZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_851d453112079a89d98eecb4d70102fa",
+      "statement": "The data directory and config are resolved before every command.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/cli.go#L61-L68",
+          "version": "repo-lines-v1:sha256:65e19fb1035f3e282a06ebda6d88bcc777268fc5488bd60df384cb6d50a7b922:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjc4ZGRkYTJmYTgzZDZmYTQxMDA4MGJmYTc1OWM3N2ZlM2M5YTMxZDBkMmUwNmUxNDg0NGJhZGRkMTE2MjQ3ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWJhZDdjYzJkZmFmYzIxNzVmYTJkOTcwNGUwMjAyZjk0MDgzYTlkYTY5YTU4NWIwYjE4YzQ4YmVhMjM2Mjc1ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzRlZmQ1ZGJlZDJlMDQ5NTkwNTQ3YTYwN2M0YmZkMjBmZDc2MWNmYzY5ZmJhOWVjYzA2NjAzZDlhNWQ0Yjc1MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTlmY2E2Yzc1MmU1NDBhMDNiNWE2NGJmZmIzZDM4ZjZjZTJhNjZlMWE5MWQ2YTQ1NDBkYmJlNWU2N2NmMjgwMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_57a91c679a434ef49e8a7620dd687e07",
+      "statement": "kata's web address is read from kata daemon status --json.",
+      "evidence": [
+        {
+          "resource": "repo://internal/services/services.go#L45-L63",
+          "version": "repo-lines-v1:sha256:f25d784fd9a2a92795f96f56788b9f619c21cd024349c3ceb77a39763e9918ea:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2MmNhZjFkYzAwOGFhODgyZGQ4NDYyM2Y5MDM3MjdhNDc1NjA4Y2VlNmNlNTc2NDRlODk2MWMxMGY2ZWQ1MzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM5N2Y1OTFiMjBhNWMzMjlkNzY5NDlkNTliODU0NjczY2Y2OTMyYmM1Yzk3YmVlYmNlYTQyMWYxNjgyODA3YjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYwNDc1ODlkOGMyZTVjNThlYWFkM2M2MzdlMzAxM2E5ZGNiMzVhYjhhNDJhODVlNzcyMmQ4MWI4NTU1ODFiODgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a9d046e086356c15bf36cf760c9e9a46",
+      "statement": "owcli is considered up when /api/wikis answers and bossman when /api/facets answers, with a 1.5 second HTTP timeout and any status below 500 counting as up.",
+      "evidence": [
+        {
+          "resource": "repo://internal/services/services.go#L30-L43",
+          "version": "repo-lines-v1:sha256:7179eacc9f8011e8a3a7a41551ac91a48478b7e1b0d3f102d97f2cdd65494569:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0ZWU3YzBiZWQ0MTY4YjJiMjE3NTA1NDAxYzQyOTE1YWMzMWQ2ZjQ4OTVkZDdjYjgxNGI5ZmNiMzI2NTU2YTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZiMGRkZGMxZjgwZTRlYzViZWZkYzRkM2FjZTRiODI0ZmU2N2UyMDAyOTMzNDIxYWE2ZTE0YTU3ZjhjNjNmYmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhhNjRmYTJiMDM4NjA2ZTJlMDdiMjg0NDRjMTgwNDAyNDZkYWYxMmUyYjQyMDFkMzhmNTlhMTA3M2MyMDYyNTUifQ"
+        },
+        {
+          "resource": "repo://internal/services/services.go#L78-L89",
+          "version": "repo-lines-v1:sha256:82f55c7a2092d86a9157fd89145152fb0ff30d20a8a2818dd68b6dea605122e4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5ZDdkZWYwNTc5ODVjNWYxMjc4M2E0MzdlMGZiNzIzOWUwMWIyMzVlYjQzMzc1YjJiNTUyNzZhYjQzZjczZDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0MDQwNGZiMjQ3ZDRjMThhNWVmY2Q2MGVmNWI2MDQyZTFkNTc1MmNlMjQ4OTZlOTIzZjI1NTBjYjk5MDM1YmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE2YTRmYjc1YjcxYWJkODAxZmQxMDA0OThkYTIwODQ0ZTk1OTM2MjM2YmViZTFlMzAxYWUzMTk5YmQ5ZmEzNzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUzMWMwNjEwZDNkYzQ1NDc3M2UwYjBiNWI3MmY0NDMwZmRjYTBkYmVkYzhlNDc0MWYwMGE3NmFlZGExMmEyZTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_51671e5842aee8da4c83c87f8374d090",
+      "statement": "StartMissing starts down services with kata daemon start, owcli serve --no-open --port, or bossman serve --addr, logging to the logs directory, then polls for up to five seconds.",
+      "evidence": [
+        {
+          "resource": "repo://internal/services/services.go#L110-L145",
+          "version": "repo-lines-v1:sha256:b7efd1abade354ac4bbd83b1b7a0b6868cdc6b1d982efb1f28573fadb3e941f1:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImExOTVkZjllNWVkY2VkZjlmMDQyNmZjNmI3N2Y1MjRlZjkyOGQ0NTE5YmE0MWVjMmUzYWU1YjgyMDk2M2EyNzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5MDg3NGU5NDMyZTM4MjJlMjQ0ZTIwZWViOTg2NWVkNTlhOTI2N2Q5ODM5NGViY2E1ZmM4NmI1MzIyMjk1ZGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZjYTA2NmMwYzgyMGNhMGZhMmU4M2ViNzZjMjNiNDA4ZDcyMTE4YzMxOGVkYWNlYWZiYmZlMjNjODM2NmM0YzQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b35dfd1cd673de77d78d46f4df3a224c",
+      "statement": "Started services run in their own session so they outlive goatlassian.",
+      "evidence": [
+        {
+          "resource": "repo://internal/services/services.go#L147-L162",
+          "version": "repo-lines-v1:sha256:f87a67d8c201aad8c2e4a7fb5c0a290489b0c33f77604419e2a9bad839be9213:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwYWYzYzlkZTBjYWVhYzM3MzMzYjgyOGMyOTk3ZmI3YzhhOTQ2YjA1NjliMWQ1NDIxNjY1NjMyZjQxYjIzMjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyOTY0MDc5YzNjNWM4MTUyMGVmMzNhMmI5ZDJlMTVhMWI4NGQ3MjgwZGI4NTkwZGNkNjU3NDdlM2UwMTJhNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b5cd4c8b320fe0a17d5a87fde2ba86ac",
+      "statement": "Event actors come from GOATLASSIAN_ACTOR, then KATA_AUTHOR, then USER.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L186-L194",
+          "version": "repo-lines-v1:sha256:8b6fe75f1854fc95e1e859210696118c716bb32673f3ebcf7c47570b27829fd5:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmY4Nzg4MjlkYjFmNmQ5OTJkZGVhZWQ0OGQwNWEwMWVjNzU4ZTgwNTNmOGIwNzZkNzExNWY1NDE3YzViZWFhNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjUwYzE3OTc0MDlhZmFkOTZiZjY5ZDQ0NjRjNmQ2ZGMyMTZjYWY0NmM0Yjk3YTc1ODM0NjIwOWQyNTVkNzgxMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmY0ZDM3MzJjOTc1MmM1NmEwNDgyYzU0ZDcyNzUwNjU3MjQ3Yzc1YjU3MjIwNGYwZmM1YzIxMWQyY2JjMzcxZiJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "owcli/ff31f70",
+    "at": "2026-10-02T20:23:49.342Z"
+  }
+}

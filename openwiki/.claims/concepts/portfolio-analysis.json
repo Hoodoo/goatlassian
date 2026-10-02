@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:134bc636af7e6b0aef28de294364bf4c6698adb5138af564635dbbb6d36eb5f9",
+  "claims": [
+    {
+      "id": "claim_30147bf0c651aea37df8b5d0f6dc6e7f",
+      "statement": "A project's last activity is the latest last activity of its components, labelled by the component kind it came from.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L162-L170",
+          "version": "repo-lines-v1:sha256:a072d637d193befa8a0d95c79c92958ca252596268e6243ae2a80eaa9574dc59:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2ZlNjBlYTU4NjI4OGY0MmI5NWUxN2I4ZGVmODQ2ZTRlYTM1NWZiNTlkYmEzMzUyZDM1YzFjZTNkYzdkMmZiOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRlZmM0OTQxOGQyNmRjZjEyOWIyMmE2YWEyMTEwOGNlZWMzNzY3N2EzMmQwOGU5ZDVmZWUzNWRkYTY2YmI5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmJkZDMxZjRmMjZmNTQyMmFjNTkyZGVkNGU4ZTEyZmNkZDAyZDczZDYxN2U2NzQ4OTc4OTA0NTkyM2FlMTBmYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzBjZTU3Y2RhZTc2NDFjN2FhODk4ZWEzMmJhYjYyMGI2M2YzNDFjOWM0ZTRmNmFlMjgwYzFiYTdmOWFiZTlhYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9389b71310273edfa38678eb986a8855",
+      "statement": "goatlassian's own log entries are recorded as LastTouched and do not count as activity.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L171-L171",
+          "version": "repo-lines-v1:sha256:2efa5de417470850a094d25c1addb21e3e58d918834045c31f831e5a56eb3018:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmVmYTVkZTQxNzQ3MDg1MGEwOTRkMjVjMWFkZGIyMWUzZTU4ZDkxODgzNDA0NWMzMWY4MzFlNWE1NmViMzAxOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmVmYTVkZTQxNzQ3MDg1MGEwOTRkMjVjMWFkZGIyMWUzZTU4ZDkxODgzNDA0NWMzMWY4MzFlNWE1NmViMzAxOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDljNGViMDAwYjY1NWIyNGU5NGQ2MGVkMDczZjA1NzRmZWMwZjkzYTg1YzY0ZmIzODQ3NjZkY2RmZTY3ZGM4ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDI5ODRkMzE4MTMxNDdkMTgwNTgyMDEzM2E3MmNiYzNmZWZlYjY0ZmU3ZWJiMjZhMGRkN2Q2ZjNkMzEwYjVlOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e72d2c1f77e3d276393a2d2b3a3214bd",
+      "statement": "A project's health is the most severe level among its flags, starting from ok.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L173-L178",
+          "version": "repo-lines-v1:sha256:1c7e3b567152e7ad702c7e45834dc58e20fbddf144f04521e13b7af976f2a77d:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTdlZTQ2MGE3MTI4OTgzZTdjNWFlZmIwYTNiMGI4ZjczYjIyMTg3MzFlZDIyZmUwYzc5MTQ2MDZjODZkYjA3MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRlZmM0OTQxOGQyNmRjZjEyOWIyMmE2YWEyMTEwOGNlZWMzNzY3N2EzMmQwOGU5ZDVmZWUzNWRkYTY2YmI5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDcyOWY1MmIzZDFjYjZjZDQyMzQ2NjIyOWYyYWY3ZGJiZTc1YTcxZDAwMzQ0MmI4OTlmMmU4OGRhZWEzOTNjNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmJmZmEzYTY5NGY0YzAzOGExNTRmMzBjNTA2OTExZDVkNmU3OWJjYTc5NjJlYTNiOTU1MWM4YjQwNjAyN2Y4MSJ9"
+        },
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L26-L36",
+          "version": "repo-lines-v1:sha256:d4a071e1c11cf125d86dcdf8a1b19c1ca14d30e9d5a05310a2e20bd7cf3f0989:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkOGI5M2E1NmUyYTFlY2JjNTU5Y2IwMmI2MGI5YWNiYjI0ZDM5M2ExZjQxNzFjYmFiNGY2ZTIxOGQzMWRhYjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA1NWQwZTFkYjhiYWUxMWQyZmFiNmM1NDkxYWVmZDk0ODg3OTFiZWViNjFmNjI4NjM3M2Y1NDgyYzNhZjIyMTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA3OTBjODA3NGI3ZTAyM2NlNWYyNjVhYjVjNzEwM2UzMTM0ZDM3MzM1ZTMyNjc0MzNlM2JhMTRjZjg0NjdmYjIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b245576629f7e19d44197f0cd9fd418a",
+      "statement": "Sessions pinned by a session component are owned by it regardless of directory.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L233-L246",
+          "version": "repo-lines-v1:sha256:0460a148616c2cc24a83b3b33aa44e064973a86138564a538483d03d656722e8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQxZmY4MDJmYjlhMDQ0OThjNDhiZTk2NGM1YjU4ODk0MmI2NDNkMzdiNGFiNjFjYTJmMjhmNTNjMWNhYTBjNmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3Y2RhODJkYTYwNjIzOGUwNWU2MjM5OTU2OWM1ZWUwMzk5MzQxOTY0OGFlNWQ0M2EyYmY4Y2Q2MzQ3ZjgyNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYzZDY5NzUxNDM5MWJjMzUzNDdkMTdkNmMwYTNhZDI5ODBlZTViOGEyOGQxZjE5MjEyNGEwNjZhNTM3ZWZiMjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE2YzM3MGUyYWEyYmVhYTIwNGU3YTU4NTg5MTdhZTE3NGZlYmQ5YWJlNzhmYWI3ZTkyOWUyYjZmZWNlZWE0ZGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_222276d379b619761b9f1fc30ea07770",
+      "statement": "Otherwise a session belongs to the sessions component with the longest directory containing it, optionally restricted by an agent attribute.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L247-L266",
+          "version": "repo-lines-v1:sha256:5e4a190a6ffb8f7802bf372a5920405da3d33c2073493b3219fbbef6014bce5f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyNzUyOTE3NzEzM2YyZGVkZGYwNzQ3MDI4MmJkZDg5MTA3ZjJjNGRlMmJkZTY1MjMzOTBhMmU2MWRkMGEwYjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI3NzZkNDc2NGM1YzNmODRjYzk4M2M2MDc5OWU1ZDhhODM1YWJjNjQyMDU5M2MyNjcyMzYwYzAzZTg0ZGZhOTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhlNWVlNDNlMzNmNmM3NjExYWMxYThmMTcwNWZhY2IzNjAyY2Y2MTRhYTgyNTY0Zjc1YmQxMGVlNzAzNGUxMmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_149f66c399fe75eeebbde05d77516921",
+      "statement": "Sessions owned by no component are reported as unassigned, with directories ordered by session count.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L182-L200",
+          "version": "repo-lines-v1:sha256:22e9d6db171da8c591f7d84ea6c07791770448d6e3a5d81b3d722fde4eae8e53:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3OTI0MWQzOGQwOWM4ZWQwNDc1NzgxNjQxMTFjNTNiYmI2ZTdiYjk2ZGU4ZTMwMmNjZjljZTlhZDY4YmI1MTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlYmI4MGQ4M2E2YmU1YzE2MzU5YWRhZDQ2MzNlODUxYWFjY2Q3MjA4MWJmZDE2NzA0ODgzMjc1ZDMzYjc3ODMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZiZmZhM2E2OTRmNGMwMzhhMTU0ZjMwYzUwNjkxMWQ1ZDZlNzliY2E3OTYyZWEzYjk1NTFjOGI0MDYwMjdmODEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZlODM5YmQ0Mzk1MjczZWI3M2VhOTYwZTJhMDY0ZjkxNTA3ZmQzNjExNzU5Zjk4NTA0NWYxOGYxN2RhNjhhZDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_baf20d71836f91a9f02bdfe100edfe4b",
+      "statement": "Kata issues with work.attention stuck or needs-human, and open issues past their deadline, become alert-level items.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L407-L419",
+          "version": "repo-lines-v1:sha256:dbe75feda1f3354d60d30941af0466a889919e6c7a34469641111179ca8c0aec:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxOTMyNDQwNDEzYThiOTM3M2FiZDllNmFmNjU2ZTg3ZmY5YWNlMmE5M2EwZmRhYTVjZTcyMWM4OWQ5NGU0NjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0ZWZjNDk0MThkMjZkY2YxMjliMjJhNmFhMjExMDhjZWVjMzc2NzdhMzJkMDhlOWQ1ZmVlMzVkZGE2NmJiOWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4MDkyNDRjZjZmNjUyYTlkN2E0ZWZhOTY3M2M0MWFlNDZjYjI0YjZmNTQxOTY0YWY4MTk5ZDI0YWVkZDUxOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVhZTZjZmI2NDU3NDU1ODc3YzIxMTMxNDczYWRmOTJkNjk4MzBmMWI4OGQwY2MxNGY4MGU1YWI5NzJiYzk1MTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ff6feba13f6615c140b22ff790e702e0",
+      "statement": "Closed issues count as recently closed when closed within the recent window.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L390-L396",
+          "version": "repo-lines-v1:sha256:2df953fedf80afb51bfc9a3688936fe72d487c501da72a11f83228992e0fb3d4:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzRmZmY3OTNmZDkzYzE3ZjAzZmM4OThmNjBiMmQ5NWE2NGY0OTE2YmIxMmE1OWJiNmE3YmFlYTdlMmMzNDYyOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTY4MDZmMTU1YzVhYzFhZTI3MjJjYTA2ZjJhYzljYWRjYjg4MWI5MTIzY2I2MjRhM2MxMDQ3NWI0NDQ5ZGMyZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDBiY2NkYWYyOWQ2MDc4ZmE1NjA2ZGY4ODA5NWExODVmNWQzZjMxNjIwZTViZTM4Zjg2YjY3OWFkZDdmZmEwZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODAzNGNiOTA0NTVjNjdlY2Q4YjFkNjczODUyNmQ4OTM0YTAzYjRlNjg4ZjYxN2MxYmIxZTNiNTExN2U5ZDU4ZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_069ab0ca399ca321a5167c44b28918b0",
+      "statement": "A date-only kata deadline counts as passed at the end of that day.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L442-L453",
+          "version": "repo-lines-v1:sha256:b35fe9d9f5637a5b54131557672ceb87fa534295255b9e198dffc1d1d06ff0aa:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhNDEyNDY2ZDA5MjZhYjVkMjY0Mzk2MTRhY2VmMGM3M2UwMGI2YjJiMDU2MWZlYThhN2Q4YWVlNDU2YTRhZGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwYjFmZTJmYmFjYTc0ZDEwOGJmZGUxYTgzOGIyYTBjOTE5Nzg0NTI1YTYwZmZlN2YxZGM0ZmY4NzdiNWZhM2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg2NTk5MjM4YWU2NTc2YjNjMGY3ODA1ZGRiZmQyYTZlMjhjMjNkMDlmYmI3MzJmODNmY2VlNDQzOWE0NDE1OGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_62f9aa393ee34892d492e7a88071571a",
+      "statement": "Wiki drift is the number of commits from the wiki's last-update git head to HEAD, or -1 when unknown.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L456-L461",
+          "version": "repo-lines-v1:sha256:1634294981ff584ee9c54331325e0587f501379dad5c3c902ba4f3e1e69104a7:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmEyODFmMjQ0YzRkOTU0ZmM0NjY5ZWM5YjlhYmViZDI1OGNhYTBkZjMxYzAxZTY2NzdmYzE3NTY5MmVlM2M5OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWU0YTU0Njc5ODE0MTlhYmJhMTIzMjdkODM0NDBmNGVmZmEyZmM4NDJjZmY0ZGFhZGY0NGFlM2VmY2M2ZWZjMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODk2MDBhNzk1NzU0ZGU1ZDFiNDdkMjIzMmVkMzcxOTk0YWE4ZTEwZjBlMzk2OTg0Y2QyNjY2NGUzZmEwNTA2NyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8ab6d8ccc27e197da237cef0e93229e3",
+      "statement": "A sessions component lists at most eight recent sessions as items.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L586-L596",
+          "version": "repo-lines-v1:sha256:aaf73aeb70a3ffd80a39263de93db02df0c647116c64a39ef58bb771e75e25e8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ5MjM3ZGVhM2FmNzFlNWE3N2ZkYTJhNzhkNjJlMzQ2YzcxMTY0YTMzYWM2Njg2MThkZGM3MjA2OTFkZjViN2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3Y2RhODJkYTYwNjIzOGUwNWU2MjM5OTU2OWM1ZWUwMzk5MzQxOTY0OGFlNWQ0M2EyYmY4Y2Q2MzQ3ZjgyNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiYmQ1MWY4MmZhZjg1NmYyNDlmNzM3NmM0YWMzYWNjZTlmNWQ3NWFjNzdhMDBjZTZlMWE2Y2QyNmY3YTk5OTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg0ODA5ZDFlYjQxNjU4MTdkNjljNDVlMDhhYjBiYjlhNTRhY2M1N2JjMTRmOTY1OTMxNGVhYWEzOGE4MWEzNzgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6907a268dfa9c10e36c579fa217e0178",
+      "statement": "Flags cover component problems, stuck, needs-human, overdue, stale active projects, activity on paused or finished projects within 72 hours, open issues on done or archived projects, wiki drift, dirty trees, and unpushed commits.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L632-L680",
+          "version": "repo-lines-v1:sha256:a03261b25b96f0b524414e34e377d8fd7caf35a1558dba1123502a5cd60bca84:eyJzZWxlY3RlZExpbmVDb3VudCI6NDksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg3MDU3M2U4ODc5YzFkMDg0ZTA4YzA4MTI3MGQzOWY1YTg5NTE2MmI0MGUyN2VlOWY2YTc5ODhlNzEwZjljOGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ2M2ZhMDhiN2E4NzkxOTg3NGM2M2FkMmJkYzgyYzJiMDZiNzdhYjRiN2I2NDQ2ODg3ODIwNDJlNzlmYTIzODciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU4YzEwZjFiMTZhMmI4M2U0Y2EzZjI1NGI2MTIzZDI2YWExMGM0N2YxZDNhMWVkNmEwZDg4NGYxMTFiZDU0ZGYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c114e3b757dae0131cba6adc69f8207c",
+      "statement": "Record stores each report's metrics, health, flag codes, and state as a snapshot.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L702-L721",
+          "version": "repo-lines-v1:sha256:9b93da30888d0eaeb4cd04cbfce1b707e4bf16ae805e9bbbdddc663d0a77bb1c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlMDJiNDUzMjJiM2ZhYWE5NGUxYWYxZTc1NTE2NmNlNDllMzkyM2RjZjExZjE3YmE3MjM0Y2RiZDAzOWIzNWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE1ZTc4MDIzNWI4NWUxNmI4NGM4NjQzZTNiYTc5ODNlMGQ5MzM4YmFiNmRmZjkyNmI5ZWJhYTdkMTgzYjU0NTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_889e1edee001df862918da09c65f1e83",
+      "statement": "Tests verify nested-repository and pinned-session ownership, kata matching by remote, flags, unassigned sessions, and snapshots against a fake world.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio_test.go",
+          "version": "repo-file-v1:sha256:27d1d195c4861b577aa35817fd45aaa2f74451b32422a6c385ff089055670447"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "owcli/ff31f70",
+    "at": "2026-10-02T20:22:46.823Z"
+  }
+}

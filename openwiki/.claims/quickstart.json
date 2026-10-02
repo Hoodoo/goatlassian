@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:a52e47b0c37cdde8bb675069046949c8383a12dd66aa777bebd77675d1fe589f",
+  "claims": [
+    {
+      "id": "claim_8cbdf4c3bf534143ffb8ef28f8211d49",
+      "statement": "goatlassian groups git repositories, kata trackers, owcli wikis and workspaces, bossman sessions, and links into projects, storing only the grouping, lifecycle, log, and snapshots.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/cli.go#L43-L58",
+          "version": "repo-lines-v1:sha256:0a87d466f675a5335f461f2fa15befe9157d9fd1a9917a90c70d75909a5b3846:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdmYzhiYjZjM2EzYTdiMjE1NGNhNmVkMGY4MTIzYTYxMTgxZmFlYjRhNTViNWZlODAwNTAwZGI4YTgzNjIzYTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU0NmQ2ZTliNDUwYTJkYjFhMWM5ZmQxYTBkN2M2NmUwOGMxMmU2MjQ1N2Y2NGMyMGI5ZGUwZTgyNzM5YTk5OTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFiZjJjZjU1NTdmNDA3YmRkMWQwZGQyMDRlZGQyMmM3MGI4YTNiNzM3YmE2MmIxMDdmZTEyODRjMjQ0ZjI2YmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwZjkxNmEzNjgyYmI5YWQ0NDQ1ZWQ1MjY5ZTY5NmEwMWJkYjY3NzczZjNkYWFjZWU0MTQ4ZjNmODJmODA4ZmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8919c939744302e54c02e3187abeb17f",
+      "statement": "make install builds bin/goatlassian and installs it to ~/.local/bin.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L3-L22",
+          "version": "repo-lines-v1:sha256:d5ebfd59228210aadb571842458f857b95f6f2a27045dc9072c3308c63f8ba37:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5OGMxNzJmOTU2MzJjYmIyMzQ3NDY2OWVjOTM3ZTA3OWQwZGYzYzJmM2FhZWY4YTg0Mzc2N2U2M2Q4ZTVmNjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlNzM3NjllZmQ0NjBjZDM3MzYzMjZmZmZjNzZkZGZjZjdkM2I0YmM0ZmM0MDhiYTg4NDdkYjYzZjA4YzQwZTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjViYWNjMGEwZjhhNGRlODE5YWY1M2VkMDdiNmQ3ZTlkMGI1YTEwMTBkN2QyZGYwMWNlYTRiYjNlYjFmNGEwMTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_64b329a9acd97d532911f31e416c2ea3",
+      "statement": "The module targets Go 1.22.",
+      "evidence": [
+        {
+          "resource": "repo://go.mod#L3-L3",
+          "version": "repo-lines-v1:sha256:98cecbd952f53113af50914852c14a30934f0cbf08e10cd4a02b8c5a786f7f22:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOThjZWNiZDk1MmY1MzExM2FmNTA5MTQ4NTJjMTRhMzA5MzRmMGNiZjA4ZTEwY2Q0YTAyYjhjNWE3ODZmN2YyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOThjZWNiZDk1MmY1MzExM2FmNTA5MTQ4NTJjMTRhMzA5MzRmMGNiZjA4ZTEwY2Q0YTAyYjhjNWE3ODZmN2YyMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmNkZGI5ZWQ4OTdhMDNhM2VkYzMyYWMwNzFkZmNkYTA0ZmM5MTQ4NmYwMWIwYzRmNTkzNTQ5YjgyYjU4YTNlYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTUzNjQzYzI3MjJlMzg2OTQzM2MxMzMxZGVmNzBhYTVmZWM0OWNiYWZjOTllM2FjN2FhMmZkOWFmOGNmODIwYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b44fc3b5248f510e28e1d98f0e3217bd",
+      "statement": "The web UI listens on 127.0.0.1:7799 by default.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/env.go#L75-L75",
+          "version": "repo-lines-v1:sha256:5eb96059388ed11e18d85fdd05a0f2b293c146275f1b1c7e3fff618fcfe512b6:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWViOTYwNTkzODhlZDExZTE4ZDg1ZmRkMDVhMGYyYjI5M2MxNDYyNzVmMWIxYzdlM2ZmZjYxOGZjZmU1MTJiNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWViOTYwNTkzODhlZDExZTE4ZDg1ZmRkMDVhMGYyYjI5M2MxNDYyNzVmMWIxYzdlM2ZmZjYxOGZjZmU1MTJiNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2Q1ZTFhMGQxNmM0MmRmODI4ZGFmMDk5YTIyNWM2MzE3NDBlOTEyN2JjY2Q1YjRmYTQ3ZTlhNTI3MjgyYjMwOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDBhMWJiYTliZDYwNWI4OWM3NTg0M2M1MDEyNDM1Yjc3ZDEzM2Q4ZThjNTA3MTRhZGFhNmM3NzNkYmQxZmFjOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_110800cdf61fa6ce917f3962f716c8cd",
+      "statement": "Tests run against a fake runner instead of the real tools.",
+      "evidence": [
+        {
+          "resource": "repo://internal/testutil/fake.go#L1-L13",
+          "version": "repo-lines-v1:sha256:2a25f58cb4e7670a77204106226657c961bae42f1b2308e5940829e74a69c601:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEyYjQzZWEyMmI2ZTNmNmRlOWFjMzM0Mzc4YmI5ZjkxYmE4MzcyNTBkMWM3YzM5ODQ5ZjUyZjA0ODA0N2M2NWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc4YTA1MWE2NzQxY2JhMjZkY2M3MjI2ZTYzMTFiNGI2ZmY5ZjE5OTYzOTBkZDQwYTY5YzQwMWE0ZDJhMmNiMmEifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "owcli/ff31f70",
+    "at": "2026-10-02T20:25:08.863Z"
+  }
+}

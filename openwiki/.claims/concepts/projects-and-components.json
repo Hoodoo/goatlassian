@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:c1007d4ad28dcbf388cf5505da4d01789b609f80914af68375856c7d1c0b4947",
+  "claims": [
+    {
+      "id": "claim_e5989110b44a183105565cd97dadcd7d",
+      "statement": "Lifecycle states are active, paused, done, and archived.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L22-L31",
+          "version": "repo-lines-v1:sha256:95b5fb79d28a6ba6cac72d4d697829b0aa48ba8b26fb6bf182e356ecd42d824d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhZTlkMjdhYzJmNzE1MThhZWE2ZWFkOTBhOTcwOTg0N2JlMzc2MDk4NzllMDM0ZjcyMGU2NDZkMTU2MWJmODEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIxMmE4YzBjYjQ3MGE4N2QwOTUwOTY0N2Y3NGRmM2I3MGQwZmIyOTA0ZGUwZWJlZmViMzAxNjkwYzk0NzNjZjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJiODlkZDlkODQzOGU2ZWU3OWU0YWVlNzU1YTEyZjU3ZGMzZjZkNmUyZGIxNDgxYzQ1MjFiMzFjNjA5MDI5YjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJmOGVhYTNlYTRiYTA4MDE4NGM2MDQ3ZWVhMTg1Mzc2NGU5NmZkMjBmMzVhYzljZGZlOTAzNjNlYzU5NDFkMGQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_511141e8ee7f2d8a10c7457b3a787d37",
+      "statement": "Slugs must start with a lower-case letter or digit and contain only lower-case letters, digits, dot, underscore, and hyphen.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L204-L204",
+          "version": "repo-lines-v1:sha256:b5c4c78e805ee158b59ecd557df159c37376dfeb21d1fbda85fdf2c3edbe64bd:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjVjNGM3OGU4MDVlZTE1OGI1OWVjZDU1N2RmMTU5YzM3Mzc2ZGZlYjIxZDFmYmRhODVmZGYyYzNlZGJlNjRiZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjVjNGM3OGU4MDVlZTE1OGI1OWVjZDU1N2RmMTU5YzM3Mzc2ZGZlYjIxZDFmYmRhODVmZGYyYzNlZGJlNjRiZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWZjNGVlZWI5YzljYjNiYTJmNWIxMDZkNGEyNDAxOWNmMTUzMDc4NWVhNTU1MzcwZGUxMmI0YTIxZjEyZmNkNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjRlMmFkNWZhN2EzNGI2NjY4YmMxODI3ZWRmM2FmNTZkMDZjYWMzNzVjN2EwMGRlZDhlNTIwNjk5YzBmMzZiYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f5d9dad3e5114695f1e8a12a88a3ab23",
+      "statement": "Tags are lower-cased, stripped of a leading #, deduplicated, and sorted.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L229-L241",
+          "version": "repo-lines-v1:sha256:e34f9a7ede6c251396dee5631f98a9205701559ba057e09e191e7b4b1b8cbb3e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA0YTE4NzM2M2EwODc3YmEwZTQwNzA3OTU3ZmY5Y2Q2ZTUxNDc5YzlmNTJjNWRkNTI0YWY5MGFiOWZjNDJjZGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA0YWViOTA2MjMzMDUzNzBhNDJjNjhkNmMzNGQ1Nzk5NDQxMWU2YjM4OTY4YmRlMmI3MDQ1NzQ0ZWM0YzRjMWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk5ZDdiMjEzZTBkODkwZjM0NGFmM2FhNzk2YjgxYTljYTE2NWFmZGZjZjQ2M2VjMTgxNjJmODZkM2E1NDVjMWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_951a9fb5f175e20538c89c37bc135b1d",
+      "statement": "Component kinds are free text; the known kinds with adapters are git, kata, owcli-wiki, owcli-workspace, sessions, session, and link.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L42-L57",
+          "version": "repo-lines-v1:sha256:35721fb052f8eb8b4b24fe7c4c31f5736a09fcb22b3c369aa1a80cf16ef4d20f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmMzQ1MDI1N2E5MjA5YWEwZWI1ZDk0OTdmZWM0MDIxMzU0NDU2Zjc4YzE0NjE1MmQ3ZmQ5NTk2NDE3NzBlYmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYzYjQ3NTMwNmY2ODFjNDI5NjE2NzMwZTg0ZGRiYmY3M2M5ODhmMzJmZjA4ZjhhYTk4ODVhZjA2YWNhODEwOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFjMzc1MTkyMmYwMjEwYThlNzA1NzBiNjIxY2NhMzc0NjhkZjE2ODFhYjdkMjBjODFlYmM5MDM5MmM3MDQwMjQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8360a54e891e5661e40ba41c31972800",
+      "statement": "A component is unique per project, kind, and ref, and attaching an existing one updates its label and attributes.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L143-L143",
+          "version": "repo-lines-v1:sha256:aebaf0921020c7e2b97e989f980c243f9295d1a647da8c6151f412aafa4aad7c:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWViYWYwOTIxMDIwYzdlMmI5N2U5ODlmOTgwYzI0M2Y5Mjk1ZDFhNjQ3ZGE4YzYxNTFmNDEyYWFmYTRhYWQ3YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWViYWYwOTIxMDIwYzdlMmI5N2U5ODlmOTgwYzI0M2Y5Mjk1ZDFhNjQ3ZGE4YzYxNTFmNDEyYWFmYTRhYWQ3YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzg1Y2QxZjA1ZTgyNzA3ZGQ1NGIxY2M3Y2I0ODQ3N2RiMDUxNzdhODc1OWUwZDdhMTRmYmIzNTRlMDAxMTE2ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2U0ZjMwZWU4MWZmMGUxMmIwN2Y1NDkzNTMwZTNkMDNhNGVmM2E3MDQ3ODU1ZTZjMGUxODNkMWM4MjBmYjBjMCJ9"
+        },
+        {
+          "resource": "repo://internal/store/store.go#L595-L598",
+          "version": "repo-lines-v1:sha256:bfc5861dd2f0cd9375480ce6b52b3f4e1d3d9d5462f97cfc4898b9cda5261341:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDczYTA3MjMxZjIxMDRhM2JiYTBiMDlhODQzY2IwMmViN2I3OWYzMzFhMTM5MGI2ZDQyODY3NGE5MjJhMGYwYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDExM2QzMDM2ZTU5MzQxMGVmNzAyMTYzNzhhMzRhZTcwNzg0OTFhNTM5NGRmODZkNjhlNTQzZjQ4ODdkNjBjZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzc1MGUwYjA1OTZiMmJhNjJmMTIxMzM0MWU1M2VjYWQ2MjNkOTE0ZDNhODYyZTEyOTljMDcxZGJjMjhlNDI2MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzc1MGUwYjA1OTZiMmJhNjJmMTIxMzM0MWU1M2VjYWQ2MjNkOTE0ZDNhODYyZTEyOTljMDcxZGJjMjhlNDI2MiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_26c0afa962a3e468f360b14ea49d0b7b",
+      "statement": "Every child table references projects with ON DELETE CASCADE, so deleting a project removes its tags, components, events, and snapshots.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L130-L160",
+          "version": "repo-lines-v1:sha256:bdca00f16b6feedf18d80e84f50e8987793ac41788430e24d21c976468b565c0:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdmNmI0MWQ1OGFhOTY0OWM3MDA0ZDA0MzM2NjYzN2FlNGQ2ZDFlZTk0ZmVkZmVjYWVjZTMzZDhhZTBkZjE5ZWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5OTY3ZWMxZWQzODM2ZjhlYjE3YWZmMTcyYjViZmVmN2RlNjA0ODVhNDM5YzZjYTExYzU5MWUxNzU1NzM5YWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ3MjgzYTQ5YTVhZDM0NWM5ZjlkNDkyZjY4ZmY0OTk3MmExZWYwNGQ2ZjVkNmYxM2E3ZDk4ODRjZTA3NGIxZTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwMTRlZjI0YmE4NzEwZDY2NjBmZDczMjc3N2Q0ZDZjOTNkZTA3Njc3MTYzZjUxMTg2NjZkYzgwMmNhOGUxZjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f5554a44ac08a08c5e4a6eea928a6f5b",
+      "statement": "Event actors come from GOATLASSIAN_ACTOR, then KATA_AUTHOR, then USER.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L186-L194",
+          "version": "repo-lines-v1:sha256:8b6fe75f1854fc95e1e859210696118c716bb32673f3ebcf7c47570b27829fd5:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmY4Nzg4MjlkYjFmNmQ5OTJkZGVhZWQ0OGQwNWEwMWVjNzU4ZTgwNTNmOGIwNzZkNzExNWY1NDE3YzViZWFhNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjUwYzE3OTc0MDlhZmFkOTZiZjY5ZDQ0NjRjNmQ2ZGMyMTZjYWY0NmM0Yjk3YTc1ODM0NjIwOWQyNTVkNzgxMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmY0ZDM3MzJjOTc1MmM1NmEwNDgyYzU0ZDcyNzUwNjU3MjQ3Yzc1YjU3MjIwNGYwZmM1YzIxMWQyY2JjMzcxZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_df18875133e2ea76e3f8f0ec1f48432c",
+      "statement": "SetState rejects unknown states and logs the transition with an optional reason.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L467-L498",
+          "version": "repo-lines-v1:sha256:80d18b46b980325cf963dd8c9eea73f1f98c5380fa9c7edc7bc09c923b17e1a0:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwNTM3YzljYjI2NDljOGIwNGVkZjMyMDk5ODQ5ZGYyODkzYTgzNjg5ZDM2MzE2ODlmYzMzNTBjOGI2NDk3ODgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUwYzE5YmUxODQyZGJhZWFiMjM4NTJkZDg5MGZhY2E0OWM2MzRiZDFiZDVjNDI1OWRkNmZhYTZhNGUwMmVmZTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUzNjgwNGViZTkyYjI1YWExMDExNmM5NTY0NDg5Y2VlYTI2ZGUwNzkxMjY3YmU0YzMwMGY1MzZlMjVkYzg5Y2QifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ca853bae37afc4430fe51b0ac495c200",
+      "statement": "Missing projects and components are reported with errors wrapping ErrNotFound.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L310-L316",
+          "version": "repo-lines-v1:sha256:b0e71e40c67547254a487df8cf4c3b1fa342ec08f5e588f7442575c338e34bd0:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTQ2YzhmMjgyNTI0Mzk2YTk3YjI4YTMzM2IwYWM0OGRmOWJjY2I1M2VjYzQ0NzQ4MWVlNDI0ODBkZjJlMzM1MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDhjMDM4NzlhN2I4MWY0NDc5M2ZmZGU1OTA4YTM0NWY2MTQ3NjExYjQ5ODA0NjA1YzkzY2UxNTA0NzdiOGExZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmEyNTQ4YmUzOGI0OGM0ODYwYTA3ODkzYTY1MWIyYWMyOThjY2NkY2EzNTM0M2I5MDNjMzJjNGVhMzViZmM3MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmUwOTJkMWY1M2M0ZDI3NDIxMTA2YzU5M2FlOGUwYjlhNDBkODBlM2VjNDYyNzM2OGY3MmViYmU3N2FjMjQ4ZSJ9"
+        },
+        {
+          "resource": "repo://internal/store/store.go#L60-L60",
+          "version": "repo-lines-v1:sha256:90cf6b95d17efec51d50cb5ae7eddc9b893e24e1d49e5cbf9fc0c457ed08dc2d:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTBjZjZiOTVkMTdlZmVjNTFkNTBjYjVhZTdlZGRjOWI4OTNlMjRlMWQ0OWU1Y2JmOWZjMGM0NTdlZDA4ZGMyZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTBjZjZiOTVkMTdlZmVjNTFkNTBjYjVhZTdlZGRjOWI4OTNlMjRlMWQ0OWU1Y2JmOWZjMGM0NTdlZDA4ZGMyZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzVjYzBiOWFkNjQyYzZkMGZiNjZmMzZiMGI3NWYzZGFmNGEzOGU1ZWFhZDBkNzFmMzM0MDNmYzRjMTYxZWJjZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjEzNTc5OTQwYzY1M2U2NGE5MjVmYWI4ZGI5OWNiNDM1MDYwNjJjYzFhYjcyY2M5MGY0ZjNjNmE2ZjA3NTU5NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8e16a824bfb72a6379a02a8bfdaec121",
+      "statement": "LastEvents returns each project's latest event time.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L557-L558",
+          "version": "repo-lines-v1:sha256:d82757931cf10165992a8f79d42b62a622d5ab28ee0a8c546a904a98bc2cec35:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjI1NmI1NWEwNmJiMzI5ZjYzOTcxMjExNzIyZmQwMzJjN2JhZmNmZWE5YjJhNzUzOTFkNWMyMmUzNDUzNTRmZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTMzZWNlMDNiZDE0MGJlYTViMGQ4MWVlYTBlNDg3MTFjNzg4ZGViMmFmZjVkMmQ3N2YzNThjMzkwNTFlM2Y1MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDBlY2FhYzNhNWE3NjM4ODNmNTFhZjVjM2FkMjkyZWM0MDUyNTM1NmVmMjk4MThlMjIxMTE4YWQzNGUxOTQ4YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzc1MGUwYjA1OTZiMmJhNjJmMTIxMzM0MWU1M2VjYWQ2MjNkOTE0ZDNhODYyZTEyOTljMDcxZGJjMjhlNDI2MiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c0aa404876517bcd98453d0818e39fae",
+      "statement": "Snapshots are read oldest first since a given time.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L704-L706",
+          "version": "repo-lines-v1:sha256:2a9744cd514ce844e4319e6f14bdd3674695e957d85cfcfbafbd892042f8ad32:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzBiYTg2MjYxZGJlOTYxNDA5NzAyOTVhNjg3ZjZmNzkzYmE3NTBhZTg2ZDA1OGVmZmI2MDZhNzc0YmQ0ZGIwMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmUxYjQ5ZGM3MmY2MzI2M2RjNGY4MWRkMjFkZjNlZGJmZTY1ZTk2NWU3YWYyOGM0Mzg4YWYyNzQ1OGVlNjBjZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGNhMzA5MGQ5MWQzOTAwZmI2Y2FjZGY0MjQ0NDk0MjUwYzMwZWRmOGJkYjUzOThhNTk2NzY2N2FhMDZmZjE1MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmNhYzYzMWU0MWZkN2E0MjRjYzE4NmRlZGJlNDY3NmQxYTYwM2Y0ZmZkYjI0MGU1N2I4MDE4ODM0ZGYyYjRiYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_fa56b23db5b566c7f7e79dbc896eb3e1",
+      "statement": "Store tests cover project lifecycle, edits, events, delete, component upsert, unknown kinds, detach, and Slugify.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store_test.go",
+          "version": "repo-file-v1:sha256:d7dd4bd90aea007410f7cc7d6722f497f34f970d6e645037ffb12c1fc771c310"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "owcli/ff31f70",
+    "at": "2026-10-02T20:23:19.592Z"
+  }
+}

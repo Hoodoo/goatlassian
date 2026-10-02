@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:558fdc4488e194210e995939d86ad7e6e00c9046737a2ff83262cf65f86afee8",
+  "claims": [
+    {
+      "id": "claim_f38c4e50ec1266058bad4f3288f32933",
+      "statement": "goatlassian serve listens on 127.0.0.1:7799 by default and records a snapshot every 6 hours unless --snapshot-every changes it.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/env.go#L75-L78",
+          "version": "repo-lines-v1:sha256:5d4bbd6caaf307245009a9e345c90fb8dc1f4d1317fa1c92a4094d4e86414d49:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWViOTYwNTkzODhlZDExZTE4ZDg1ZmRkMDVhMGYyYjI5M2MxNDYyNzVmMWIxYzdlM2ZmZjYxOGZjZmU1MTJiNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDViNDIxOTAxZmRkMDQyNjM5MTA3MjZjMWNjYjM1NzViOTczZjcyYzlhYzc4YTU3ZDRlZDQ4NGU5NmFhOGQyNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2Q1ZTFhMGQxNmM0MmRmODI4ZGFmMDk5YTIyNWM2MzE3NDBlOTEyN2JjY2Q1YjRmYTQ3ZTlhNTI3MjgyYjMwOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjYzNTMwMzQzZTRjNDRiNDMyM2E1ZTU2MmQzM2RlZmNkOGMyN2RhY2JmOGM3ZWQxZTdiMjgyNDQxYmI3YWExNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_17791f37768d30511afddf0995b2f01f",
+      "statement": "The client is embedded into the binary from internal/web/static.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/web.go#L29-L30",
+          "version": "repo-lines-v1:sha256:00a3998a9b482ef3c7ea8a955b06022c74d96edbf1a35de0f6a98fb8ef1b6ff4:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGIyODAxMjg3Y2FhMGVjOTIyY2VjMTIxZTEwNDFhYjA0NDY1YWU5YzJmYjM4OGI3MDZiYjNjNjBkMDdjMzllMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWIzMWNiZDNmNWQzODBhNWZjODUwNWRjZmMwMTRiYTBkZmM0YTI3ZTFhZmM2MGRmMDJjOTMyNjQyZGU0YTMwYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjlhNjFkMzZkYTc3NmNjYzdhY2RmOTMxY2JmMWJmYTgzOTZlMmNkNmIzOTZjMTFiZjRlYThiNWE5ZWIzMjFhNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjk1ZDA2OTEyMTE0M2MwNzUzMDRhODRmYjEwMjQ0ODVjMjA4YzE0YzY4ZjdkOGE5ZTcyNWI0ZGNlNTQwM2Q0MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_31bf6507773c4d29e5e12a6d75c369c6",
+      "statement": "The API exposes routes for meta, portfolio, project CRUD, state, notes, components, discover, adopt, and services.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/web.go#L58-L71",
+          "version": "repo-lines-v1:sha256:13c4d6e7e90b72698f68b5f8ea4ab6aae4a9dbf753de30c47ef23e781cf9e06f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkYmQyOGZlOWZmNWM1NTE4Y2I4ZjI3MTg1MmJjN2YwNDNiNzk0YzQxMzdmOGY4NDQwMjNlZWVhODFkNGIyMWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzMDdiNGNiZmM5MmNiZGM2YzkwZGM0ODRjNGE4ZDZlNjJlODgwZWM1NjhiOTY1NzdlNGRmNWM1MzA5NzM2MWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRlNDE4NTZlMTkzNDk3YmU0MjU2NWI4YzcyNGYxN2YyNmZiZDk1ZmZjNGE1Y2Q0YzRmM2U1YzRlNDlhZWFlMjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE4N2MwMDUyMWIwMzg2NzkxYTcyNzViMWU1N2RmYzhlNWM4OWViZjkxMTRkOTQyOThhYWU5ZGRlNzBiZjcwYjAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8461ff00aacfab7db57c62290b7d01a2",
+      "statement": "Requests whose Host is not localhost, a loopback IP, or the listen host are refused with 403.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/web.go#L77-L81",
+          "version": "repo-lines-v1:sha256:e378452c76a4e2627c1dca2c8af3757837baa40c1e4b2bdd654ba10ec4cb1a31:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTFhNzA2NDE0MTUwYThjYTg4N2I4N2I3MzAzOTM4OWMwNzFhOGRlMzFiNjU1MDI2NGEwYWQ4NDRmYjE3MTlmZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdjZGE4MmRhNjA2MjM4ZTA1ZTYyMzk5NTY5YzVlZTAzOTkzNDE5NjQ4YWU1ZDQzYTJiZjhjZDYzNDdmODI2MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWU5YWM0YzhjMzM4ZDI1YzY3NTUwMTM3ZDI3ODYzZGUwMTY3MGRmYWQ2ZjNjNmNhZDJkMDcyZDc2YTVlNWU1ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTg1YjFiYjhhN2Q1Y2RjMDFmOTU0YjViMTkyMjhhZjgwY2M0ZDUxNzMwMGU0MjU0MjcwMzhlMWZjMTcwY2FjMCJ9"
+        },
+        {
+          "resource": "repo://internal/web/web.go#L91-L102",
+          "version": "repo-lines-v1:sha256:6660974d9a069d1e64831b6299fa1718170c28056c8cc43577d002950782b84c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRiY2I4MzQ2YzI1MzkwYjA0ZDQxNWY0NWZkZmJiOWNjM2MzMDMwZWU3Y2Q3OWZiNjQ4NWYzZTBlNmZmZDYwYTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVjYjkzOWI2MTYyNWY4M2MxODc4OGRiNDhiM2RhY2FiN2VlYjE2MTA4Y2IxMmFjOGJhNzI0OTU4MGIwNDJkNjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVmODkyYTA3ZmM0N2M2ZmJlM2ZkOGQ2ZjNiMGNmMmQxNmFlZGMzZWMyZWIzNTI2ZWExMjU5YTlkZDRjOWQ0YmIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_65a72c848ad6ea9f39c232947e21045b",
+      "statement": "State-changing requests must be sent as application/json or are refused with 415.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/web.go#L82-L87",
+          "version": "repo-lines-v1:sha256:fd0e506635b125390912c6166715cb0a762ce724afcb7817aa41ca9a28b1c958:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWFiZThlYjA5NDM3MDExMzMwNDllZTJkOTY1MWYxODcxZGQ1NmI2OWIwYmE4NjUwN2MxZWUzM2M3ZDM4OGE5ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdjZGE4MmRhNjA2MjM4ZTA1ZTYyMzk5NTY5YzVlZTAzOTkzNDE5NjQ4YWU1ZDQzYTJiZjhjZDYzNDdmODI2MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWVlZmI2NWQwZGQ1YmFhMTEyMjMxMjg3OGI2ODk2OGRiYjMwNWNlYTMyODRhMjAwMWExOTRjMTRhMjUwNDhmZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWNiOTM5YjYxNjI1ZjgzYzE4Nzg4ZGI0OGIzZGFjYWI3ZWViMTYxMDhjYjEyYWM4YmE3MjQ5NTgwYjA0MmQ2MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ea60b0a35043b7caad2cf571346e3d3a",
+      "statement": "The server caches the collected World for 20 seconds and re-collects when asked for a fresh one.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/web.go#L106-L116",
+          "version": "repo-lines-v1:sha256:9023f21ecf4fa7a8f2c47422e4df5888f03261a450213155c29a25c6c07b0c8e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhNTM1MjEwMTFlMDUxMmMwMzQ5ZTQwZjQ3OTU0NTczYWViN2M1ZGJmOGQ1NGUyOWY4OWIzYmY1MjY5ZDdjYzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVmODkyYTA3ZmM0N2M2ZmJlM2ZkOGQ2ZjNiMGNmMmQxNmFlZGMzZWMyZWIzNTI2ZWExMjU5YTlkZDRjOWQ0YmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1NWVkZGQ4NWNmNTFhYWE3MTkxZWFiNjExMTZjMWYzYWEzYzUyOTg1ZTRhOWRlMzkzMTAxNmFjNTg4MzMzZTUifQ"
+        },
+        {
+          "resource": "repo://internal/web/web.go#L33-L33",
+          "version": "repo-lines-v1:sha256:c91dc5202a4f82052ea25b82eaab16a6655c25e593a59f43f9dd6e0f829e8d58:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzkxZGM1MjAyYTRmODIwNTJlYTI1YjgyZWFhYjE2YTY2NTVjMjVlNTkzYTU5ZjQzZjlkZDZlMGY4MjllOGQ1OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzkxZGM1MjAyYTRmODIwNTJlYTI1YjgyZWFhYjE2YTY2NTVjMjVlNTkzYTU5ZjQzZjlkZDZlMGY4MjllOGQ1OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmZkNTU0NjZiMjYyMGQ5ZTU4YjRmOTlhZDRjNjczYTI0NjJmNjFjY2Q5MjQzM2QyOTRiOWRiNTE3OWZlYTI1OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDE3ODc0NDAyZmQyODk3NTMyNzdjYTViNjViYmFjOGVkZjRlZDRlZWE5ZTgyNmM5MzJlYjE1ZGQ0Yjk2OTFkZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f06de535b37898a821c551ad1c850df7",
+      "statement": "SnapshotLoop records a snapshot at start when the last one is older than the interval, then on every tick.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/web.go#L120-L136",
+          "version": "repo-lines-v1:sha256:1e459e7ae43c2b2fbd5ae42247997ad8ed1a711b59a85b88f025428990cec813:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU0NzUzZDg2NDg1YWUxNDU0NDQ1ZWFkZmIxYWMyNjc0ODk1MzY3M2VmOTc0MTVjYWFmMmEwYzk2NTIxNDZhMjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM1NWVkZGQ4NWNmNTFhYWE3MTkxZWFiNjExMTZjMWYzYWEzYzUyOTg1ZTRhOWRlMzkzMTAxNmFjNTg4MzMzZTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE1NDg3OGEwMzUyYjBlYjRjZmJkZWI4NDM1ZjZjMjNmNjlkNTYwMzYwNjVkOTZkNWM0ZGM4MThmNTQxOTc3MDkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_393318bf521957fc75242d3c04f27ea0",
+      "statement": "writeErr maps not-found errors to 404 and known validation messages to 400.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/web.go#L158-L175",
+          "version": "repo-lines-v1:sha256:d57a80046141cef9db180fca15b99308831b6e6994859091eff2f8468d8fdc9b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2NGZkZGM3OWZiMGM5NTMwNTNkOTlhOTdmMjU2ZGZlZDJlYjE5ZTJlZmNkOWRkNmQ3YTYzNjZkZmY1ZDY1MTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyOWFiMGNlODkxMDA5MTgxOTk4ZDZiOGQ4ZmQ4MjBmYTNlNjQ4YWYyYWUyY2Y3NzA2ZDgyMDY4Nzc2NGRjNTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM3NjY5ZWY1N2RhMmNlMDgzMGFiYTU0YzkxMmViMzVmYzZmN2FiMTM5N2Y4ZWE3NGRlNGQ0MGYxNjNkY2QzN2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVhMTJiNmNiMWJmOGI4MzU0M2MwZTVlZDIxMjNmYTgyZmFkODM1MTIzOGYwZDAzMDcyNTczMDI2NTQyOTVkNjIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ad2a5bd085d70f5e6d85f2743d634f39",
+      "statement": "Request bodies are limited to 1 MiB.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/web.go#L179-L179",
+          "version": "repo-lines-v1:sha256:d06d274f3b2fe26191f55aa2bc6764a1d4c22745cd84efbed347e5df3e58e2fb:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDA2ZDI3NGYzYjJmZTI2MTkxZjU1YWEyYmM2NzY0YTFkNGMyMjc0NWNkODRlZmJlZDM0N2U1ZGYzZTU4ZTJmYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDA2ZDI3NGYzYjJmZTI2MTkxZjU1YWEyYmM2NzY0YTFkNGMyMjc0NWNkODRlZmJlZDM0N2U1ZGYzZTU4ZTJmYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWExMmI2Y2IxYmY4YjgzNTQzYzBlNWVkMjEyM2ZhODJmYWQ4MzUxMjM4ZjBkMDMwNzI1NzMwMjY1NDI5NWQ2MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTMxOTIxZDc1Nzg1NjYwNGVmMzBiZTU3OGIzZWYwMzkzMmM3OWEzZDg0OTI5ZDlmZjc2NmM5NWIzYmU0YzY3ZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c2e7c1ca8f11ff84cf0d3178da7b3eea",
+      "statement": "The client builds DOM with an h() helper that appends text nodes rather than using innerHTML.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/static/app.js#L9-L24",
+          "version": "repo-lines-v1:sha256:d375efee14b251d534bdec107366d56746f35d62e4d61bdc0ca43f05ce0fada0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkODVmZTg3OTQ3MWVjZmVhMDAzM2VmMDJjZmRlZTE1NWIyOGZjYTU3Y2E2MjIzZGQ3M2Q0Njg5Y2FiZTczNGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhiYjA3MzYzMDIwNTcxOTgwY2E5NDgyZjg2NzFjOTc3YjgzMGQ1N2UyOGE0OGUwZTI5ZTc5ZTM4MWVmYTBhOWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVhYTRmZGUxNWZmNDE1OGQ5Njc1NDZmZjg3NzY1ZTMwYWNkODMzYmFiYjcxOWYyM2QxZGQ1ZDNkMDQxNjI5ZTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7bd81944bfccb99126cfa3bec0bcd685",
+      "statement": "The client routes #/p/<slug> to the project page, #/discover to discovery, and everything else to the portfolio.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/static/app.js#L154-L166",
+          "version": "repo-lines-v1:sha256:9e34e5d2108b7d26d241a1a65a9a33e1fa83cc48854e3845a6e841bef8365d51:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBiY2I2M2ZhZmFmNzhlYmE4Y2Q5OWI1ZDZhZDM5NTgxOTEzZWIwMjIyNWQ3ZDhiOTZiYTA5Yzc2NTVlOGFlNjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1MTg4NmI3NjY3ZjA3ZWE1ZTQ0YjA5NjFhYWYzNjEzN2JlMWQ5ZDBmY2I1MDYwMmQ4NWIxZGQxN2VjMTQ2M2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkzZmY5YjVhZjhkMTMwZWY2ZmE4Zjc0OWY5MTMwNWEyNTViM2M0NThmNzQ4ZGExZGQ5YWJlMGExMTExNDc4NTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcxYzdkYWIwMTRlMTNjMDRhZWI3ZWFkNjcxYzY3ODljMmI1YWU3ZjRjNTg4MTFhYmVmY2IwNjlkMTI4ODc2NGQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b071726fa359123fe0c152884833de2c",
+      "statement": "When normalization rejects an attach, the client offers to attach the component as given.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/static/app.js#L449-L449",
+          "version": "repo-lines-v1:sha256:c36f2f308d45d050f87791376bbd28b238b94489c120e63ea5b25841685e570e:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzM2ZjJmMzA4ZDQ1ZDA1MGY4Nzc5MTM3NmJiZDI4YjIzOGI5NDQ4OWMxMjBlNjNlYTViMjU4NDE2ODVlNTcwZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzM2ZjJmMzA4ZDQ1ZDA1MGY4Nzc5MTM3NmJiZDI4YjIzOGI5NDQ4OWMxMjBlNjNlYTViMjU4NDE2ODVlNTcwZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmZhYjM0Mjk1NGQ2NjJlNDRiYjUzZjZhODM5OWMzYTU2YzM2NjE5NmM1M2Y3YWVkZGY2ODIxMDE1YTY0OTNiYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTM4MmU0OGE4MDEyZmRhMmQzOGY1ZGIwN2UzNzU4OGZlZTQ4NTFjYTg2OTEzZWY4ODY4ZjFiOGE4NDQ3ZGEyYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_81e6988e3b4da2dd0db8f721c237872a",
+      "statement": "History is drawn as small multiples of open issues, closed issues, sessions, and total cost.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/static/app.js#L459-L473",
+          "version": "repo-lines-v1:sha256:7e95f717e3d9be33aa6b8fb124791e165a37fd8892570f9f7bc48f64f3e7a3e2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2YTYwYThmOGNhODFjYWY4ODM5ZjdhOTRjN2U1M2I3YTU1MDA2ZTYxYTViMTdlNDhhYjJlZTU0ZmZkNmQ3YjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMyOTgzNjk4MmQ2ZmUxYTY5NDg4ZDJjODI3ZjE4ODU4Y2E5NDNiNDMwZTQzMjdlZWE2NWE1NWJhOWNhOGQ0OWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgzMzA2NGM1NzdhZjFiMDY4MzM4OWEyYWY1ZWI3YzBhMWEwYmU2ODRkOGRlOWQ0YjJhNjk0NTQxMTg0NzU1MzQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1baf5c399bcb237e3836919ecac73a3a",
+      "statement": "The API test covers project create, attach, state, notes, rename, delete, and the host and content-type guards.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/web_test.go",
+          "version": "repo-file-v1:sha256:97e55518e1904c567de08dfc6c19053ee9549adc79f1860dc3c382c97481423d"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "owcli/ff31f70",
+    "at": "2026-10-02T20:21:46.455Z"
+  }
+}

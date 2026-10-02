@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:6bc33b1024022702063fca7ddba4c2c2f979376234162e7b0cdb561e764018c7",
+  "claims": [
+    {
+      "id": "claim_be4bb18bab17c56b8801268cc0ad8eab",
+      "statement": "The goatlassian main function calls cli.Execute and exits with its return code.",
+      "evidence": [
+        {
+          "resource": "repo://cmd/goatlassian/main.go#L11-L11",
+          "version": "repo-lines-v1:sha256:5f3ad717a3b6a026c2999b0bc3230df4215fc8b5677b35de79389fe967352b65:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWYzYWQ3MTdhM2I2YTAyNmMyOTk5YjBiYzMyMzBkZjQyMTVmYzhiNTY3N2IzNWRlNzkzODlmZTk2NzM1MmI2NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWYzYWQ3MTdhM2I2YTAyNmMyOTk5YjBiYzMyMzBkZjQyMTVmYzhiNTY3N2IzNWRlNzkzODlmZTk2NzM1MmI2NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTM5ZjIxYWZlYWIwNzBmOWZiNWVmZWEwOGRlMzE1Yzc2NTk4N2Q2N2VlYjY0MGQ1NWNiNmEyOWMyMzQ1OTRkMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_db3ccc6daaffd871ec920eb97f6d9cf8",
+      "statement": "sources.Collect runs the kata, owcli, and bossman collectors concurrently and waits for all three.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L66-L76",
+          "version": "repo-lines-v1:sha256:cca14984466d432eaaf38298a59b7aa98db0be7c0515c22bc135546854382ba2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkMDY1MDcyZGUxOTE4Y2Q5NDMyNjYxMTk1ZTBjYTg1YmRmNGQyYzM1OGVlYjBhNjg3ODUwODBjMGU0YzM2YTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdmYjk2NjJkYTg0ZDJmMjUyZjZmNDZiMzRhMTljMTkyZWVkNGNmNjE5OGUxYmQxNzNhNzQ5NDZjNGExYThkNGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJhZWYxMzg0NDM0NDNiYWI1NDllMzg2ZGFhYmZhZDc0ODVlODI1NjQ4OWM0YmE2YjYzZjQ3ODk3ZTZhMTEzNDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdhYzhkZjUxYWY3MDUxYmRlMWVjMjJkMzkwMDNkMDJhYzkyNzBhMDI0ODY0ZTQwMDVjODY0YzJmMmMzYjhhYTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_08d926f65f4510aed8ec865cf4afb1ad",
+      "statement": "Git status is read lazily per repository and cached for the life of a World.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L66-L67",
+          "version": "repo-lines-v1:sha256:6c0caaeba0a389f88748aa2b849ee3f1dd82bdadc992d0bb0239e408b53cbd09:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQwNjUwNzJkZTE5MThjZDk0MzI2NjExOTVlMGNhODViZGY0ZDJjMzU4ZWViMGE2ODc4NTA4MGMwZTRjMzZhNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2IyZmI3NDdkZWYyNzAwZWRhMmQwYTRiN2Y2OTU3ZjFmNTQxYmU4ODIxMmI3OGQyYjgyNGE2ZTk4YWQ3N2EyNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmFlZjEzODQ0MzQ0M2JhYjU0OWUzODZkYWFiZmFkNzQ4NWU4MjU2NDg5YzRiYTZiNjNmNDc4OTdlNmExMTM0OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTBmZTYyNmZhMmEzZmFiYTYyYWU2NGYxMmIyMTk5OTdjYjFiOTVkM2U2YzAyMWIxMTY5MmIyNTVlMDc5NTNiYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_156248a6c26b4f7ac07a2bd8e2aa1e67",
+      "statement": "A missing tool binary is reported as an 'is not installed' error rather than a crash.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L79-L86",
+          "version": "repo-lines-v1:sha256:ede98cb38552da5e4664ca4f1a3aa47725f7018cc6ade04f414b5410be25e888:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjA5ZWRjYzEzNWRiYmZmN2Q2NzUyMjk2MzkyNmYzZThiNGNmYjg2NDFkZWM3MTMwMTVmODkzNmM1MzQwZGRjZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzU1YmE4MTg1ZGNlYmYzODViNjM3M2Q3MmFhODVhZDA4ODM2Nzk4OGJlZmIwNTllNGM0ZGQzMTc3YWZlNTVjYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWY4YjgxZWMwNWYyYWI0YjE1NTQwMjNjYTM3YjUwZGFmMGI3MzEzYTI0NzgxZjAyZTVmMTEzOWNiOWYyYTUyYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjQ3ODk5OTMwYzA0NTM3ZDVjNjI5NTIwMzJiNGUyZWMwNDU5YzBhNTg5YTQxNjIxZTFkMWU2M2FkMjMzMzA2MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a697f0c27e5840e49fa654e7f8c3bbfc",
+      "statement": "The sources package collects each tool in bulk once per refresh and turns a missing binary or daemon into a Problem on that tool instead of failing the whole collection.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L1-L4",
+          "version": "repo-lines-v1:sha256:87873faaec40ce4a111319f2785b62aea418cc8cf56f89bdb3c983c36c69f985:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODY4OTY2NDYwMjk2ZWM0NTk0MjNjNDFhYThhOGUyZGM0ZDljNTk2YWI5YTkzMjdmMjg1YzQwZmFmNmJlYjhiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGVjM2ZjOTVlMTkzMmMxMDlkM2E1NzQyM2E3ZjEzZjg4NjFiMTZiY2UzNzUxMWY0Zjg5YzlkYzNhMDBjYWRiMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDJkMjgwZWRiYzJmNGRlNTk1ZTgwM2YyMDMzNzlkMmUxYWU4OGVmYWI4ZWQyNzJmMDYxOGE0NDc5OTY1ZjkwNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9b85eab66a15eb72cf7a7715775936d2",
+      "statement": "The store keeps only goatlassian's own records (projects, components, events, snapshots) and never stores the issues, wiki pages, or sessions the sibling tools own.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L1-L4",
+          "version": "repo-lines-v1:sha256:e2d453c7b920e776605dcf8d5ea8c82aae75aa77ab45194480b4e82b16fcf7bb:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWFlMzQzZTNlYzRjOTNmYmMxNWM0OTFkYTRhNGM3MGI1ZmViMDhjN2RhMzg5NTlkOTg5NzA0NTViZjc2OTMwOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTg2OGNlZGYwNzk4YzYwMjVlNjliYWMxODNjMDdiOTQzNWI4NmUxOWMwZTcwYzZlNzEyZjBmODlhYmRiMDQ3ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGEwYjI3MjFkMjE5ZTQ3ODA5NmFkMTVjMzhjZmQ0NTE4MTQxNzljYzE3Y2UxMzQ0YWI3YmZhMWRkN2U5NTM2MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_aa97d30f400566c2eaa73df1f4da4384",
+      "statement": "The store is a SQLite database named goatlassian.db in the data directory, opened with WAL journaling, a busy timeout, and foreign keys on.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L164-L176",
+          "version": "repo-lines-v1:sha256:c4082dd14cf1750fe333e84d6f1b835bab66a38420dcfe00e7846b8afd5dc95e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjMGRhNWRhYmFiZGY3ZmRhMTU2NzU2ZWMxN2IzOTBmYWExNmM2MDI5YWYwZDI4NDczZmEyMTA1NmVkMmM0NWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0NDU1MjBlMjc5YzJkZGIyZWY1YTg4NTkxNTBjZDFhOTE1YmE4MmQ1NDMxOWI3N2Y3MTllOWU5MDdjM2RmNjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUwMTRlZjI0YmE4NzEwZDY2NjBmZDczMjc3N2Q0ZDZjOTNkZTA3Njc3MTYzZjUxMTg2NjZkYzgwMmNhOGUxZjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEyMGM3NWUxZTU2ZGIwZDRkMjdmYzFjYTM2YzA0Y2JlMmUzYzBhNjg3ZDM5MWM4NDdkNWI4ODM4NmMxNDVjZmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a228f94b55aaf34825b64fbac9c6edb9",
+      "statement": "CLI commands collect the tools once with a 60-second timeout.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/cli.go#L104-L108",
+          "version": "repo-lines-v1:sha256:eb4c5317308e24f58a0c01e4485e62bcd9996a5d164c427bcb0b3fcad06a71eb:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjQxZjgzMzI1MjAwYWMyNGRkMjM1MGI5MTBkNjY0NjIzNDM3Mzc0ZWQyODAyMWNkODI1ODNhMGRmZDU3NTY0MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjI5NjQwNzljM2M1YzgxNTIwZWYzM2EyYjlkMmUxNWExYjg0ZDcyODBkYjg1OTBkY2Q2NTc0N2UzZTAxMmE0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2ZhNjIyNmE1Njk0MGU2YmY3YmU5NjczYjA3ZDNlN2VlZWI3MzA5MDBmOTg3N2U1ZGViOGVkN2E2ZTcxNWU2MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9df64e2c4df5cb9b2fad7cdac071256e",
+      "statement": "The web server caches one World for 20 seconds before collecting again.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/web.go#L106-L116",
+          "version": "repo-lines-v1:sha256:9023f21ecf4fa7a8f2c47422e4df5888f03261a450213155c29a25c6c07b0c8e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhNTM1MjEwMTFlMDUxMmMwMzQ5ZTQwZjQ3OTU0NTczYWViN2M1ZGJmOGQ1NGUyOWY4OWIzYmY1MjY5ZDdjYzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVmODkyYTA3ZmM0N2M2ZmJlM2ZkOGQ2ZjNiMGNmMmQxNmFlZGMzZWMyZWIzNTI2ZWExMjU5YTlkZDRjOWQ0YmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1NWVkZGQ4NWNmNTFhYWE3MTkxZWFiNjExMTZjMWYzYWEzYzUyOTg1ZTRhOWRlMzkzMTAxNmFjNTg4MzMzZTUifQ"
+        },
+        {
+          "resource": "repo://internal/web/web.go#L33-L33",
+          "version": "repo-lines-v1:sha256:c91dc5202a4f82052ea25b82eaab16a6655c25e593a59f43f9dd6e0f829e8d58:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzkxZGM1MjAyYTRmODIwNTJlYTI1YjgyZWFhYjE2YTY2NTVjMjVlNTkzYTU5ZjQzZjlkZDZlMGY4MjllOGQ1OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzkxZGM1MjAyYTRmODIwNTJlYTI1YjgyZWFhYjE2YTY2NTVjMjVlNTkzYTU5ZjQzZjlkZDZlMGY4MjllOGQ1OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmZkNTU0NjZiMjYyMGQ5ZTU4YjRmOTlhZDRjNjczYTI0NjJmNjFjY2Q5MjQzM2QyOTRiOWRiNTE3OWZlYTI1OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDE3ODc0NDAyZmQyODk3NTMyNzdjYTViNjViYmFjOGVkZjRlZDRlZWE5ZTgyNmM5MzJlYjE1ZGQ0Yjk2OTFkZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_21e42e5726733633283b84523f0530bf",
+      "statement": "portfolio.Analyze joins the store's projects and components with a World to produce per-project reports.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L132-L150",
+          "version": "repo-lines-v1:sha256:b41a778618b401da8daf1b2107675a53bb3aa4a07a66084eb0623b07b60da240:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkNmFmOTA1MzBlMTEyMGQyMzg4NDA3NmQ5OGI1ZDRhNzg5MTdiNTEzM2QyZmQwYjNiNjAxMmI2NmVlZDdjNmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyNzUyOTE3NzEzM2YyZGVkZGYwNzQ3MDI4MmJkZDg5MTA3ZjJjNGRlMmJkZTY1MjMzOTBhMmU2MWRkMGEwYjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJhODIzYmU4MDNiMWM1MDlkMjAxNzMwY2MxMjI2ODRmY2UxZDgzNzIzMWY4NDZhYmRiYmZmYmFjYTFkMDA0MDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE0OTE5YjExMjA1MzE4YmVjMjVkYWRkZTRhYzkxYjYxYmQ4MjE5MjhiMzBiYzk5YjQyNmM0MGNlM2YyMjlmNTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_53cc278115d42da87026b7c8d6c325fd",
+      "statement": "The root command's help states that goatlassian reads the other tools through their command lines, links to their web UIs, and never writes into a repository.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/cli.go#L43-L51",
+          "version": "repo-lines-v1:sha256:8cd23b234ac712e899ff9eea5954bbafdb4104a8feabe283154bbb28ee8c0ab2:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ZjOGJiNmMzYTNhN2IyMTU0Y2E2ZWQwZjgxMjNhNjExODFmYWViNGE1NWI1ZmU4MDA1MDBkYjhhODM2MjNhMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTI3MGZlMjc2MjEyNTY4ZGIyYTQxZDhkYjg2YTA0YmVmZjgwN2Q1ZGRkMjZlOWVhNjc3ODJiYTY5Yjk4YTJlNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWJmMmNmNTU1N2Y0MDdiZGQxZDBkZDIwNGVkZDIyYzcwYjhhM2I3MzdiYTYyYjEwN2ZlMTI4NGMyNDRmMjZiYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWVjMzgxNTU0NGQ2YWRkMjE1YmZjNmNjYjk2Y2YxNjEwZGU1MWQ5NmUwZmE2YzI1ZTNjZDU4YzIyMGVhNTM4MSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "owcli/ff31f70",
+    "at": "2026-10-02T20:20:27.922Z"
+  }
+}
