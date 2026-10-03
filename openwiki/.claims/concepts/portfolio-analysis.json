@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:134bc636af7e6b0aef28de294364bf4c6698adb5138af564635dbbb6d36eb5f9",
+  "pageVersion": "sha256:7f15462d219816541ea685219aaed2a0fa37c27b1edc26d9d80e9dc0ca9bdf9a",
   "claims": [
     {
       "id": "claim_30147bf0c651aea37df8b5d0f6dc6e7f",
@@ -142,13 +142,13 @@
       "evidence": [
         {
           "resource": "repo://internal/portfolio/portfolio_test.go",
-          "version": "repo-file-v1:sha256:27d1d195c4861b577aa35817fd45aaa2f74451b32422a6c385ff089055670447"
+          "version": "repo-file-v1:sha256:16449f77874e91f915007e5448e4bd82ecc0181d42f3f82d7f444c32d2f52048"
         }
       ]
     }
   ],
   "verification": {
-    "by": "owcli/ff31f70",
-    "at": "2026-10-02T20:22:46.823Z"
+    "by": "owcli/2d956c2",
+    "at": "2026-10-03T15:43:01.209Z"
   }
 }

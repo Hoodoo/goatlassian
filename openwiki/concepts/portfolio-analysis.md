@@ -4,8 +4,8 @@ title: Portfolio Analysis
 description: How goatlassian turns projects and a World into per-component status, per-project metrics, last activity, session ownership, health flags, unassigned sessions, and snapshots.
 tags: [analysis, metrics, flags, health, sessions]
 verified:
-  - by: owcli/ff31f70
-    at: "2026-10-02T20:22:46.823Z"
+  - by: owcli/2d956c2
+    at: "2026-10-03T15:43:01.209Z"
 sources:
   - id: openwiki-source-eebd91804ebf511b7b315be6
     resource: repo://internal/portfolio/portfolio.go

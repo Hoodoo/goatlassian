@@ -4,8 +4,8 @@ title: Quickstart
 description: What goatlassian is, how to build and run it, and which wiki page answers each common task.
 tags: [quickstart, overview, onboarding]
 verified:
-  - by: owcli/ff31f70
-    at: "2026-10-02T20:25:08.863Z"
+  - by: owcli/2d956c2
+    at: "2026-10-03T15:43:14.247Z"
 sources:
   - id: openwiki-source-7bd911fdd3026b7b031a01e3
     resource: repo://go.mod
@@ -17,7 +17,9 @@ sources:
     resource: repo://internal/testutil/fake.go
   - id: openwiki-source-012f2c78e3b1446dfc35803f
     resource: repo://Makefile
-generated: { by: "owcli/ff31f70", at: "2026-10-02T20:25:09.016Z" }
+  - id: openwiki-source-23775c3de52f3ab95a13cb8b
+    resource: repo://README.md
+generated: { by: "owcli/2d956c2", at: "2026-10-03T15:43:14.386Z" }
 ---
 
 # Quickstart
@@ -35,6 +37,7 @@ what is stale, what needs a human, and what it costs.
 
 ```sh
 make install                   # bin/goatlassian → ~/.local/bin
+# or, without a clone: go install github.com/Hoodoo/goatlassian/cmd/goatlassian@latest
 goatlassian discover           # repos kata/owcli/bossman know, and who covers them
 goatlassian discover --adopt   # one project per uncovered repo
 goatlassian status             # the portfolio

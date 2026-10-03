@@ -4,8 +4,8 @@ title: Adding a Component Kind or Adapter
 description: How to give goatlassian a new artifact kind (for example Slack threads or GitHub PRs) or a new tool adapter, and how to develop and test changes without the real tools.
 tags: [extending, adapters, testing, development]
 verified:
-  - by: owcli/ff31f70
-    at: "2026-10-02T20:24:52.432Z"
+  - by: owcli/2d956c2
+    at: "2026-10-03T15:43:06.638Z"
 sources:
   - id: openwiki-source-eebd91804ebf511b7b315be6
     resource: repo://internal/portfolio/portfolio.go

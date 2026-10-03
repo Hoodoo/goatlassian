@@ -4,8 +4,8 @@ title: Web UI and JSON API
 description: How goatlassian serve works - its JSON API, request guards, World caching, the snapshot loop, and the embedded single-page client.
 tags: [web, api, ui, serve]
 verified:
-  - by: owcli/ff31f70
-    at: "2026-10-02T20:21:46.455Z"
+  - by: owcli/2d956c2
+    at: "2026-10-03T15:42:54.435Z"
 sources:
   - id: openwiki-source-bc7eae14d3b20f2f098061ac
     resource: repo://internal/cli/env.go
