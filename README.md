@@ -27,6 +27,8 @@ files.
 ## Install
 
 ```sh
+go install github.com/Hoodoo/goatlassian/cmd/goatlassian@latest
+# or, from a clone:
 make install        # builds bin/goatlassian and installs it to ~/.local/bin
 ```
 

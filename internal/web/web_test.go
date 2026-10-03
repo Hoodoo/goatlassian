@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	"goatlassian/internal/config"
-	"goatlassian/internal/store"
-	"goatlassian/internal/testutil"
+	"github.com/Hoodoo/goatlassian/internal/config"
+	"github.com/Hoodoo/goatlassian/internal/store"
+	"github.com/Hoodoo/goatlassian/internal/testutil"
 )
 
 func newServer(t *testing.T) *Server {

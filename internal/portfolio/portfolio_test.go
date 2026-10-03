@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
-	"goatlassian/internal/config"
-	"goatlassian/internal/discover"
-	"goatlassian/internal/portfolio"
-	"goatlassian/internal/sources"
-	"goatlassian/internal/store"
-	"goatlassian/internal/testutil"
+	"github.com/Hoodoo/goatlassian/internal/config"
+	"github.com/Hoodoo/goatlassian/internal/discover"
+	"github.com/Hoodoo/goatlassian/internal/portfolio"
+	"github.com/Hoodoo/goatlassian/internal/sources"
+	"github.com/Hoodoo/goatlassian/internal/store"
+	"github.com/Hoodoo/goatlassian/internal/testutil"
 )
 
 func fakeWorld(t *testing.T) *sources.World {

@@ -17,13 +17,13 @@ import (
 	"sync"
 	"time"
 
-	"goatlassian/internal/config"
-	"goatlassian/internal/discover"
-	"goatlassian/internal/portfolio"
-	"goatlassian/internal/services"
-	"goatlassian/internal/sources"
-	"goatlassian/internal/store"
-	"goatlassian/internal/version"
+	"github.com/Hoodoo/goatlassian/internal/config"
+	"github.com/Hoodoo/goatlassian/internal/discover"
+	"github.com/Hoodoo/goatlassian/internal/portfolio"
+	"github.com/Hoodoo/goatlassian/internal/services"
+	"github.com/Hoodoo/goatlassian/internal/sources"
+	"github.com/Hoodoo/goatlassian/internal/store"
+	"github.com/Hoodoo/goatlassian/internal/version"
 )
 
 //go:embed static

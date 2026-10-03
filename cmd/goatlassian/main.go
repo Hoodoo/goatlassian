@@ -5,7 +5,7 @@ package main
 import (
 	"os"
 
-	"goatlassian/internal/cli"
+	"github.com/Hoodoo/goatlassian/internal/cli"
 )
 
 func main() { os.Exit(cli.Execute()) }

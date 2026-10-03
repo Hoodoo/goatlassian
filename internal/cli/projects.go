@@ -11,8 +11,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"goatlassian/internal/discover"
-	"goatlassian/internal/store"
+	"github.com/Hoodoo/goatlassian/internal/discover"
+	"github.com/Hoodoo/goatlassian/internal/store"
 )
 
 func (a *app) projectCmd() *cobra.Command {

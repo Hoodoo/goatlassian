@@ -12,11 +12,11 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"goatlassian/internal/config"
-	"goatlassian/internal/portfolio"
-	"goatlassian/internal/sources"
-	"goatlassian/internal/store"
-	"goatlassian/internal/version"
+	"github.com/Hoodoo/goatlassian/internal/config"
+	"github.com/Hoodoo/goatlassian/internal/portfolio"
+	"github.com/Hoodoo/goatlassian/internal/sources"
+	"github.com/Hoodoo/goatlassian/internal/store"
+	"github.com/Hoodoo/goatlassian/internal/version"
 )
 
 type app struct {

@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"goatlassian/internal/sources"
-	"goatlassian/internal/store"
+	"github.com/Hoodoo/goatlassian/internal/sources"
+	"github.com/Hoodoo/goatlassian/internal/store"
 )
 
 // Flag levels, in increasing severity.

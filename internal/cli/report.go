@@ -11,8 +11,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"goatlassian/internal/portfolio"
-	"goatlassian/internal/store"
+	"github.com/Hoodoo/goatlassian/internal/portfolio"
+	"github.com/Hoodoo/goatlassian/internal/store"
 )
 
 func (a *app) analyze(st *store.Store, keep func(*store.Project) bool) (*portfolio.Portfolio, error) {

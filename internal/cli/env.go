@@ -13,9 +13,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"goatlassian/internal/services"
-	"goatlassian/internal/store"
-	"goatlassian/internal/web"
+	"github.com/Hoodoo/goatlassian/internal/services"
+	"github.com/Hoodoo/goatlassian/internal/store"
+	"github.com/Hoodoo/goatlassian/internal/web"
 )
 
 func (a *app) servicesCmd() *cobra.Command {

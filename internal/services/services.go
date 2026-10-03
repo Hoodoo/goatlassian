@@ -15,7 +15,7 @@ import (
 	"syscall"
 	"time"
 
-	"goatlassian/internal/config"
+	"github.com/Hoodoo/goatlassian/internal/config"
 )
 
 // Service is one sibling web UI.

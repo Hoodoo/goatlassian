@@ -16,7 +16,7 @@ import (
 	"sync"
 	"time"
 
-	"goatlassian/internal/config"
+	"github.com/Hoodoo/goatlassian/internal/config"
 )
 
 // Runner runs a command and returns its standard output.

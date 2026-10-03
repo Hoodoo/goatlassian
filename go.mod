@@ -1,4 +1,4 @@
-module goatlassian
+module github.com/Hoodoo/goatlassian
 
 go 1.22.2
 

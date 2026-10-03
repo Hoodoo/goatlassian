@@ -12,8 +12,8 @@ import (
 	"sort"
 	"strings"
 
-	"goatlassian/internal/sources"
-	"goatlassian/internal/store"
+	"github.com/Hoodoo/goatlassian/internal/sources"
+	"github.com/Hoodoo/goatlassian/internal/store"
 )
 
 // Candidate is a directory that could become a project, with the
