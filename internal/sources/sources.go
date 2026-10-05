@@ -277,6 +277,25 @@ func (o OwcliWorld) Wiki(id string) *OwcliWiki {
 	return nil
 }
 
+// WikiFor finds the wiki a component refers to: by ID, else by repository
+// root. owcli's ID for a wiki is not stable (it switches from the hash form
+// to the workspace registry's slug when the repository joins a workspace),
+// so components also record the root they were attached with.
+func (o OwcliWorld) WikiFor(id, repoRoot string) *OwcliWiki {
+	if wk := o.Wiki(id); wk != nil {
+		return wk
+	}
+	if repoRoot == "" {
+		return nil
+	}
+	for i := range o.Wikis {
+		if o.Wikis[i].RepoRoot == repoRoot {
+			return &o.Wikis[i]
+		}
+	}
+	return nil
+}
+
 // Workspace finds a workspace by ID or name.
 func (o OwcliWorld) Workspace(id string) *OwcliWorkspace {
 	for i := range o.Workspaces {

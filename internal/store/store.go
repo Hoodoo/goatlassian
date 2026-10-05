@@ -46,7 +46,7 @@ func ValidState(s string) bool {
 const (
 	KindGit            = "git"             // ref: absolute repository path
 	KindKata           = "kata"            // ref: kata project name; attrs.uid pins it
-	KindOwcliWiki      = "owcli-wiki"      // ref: owcli wiki ID
+	KindOwcliWiki      = "owcli-wiki"      // ref: owcli wiki ID; attr root pins it across ID changes
 	KindOwcliWorkspace = "owcli-workspace" // ref: owcli workspace ID
 	KindSessions       = "sessions"        // ref: directory; sessions started in or under it
 	KindSession        = "session"         // ref: one bossman session key (agent:id); overrides directories

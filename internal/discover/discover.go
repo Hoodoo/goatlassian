@@ -84,7 +84,7 @@ func ForDir(ctx context.Context, w *sources.World, dir string) (*Candidate, erro
 	}
 	for _, wk := range w.Owcli.Wikis {
 		if wk.RepoRoot != "" && within(wk.RepoRoot, r) {
-			c.Components = append(c.Components, store.Component{Kind: store.KindOwcliWiki, Ref: wk.ID, Label: wk.Name})
+			c.Components = append(c.Components, store.Component{Kind: store.KindOwcliWiki, Ref: wk.ID, Label: wk.Name, Attrs: map[string]string{"root": wk.RepoRoot}})
 			ev := "owcli wiki " + wk.ID
 			if wk.Problem != "" {
 				ev += " (" + wk.Problem + ")"
@@ -202,7 +202,7 @@ func Adopt(st *store.Store, c *Candidate, slug, name, description string, tags [
 
 // Normalize fills in what a hand-attached component leaves implicit: an
 // absolute path (the repository top level for git), a kata project's UID,
-// an owcli wiki's name.
+// an owcli wiki's name and repository root.
 func Normalize(ctx context.Context, w *sources.World, c store.Component) (store.Component, error) {
 	if c.Attrs == nil {
 		c.Attrs = map[string]string{}
@@ -267,7 +267,7 @@ func Normalize(ctx context.Context, w *sources.World, c store.Component) (store.
 			if wk == nil {
 				return c, fmt.Errorf("owcli knows no wiki %q (see owcli wikis)", c.Ref)
 			}
-			c.Ref = wk.ID
+			c.Ref, c.Attrs["root"] = wk.ID, wk.RepoRoot
 			if c.Label == "" {
 				c.Label = wk.Name
 			}

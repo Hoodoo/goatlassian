@@ -17,6 +17,10 @@ import (
 
 func fakeWorld(t *testing.T) *sources.World {
 	t.Helper()
+	return sources.Collect(context.Background(), config.Default(), fakeRunner())
+}
+
+func fakeRunner() testutil.Runner {
 	now := time.Now().UTC()
 	day := func(n int) string { return now.AddDate(0, 0, -n).Format(time.RFC3339) }
 	r := testutil.Runner{
@@ -48,7 +52,47 @@ func fakeWorld(t *testing.T) *sources.World {
 	r["git -C /src/other remote get-url origin"] = "git@github.com:me/other.git"
 	r["git -C /src/shop status --porcelain"] = " M a.go\n?? b.go"
 	r["git -C /src/shop rev-list --count abc..HEAD"] = "12"
-	return sources.Collect(context.Background(), config.Default(), r)
+	return r
+}
+
+// TestWikiIDChange: owcli renames a wiki's ID when its repository joins a
+// workspace (hash form to registry slug); the component still resolves
+// through the repository root recorded at adopt time.
+func TestWikiIDChange(t *testing.T) {
+	ctx := context.Background()
+	st, err := store.Open(t.TempDir())
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer st.Close()
+	c, err := discover.ForDir(ctx, fakeWorld(t), "/src/shop")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if _, err := discover.Adopt(st, c, "", "", "", nil); err != nil {
+		t.Fatal(err)
+	}
+
+	r := fakeRunner()
+	r["owcli wikis --json"] = strings.Replace(r["owcli wikis --json"], `"id":"shop-1"`, `"id":"shop"`, 1)
+	w := sources.Collect(ctx, config.Default(), r)
+	pf, err := portfolio.Analyze(ctx, st, w, nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, cr := range pf.Reports[0].Components {
+		if cr.Kind == store.KindOwcliWiki && cr.Problem != "" {
+			t.Fatalf("wiki component after ID change: %s", cr.Problem)
+		}
+	}
+	if pf.Reports[0].Metrics.WikiDrift != 12 {
+		t.Errorf("wiki drift %d", pf.Reports[0].Metrics.WikiDrift)
+	}
+
+	n, err := discover.Normalize(ctx, w, store.Component{Kind: store.KindOwcliWiki, Ref: "shop"})
+	if err != nil || n.Attrs["root"] != "/src/shop" {
+		t.Errorf("Normalize must pin the root: %+v, %v", n, err)
+	}
 }
 
 func TestDiscoverAdoptAnalyze(t *testing.T) {

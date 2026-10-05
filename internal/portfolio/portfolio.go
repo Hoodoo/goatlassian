@@ -465,7 +465,7 @@ func describeWiki(ctx context.Context, w *sources.World, cr *ComponentReport, m 
 		cr.Problem = w.Owcli.Problem
 		return
 	}
-	wk := w.Owcli.Wiki(cr.Ref)
+	wk := w.Owcli.WikiFor(cr.Ref, cr.Attrs["root"])
 	if wk == nil {
 		cr.Problem = "owcli knows no wiki " + cr.Ref
 		return

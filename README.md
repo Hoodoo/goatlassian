@@ -10,7 +10,7 @@ A **project** groups **components** that other tools own:
 | ----------------- | ------------------------------------- | ------------------------------------ |
 | `git`             | repository path                       | `git`                                |
 | `kata`            | kata project name (pinned by UID)     | `kata … --json`, daemon web UI       |
-| `owcli-wiki`      | owcli wiki ID or name                 | `owcli wikis --json`, `owcli serve`  |
+| `owcli-wiki`      | owcli wiki ID or name (pinned by repo root) | `owcli wikis --json`, `owcli serve`  |
 | `owcli-workspace` | owcli workspace ID or name            | `owcli wikis --json`, `owcli serve`  |
 | `sessions`        | directory sessions ran in or under    | `bossman --json ls`, `bossman serve` |
 | `session`         | one bossman session key               | same; pins it, overriding directories|
