@@ -16,11 +16,11 @@
       "sourceFingerprint": "sha256:9e5a517ff5e91c26c8758c991eb0a494b82643437efa2146780a465f827cbcca"
     },
     "/openwiki/architecture/web-ui.md": {
-      "pageVersion": "sha256:2896075832fa0c075281cf324dec0bf29f61ebd9a135ad87267f0ed3c8291ba2",
-      "completedBy": "owcli/2d956c2",
-      "completedRunId": "311100e6-be1e-41fe-94ee-618a0659fc16",
-      "gitHead": "ee346fb7648eba1bc97c3c87662508aa86a0a8be",
-      "sourceFingerprint": "sha256:86a87a9392f5633f0e1f158683138450510cdcd8a00f3a91007da0895d050e89"
+      "pageVersion": "sha256:f0bf6d5a61052548478f0a16682fbce0e009053094076c258c5ba6c86453d882",
+      "completedBy": "owcli/v0.3.0",
+      "completedRunId": "ec6ce6c1-11aa-4913-8010-127381fb975b",
+      "gitHead": "06927db0bc4e8fb141d4256ead7362381fbd6d17",
+      "sourceFingerprint": "sha256:c0b9539a5dbf3a9c36e3c4c1374af7b63d93733ad3ec2389675ff28054191e8b"
     },
     "/openwiki/concepts/portfolio-analysis.md": {
       "pageVersion": "sha256:05e4411a49824ff8aa0d3b0063ab420bcdb03a22e7eedfc6da8fb25e8b612232",

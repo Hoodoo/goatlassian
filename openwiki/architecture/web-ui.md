@@ -4,18 +4,20 @@ title: Web UI and JSON API
 description: How goatlassian serve works - its JSON API, request guards, World caching, the snapshot loop, and the embedded single-page client.
 tags: [web, api, ui, serve]
 verified:
-  - by: owcli/2d956c2
-    at: "2026-10-03T15:42:54.435Z"
+  - by: owcli/v0.3.0
+    at: "2026-10-05T09:12:59.169Z"
 sources:
   - id: openwiki-source-bc7eae14d3b20f2f098061ac
     resource: repo://internal/cli/env.go
+  - id: openwiki-source-4a81fcd95533ed8ba5a77739
+    resource: repo://internal/store/store.go
   - id: openwiki-source-213e0022dfc208535b4c26a9
     resource: repo://internal/web/static/app.js
   - id: openwiki-source-6dbe79f2b1613ac94797fd56
     resource: repo://internal/web/web.go
   - id: openwiki-source-eb4688fc0fba2b62687b137d
     resource: repo://internal/web/web_test.go
-generated: { by: "owcli/ff31f70", at: "2026-10-02T20:25:09.016Z" }
+generated: { by: "owcli/v0.3.0", at: "2026-10-05T09:12:59.364Z" }
 ---
 
 # Web UI and JSON API
@@ -58,8 +60,9 @@ bodies are limited to 1 MiB.
 The server binds to loopback, but a browser can still be tricked into
 talking to it, so `ServeHTTP` checks two things before routing:
 
-- **Host header.** Only `localhost`, loopback IPs, or the configured listen
-  host are accepted (403 otherwise). This defeats DNS rebinding.
+- **Host header.** Only `localhost`, loopback IPs, the configured listen
+  host, or a name given with `--allow-host` (compared case-insensitively)
+  are accepted (403 otherwise). This defeats DNS rebinding.
 - **JSON-only state changes.** Any non-GET/HEAD request must have
   `Content-Type: application/json` (415 otherwise). A cross-site page can
   only send JSON after a CORS preflight, which the server never approves, so
@@ -98,8 +101,31 @@ and tooltip; the y scale has 25% headroom so a flat series does not look
 maxed out. Theme and last sort are per-browser preferences in
 `localStorage`, wrapped so the UI still works when storage is unavailable.
 
+## Behind a reverse proxy
+
+`web.Options` (from `serve --allow-host` and `--user-header`) lets the UI run
+behind a proxy that signs people in, such as Google IAP:
+
+- `AllowHosts` adds the proxy's public names to the Host check.
+- `UserHeader` names a header the proxy sets to the signed-in user
+  (`X-Goog-Authenticated-User-Email` for IAP). `Server.Viewer` reads it and
+  strips everything up to the last `:` (IAP's `accounts.google.com:`
+  prefix). A request without it gets 401 before routing, so traffic that
+  bypasses the proxy fails closed.
+- Every handler that writes goes through `storeFor(r)`, which is
+  `Store.As(viewer)`: a copy of the store sharing its database with `Actor`
+  set to the viewer. Events are attributed per request, and concurrent
+  viewers never change the actor of the shared store. `/api/meta` reports
+  the actor a request would write as.
+
+The header is only as trustworthy as the network, so it is meant for an
+address only the proxy can reach. When serving behind a proxy, point
+`[services]` at the sibling UIs' public addresses so links work.
+
 ## Testing
 
 `internal/web/web_test.go` drives the API through `ServeHTTP` with a fake
 runner: create, duplicate, attach (including an unknown kata project → 400),
 state, note, project detail, portfolio, rename, delete, and both guards.
+`TestBehindProxy` covers the public name, the 401 without a user header, and
+events attributed to two different signed-in users.
