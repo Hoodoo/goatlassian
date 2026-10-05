@@ -55,6 +55,15 @@ goatlassian note shop "agreed scope with Ann"
 goatlassian log shop
 ```
 
+After moving repositories (or your home directory to a new machine), rewrite
+the stored paths: git refs and wiki roots move, and each sessions directory
+gains the new path while keeping the old one, where past sessions ran.
+
+```sh
+goatlassian relocate --dry-run ~/src ~/work
+goatlassian relocate ~/src ~/work
+```
+
 Every command takes `--json`.
 
 ### How projects are read

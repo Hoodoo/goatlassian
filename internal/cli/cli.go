@@ -78,7 +78,7 @@ Start with:
 		c.GroupID = "report"
 		root.AddCommand(c)
 	}
-	for _, c := range []*cobra.Command{a.adoptCmd(), a.projectCmd(), a.attachCmd(), a.detachCmd(), a.noteCmd(), a.logCmd()} {
+	for _, c := range []*cobra.Command{a.adoptCmd(), a.projectCmd(), a.attachCmd(), a.detachCmd(), a.relocateCmd(), a.noteCmd(), a.logCmd()} {
 		c.GroupID = "edit"
 		root.AddCommand(c)
 	}

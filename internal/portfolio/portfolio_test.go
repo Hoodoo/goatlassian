@@ -55,6 +55,51 @@ func fakeRunner() testutil.Runner {
 	return r
 }
 
+// TestRelocate: after the repository moves from /src/shop to /work/shop and
+// goatlassian relocates, git and the wiki resolve at the new path, and the
+// sessions bossman recorded under the old path still belong to the project.
+func TestRelocate(t *testing.T) {
+	ctx := context.Background()
+	st, err := store.Open(t.TempDir())
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer st.Close()
+	c, err := discover.ForDir(ctx, fakeWorld(t), "/src/shop")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if _, err := discover.Adopt(st, c, "", "", "", nil); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := st.Relocate("/src/shop", "/work/shop", false); err != nil {
+		t.Fatal(err)
+	}
+
+	r := fakeRunner()
+	r["owcli wikis --json"] = strings.NewReplacer(`"id":"shop-1"`, `"id":"shop-2"`, "/src/shop", "/work/shop").Replace(r["owcli wikis --json"])
+	for k, v := range r {
+		if strings.HasPrefix(k, "git -C /src/shop ") {
+			r["git -C /work/shop "+strings.TrimPrefix(k, "git -C /src/shop ")] = strings.ReplaceAll(v, "/src/shop", "/work/shop")
+		}
+	}
+	pf, err := portfolio.Analyze(ctx, st, sources.Collect(ctx, config.Default(), r), nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	rep := pf.Reports[0]
+	for _, cr := range rep.Components {
+		if cr.Problem != "" {
+			t.Errorf("%s %s: %s", cr.Kind, cr.Ref, cr.Problem)
+		}
+	}
+	// s1 and s4 ran in /src/shop; s2 ran in a nested repository that no
+	// project covers here, so it also counts.
+	if rep.Metrics.Sessions != 3 || rep.Metrics.WikiDrift != 12 {
+		t.Errorf("after relocate: sessions %d, wiki drift %d", rep.Metrics.Sessions, rep.Metrics.WikiDrift)
+	}
+}
+
 // TestWikiIDChange: owcli renames a wiki's ID when its repository joins a
 // workspace (hash form to registry slug); the component still resolves
 // through the repository root recorded at adopt time.

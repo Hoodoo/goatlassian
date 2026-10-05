@@ -294,6 +294,50 @@ func (a *app) detachCmd() *cobra.Command {
 	return cmd
 }
 
+func (a *app) relocateCmd() *cobra.Command {
+	var dryRun bool
+	cmd := &cobra.Command{
+		Use:   "relocate <old-path> <new-path>",
+		Short: "Rewrite component paths after repositories moved",
+		Long: `Rewrite every component path at or under old-path to the same path under
+new-path, in all projects: git refs and owcli-wiki repository roots are
+rewritten; a sessions directory stays attached, since past sessions ran
+there, and the new directory is attached next to it. Each change goes into
+the project's log.
+
+  goatlassian relocate ~/src ~/work
+  goatlassian relocate /home/me /Users/me     # a new machine
+
+Paths in config.toml ([bin], [services]) are not touched. Nothing is written
+with --dry-run, or when a project would end up with the same git repository
+twice.`,
+		Args: cobra.ExactArgs(2),
+	}
+	cmd.Flags().BoolVar(&dryRun, "dry-run", false, "show what would change without writing")
+	cmd.RunE = a.withStore(func(st *store.Store, args []string) error {
+		changes, err := st.Relocate(args[0], args[1], dryRun)
+		if err != nil {
+			return err
+		}
+		if a.json {
+			return a.printJSON(map[string]any{"dry_run": dryRun, "changes": changes})
+		}
+		for _, c := range changes {
+			fmt.Fprintf(a.out, "%-14s %-12s %-10s %s -> %s\n", c.Project, c.Kind, c.Field, c.From, c.To)
+		}
+		switch {
+		case len(changes) == 0:
+			fmt.Fprintf(a.out, "no component under %s\n", args[0])
+		case dryRun:
+			fmt.Fprintf(a.out, "dry run: %d change(s)\n", len(changes))
+		default:
+			fmt.Fprintf(a.out, "relocated: %d change(s)\n", len(changes))
+		}
+		return nil
+	})
+	return cmd
+}
+
 func (a *app) noteCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "note <slug> <text...|->",
