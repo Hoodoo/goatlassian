@@ -117,6 +117,18 @@ type Store struct {
 	Actor string
 }
 
+// As returns a store that attributes the events it writes to actor, sharing
+// the same database; an empty actor returns s. It lets a web server record
+// each signed-in viewer without changing the store other requests use.
+func (s *Store) As(actor string) *Store {
+	if actor == "" {
+		return s
+	}
+	c := *s
+	c.Actor = actor
+	return &c
+}
+
 const schema = `
 CREATE TABLE IF NOT EXISTS projects (
 	id          INTEGER PRIMARY KEY,

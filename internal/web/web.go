@@ -38,6 +38,7 @@ type Server struct {
 	cfg    config.Config
 	home   string
 	host   string // the listen host, accepted in Host headers besides loopback
+	opts   Options
 	runner sources.Runner
 	mux    *http.ServeMux
 
@@ -45,14 +46,28 @@ type Server struct {
 	world *sources.World
 }
 
+// Options let the server run behind a reverse proxy.
+type Options struct {
+	// AllowHosts are further names accepted in the Host header, such as the
+	// public name a proxy forwards.
+	AllowHosts []string
+	// UserHeader names a request header the proxy sets to the signed-in
+	// viewer (X-Goog-Authenticated-User-Email behind Google IAP). The viewer
+	// becomes the actor of every change the request makes, and requests
+	// without the header are refused, so traffic that bypasses the proxy
+	// fails closed. Only set it when nothing but the proxy can reach the
+	// server, since anyone else could send the header.
+	UserHeader string
+}
+
 // New builds the server. host is the address it listens on.
-func New(st *store.Store, cfg config.Config, home, host string) *Server {
-	return NewWithRunner(st, cfg, home, host, sources.Exec{})
+func New(st *store.Store, cfg config.Config, home, host string, opts Options) *Server {
+	return NewWithRunner(st, cfg, home, host, opts, sources.Exec{})
 }
 
 // NewWithRunner builds the server with a custom tool runner (for tests).
-func NewWithRunner(st *store.Store, cfg config.Config, home, host string, r sources.Runner) *Server {
-	s := &Server{st: st, cfg: cfg, home: home, host: host, runner: r, mux: http.NewServeMux()}
+func NewWithRunner(st *store.Store, cfg config.Config, home, host string, opts Options, r sources.Runner) *Server {
+	s := &Server{st: st, cfg: cfg, home: home, host: host, opts: opts, runner: r, mux: http.NewServeMux()}
 	sub, _ := fs.Sub(static, "static")
 	s.mux.Handle("GET /", http.FileServer(http.FS(sub)))
 	s.mux.HandleFunc("GET /api/meta", s.meta)
@@ -79,6 +94,10 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "forbidden host", http.StatusForbidden)
 		return
 	}
+	if s.opts.UserHeader != "" && s.Viewer(r) == "" {
+		http.Error(w, "no signed-in user", http.StatusUnauthorized)
+		return
+	}
 	if r.Method != http.MethodGet && r.Method != http.MethodHead {
 		if ct, _, _ := mime.ParseMediaType(r.Header.Get("Content-Type")); ct != "application/json" {
 			http.Error(w, "send application/json", http.StatusUnsupportedMediaType)
@@ -93,13 +112,35 @@ func (s *Server) hostAllowed(hostport string) bool {
 	if h, _, err := net.SplitHostPort(hostport); err == nil {
 		host = h
 	}
-	host = strings.Trim(host, "[]")
+	host = strings.ToLower(strings.Trim(host, "[]"))
 	if host == "localhost" || host == s.host {
 		return true
+	}
+	for _, h := range s.opts.AllowHosts {
+		if host == strings.ToLower(h) {
+			return true
+		}
 	}
 	ip := net.ParseIP(host)
 	return ip != nil && ip.IsLoopback()
 }
+
+// Viewer returns who the proxy says is signed in, or "" without a
+// UserHeader. Google IAP prefixes the address with "accounts.google.com:".
+func (s *Server) Viewer(r *http.Request) string {
+	if s.opts.UserHeader == "" {
+		return ""
+	}
+	v := strings.TrimSpace(r.Header.Get(s.opts.UserHeader))
+	if i := strings.LastIndex(v, ":"); i >= 0 {
+		v = v[i+1:]
+	}
+	return v
+}
+
+// storeFor is the store a request writes through: changes are attributed
+// to the signed-in viewer when there is one.
+func (s *Server) storeFor(r *http.Request) *store.Store { return s.st.As(s.Viewer(r)) }
 
 // World returns the cached collection of the tools, refreshing it when
 // older than worldTTL or when fresh is set.
@@ -185,13 +226,13 @@ func decode(r *http.Request, v any) error {
 
 // ---- handlers ----------------------------------------------------------
 
-func (s *Server) meta(w http.ResponseWriter, _ *http.Request) {
+func (s *Server) meta(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{
 		"version": version.Version,
 		"states":  store.States,
 		"kinds":   store.KnownKinds,
 		"config":  s.cfg,
-		"actor":   s.st.Actor,
+		"actor":   s.storeFor(r).Actor,
 	})
 }
 
@@ -247,7 +288,7 @@ func (s *Server) createProject(w http.ResponseWriter, r *http.Request) {
 	if in.Slug == "" {
 		in.Slug = store.Slugify(in.Name)
 	}
-	p, err := s.st.CreateProject(in.Slug, in.Name, in.Description, in.Tags)
+	p, err := s.storeFor(r).CreateProject(in.Slug, in.Name, in.Description, in.Tags)
 	if err != nil {
 		writeErr(w, err)
 		return
@@ -261,7 +302,7 @@ func (s *Server) editProject(w http.ResponseWriter, r *http.Request) {
 		writeErr(w, err)
 		return
 	}
-	p, err := s.st.EditProject(r.PathValue("slug"), e)
+	p, err := s.storeFor(r).EditProject(r.PathValue("slug"), e)
 	if err != nil {
 		writeErr(w, err)
 		return
@@ -270,7 +311,7 @@ func (s *Server) editProject(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) deleteProject(w http.ResponseWriter, r *http.Request) {
-	if err := s.st.DeleteProject(r.PathValue("slug")); err != nil {
+	if err := s.storeFor(r).DeleteProject(r.PathValue("slug")); err != nil {
 		writeErr(w, err)
 		return
 	}
@@ -286,7 +327,7 @@ func (s *Server) setState(w http.ResponseWriter, r *http.Request) {
 		writeErr(w, err)
 		return
 	}
-	p, err := s.st.SetState(r.PathValue("slug"), in.State, in.Why)
+	p, err := s.storeFor(r).SetState(r.PathValue("slug"), in.State, in.Why)
 	if err != nil {
 		writeErr(w, err)
 		return
@@ -302,7 +343,7 @@ func (s *Server) addNote(w http.ResponseWriter, r *http.Request) {
 		writeErr(w, err)
 		return
 	}
-	if err := s.st.AddNote(r.PathValue("slug"), in.Text); err != nil {
+	if err := s.storeFor(r).AddNote(r.PathValue("slug"), in.Text); err != nil {
 		writeErr(w, err)
 		return
 	}
@@ -326,7 +367,7 @@ func (s *Server) attach(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
-	got, err := s.st.Attach(r.PathValue("slug"), c)
+	got, err := s.storeFor(r).Attach(r.PathValue("slug"), c)
 	if err != nil {
 		writeErr(w, err)
 		return
@@ -340,7 +381,7 @@ func (s *Server) detach(w http.ResponseWriter, r *http.Request) {
 		writeErr(w, badRequest("bad component id"))
 		return
 	}
-	if err := s.st.Detach(r.PathValue("slug"), id, "", ""); err != nil {
+	if err := s.storeFor(r).Detach(r.PathValue("slug"), id, "", ""); err != nil {
 		writeErr(w, err)
 		return
 	}
@@ -380,7 +421,7 @@ func (s *Server) adopt(w http.ResponseWriter, r *http.Request) {
 		writeErr(w, err)
 		return
 	}
-	p, err := discover.Adopt(s.st, c, in.Slug, in.Name, in.Description, in.Tags)
+	p, err := discover.Adopt(s.storeFor(r), c, in.Slug, in.Name, in.Description, in.Tags)
 	if err != nil {
 		writeErr(w, err)
 		return

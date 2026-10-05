@@ -14,6 +14,11 @@ import (
 
 func newServer(t *testing.T) *Server {
 	t.Helper()
+	return newServerWith(t, Options{})
+}
+
+func newServerWith(t *testing.T, opts Options) *Server {
+	t.Helper()
 	st, err := store.Open(t.TempDir())
 	if err != nil {
 		t.Fatal(err)
@@ -26,7 +31,7 @@ func newServer(t *testing.T) *Server {
 		"owcli wikis --json":                            `{"wikis":[],"workspaces":[]}`,
 		"bossman --json ls -n 0":                        `[]`,
 	}
-	return NewWithRunner(st, config.Default(), t.TempDir(), "127.0.0.1", r)
+	return NewWithRunner(st, config.Default(), t.TempDir(), "127.0.0.1", opts, r)
 }
 
 func do(t *testing.T, s *Server, method, path, body string) (int, map[string]any) {
@@ -108,5 +113,60 @@ func TestGuards(t *testing.T) {
 	s.ServeHTTP(rec, req)
 	if rec.Code != 200 || !strings.Contains(rec.Body.String(), "goatlassian") {
 		t.Fatalf("index: %d", rec.Code)
+	}
+}
+
+// TestBehindProxy: behind Google IAP the public name is accepted, requests
+// without the user header are refused, and the signed-in user is the actor
+// of the changes they make.
+func TestBehindProxy(t *testing.T) {
+	s := newServerWith(t, Options{AllowHosts: []string{"Portfolio.Example.com"}, UserHeader: "X-Goog-Authenticated-User-Email"})
+	req := func(method, host, path, body, user string) (int, map[string]any) {
+		r := httptest.NewRequest(method, path, strings.NewReader(body))
+		r.Host = host
+		if body != "" {
+			r.Header.Set("Content-Type", "application/json")
+		}
+		if user != "" {
+			r.Header.Set("X-Goog-Authenticated-User-Email", "accounts.google.com:"+user)
+		}
+		rec := httptest.NewRecorder()
+		s.ServeHTTP(rec, r)
+		var out map[string]any
+		_ = json.Unmarshal(rec.Body.Bytes(), &out)
+		return rec.Code, out
+	}
+	if code, out := req("GET", "portfolio.example.com", "/api/meta", "", "alice@example.com"); code != 200 || out["actor"] != "alice@example.com" {
+		t.Fatalf("meta: %d %v", code, out["actor"])
+	}
+	if code, _ := req("GET", "portfolio.example.com", "/api/meta", "", ""); code != http.StatusUnauthorized {
+		t.Errorf("no user header: %d", code)
+	}
+	if code, _ := req("GET", "evil.example", "/api/meta", "", "alice@example.com"); code != http.StatusForbidden {
+		t.Errorf("unknown host: %d", code)
+	}
+	if code, _ := req("POST", "portfolio.example.com", "/api/projects", `{"slug":"shop"}`, "alice@example.com"); code != 201 && code != 200 {
+		t.Fatalf("create: %d", code)
+	}
+	if code, _ := req("POST", "portfolio.example.com", "/api/projects/shop/notes", `{"text":"hi"}`, "bob@example.com"); code >= 300 {
+		t.Fatalf("note: %d", code)
+	}
+	p, err := s.st.Project("shop")
+	if err != nil {
+		t.Fatal(err)
+	}
+	evs, err := s.st.Events(p.ID, 0)
+	if err != nil {
+		t.Fatal(err)
+	}
+	actors := map[string]string{}
+	for _, e := range evs {
+		actors[e.Kind] = e.Actor
+	}
+	if actors["created"] != "alice@example.com" || actors["note"] != "bob@example.com" {
+		t.Errorf("event actors %v", actors)
+	}
+	if s.st.Actor == "alice@example.com" || s.st.Actor == "bob@example.com" {
+		t.Error("a request changed the shared store's actor")
 	}
 }

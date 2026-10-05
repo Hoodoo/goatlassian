@@ -90,6 +90,23 @@ Every command takes `--json`.
 --services`) starts the missing ones detached, logging to
 `~/.local/share/goatlassian/logs`.
 
+### Behind a reverse proxy
+
+`serve` stays on loopback by default. To publish it through a proxy that
+signs people in, such as Google IAP, let it listen where the proxy reaches
+it, accept the public name, and trust the proxy's user header:
+
+```sh
+goatlassian serve --addr 0.0.0.0:7799 --allow-host portfolio.example.com \
+  --user-header X-Goog-Authenticated-User-Email
+```
+
+Requests without the header are refused, and every change made in the UI is
+logged with the signed-in user as its actor. Only trust the header when
+nothing but the proxy can reach the address (on GCP, a firewall that admits
+only the load balancer). Point `[services]` in config.toml at the sibling
+UIs' public addresses so its links work for viewers.
+
 ## Configuration
 
 `~/.local/share/goatlassian/config.toml` (or `$GOATLASSIAN_HOME`), all optional:

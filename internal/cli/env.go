@@ -63,25 +63,38 @@ func (a *app) serveCmd() *cobra.Command {
 	var addr string
 	var open, startServices bool
 	var every time.Duration
+	var opts web.Options
 	cmd := &cobra.Command{
 		Use:   "serve",
 		Short: "Run the local web UI",
 		Long: `serve starts the portfolio web UI on a loopback address. Pages link into
 the kata, owcli, and bossman web UIs; --services starts those first if they
 are down. While running, serve records a metrics snapshot every
---snapshot-every (0 disables).`,
+--snapshot-every (0 disables).
+
+Behind a reverse proxy such as Google IAP, listen where the proxy can reach
+the server, accept the public name, and trust the proxy's user header; the
+signed-in user is then the actor of every change made in the UI:
+
+  goatlassian serve --addr 0.0.0.0:7799 --allow-host portfolio.example.com \
+    --user-header X-Goog-Authenticated-User-Email
+
+With --user-header, requests without that header are refused. Only use it
+when nothing but the proxy can reach the address.`,
 		Args: cobra.NoArgs,
 	}
 	cmd.Flags().StringVar(&addr, "addr", "127.0.0.1:7799", "listen address (keep it on loopback)")
 	cmd.Flags().BoolVar(&open, "open", false, "open the UI in a browser")
 	cmd.Flags().BoolVar(&startServices, "services", false, "start missing sibling web UIs first")
 	cmd.Flags().DurationVar(&every, "snapshot-every", 6*time.Hour, "record a metrics snapshot this often")
+	cmd.Flags().StringArrayVar(&opts.AllowHosts, "allow-host", nil, "also accept this name in the Host header, e.g. a proxy's public name (repeatable)")
+	cmd.Flags().StringVar(&opts.UserHeader, "user-header", "", "trust this request header as the signed-in user (the actor of changes) and refuse requests without it")
 	cmd.RunE = a.withStore(func(st *store.Store, _ []string) error {
 		host, _, err := net.SplitHostPort(addr)
 		if err != nil {
 			return fmt.Errorf("--addr %q: %w", addr, err)
 		}
-		if ip := net.ParseIP(host); host != "localhost" && (ip == nil || !ip.IsLoopback()) {
+		if ip := net.ParseIP(host); host != "localhost" && (ip == nil || !ip.IsLoopback()) && opts.UserHeader == "" {
 			fmt.Fprintf(os.Stderr, "warning: %s is not a loopback address; anyone who can reach it can read and change your projects\n", host)
 		}
 		if startServices {
@@ -91,7 +104,7 @@ are down. While running, serve records a metrics snapshot every
 			}
 			cancel()
 		}
-		srv := web.New(st, a.cfg, a.home, host)
+		srv := web.New(st, a.cfg, a.home, host, opts)
 		if every > 0 {
 			go srv.SnapshotLoop(every)
 		}
