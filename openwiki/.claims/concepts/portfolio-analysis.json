@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:d1eec6559ee1a86ad49f616124d9a16f7519c6a4839ccbd2c179596851c9408d",
+  "pageVersion": "sha256:05e4411a49824ff8aa0d3b0063ab420bcdb03a22e7eedfc6da8fb25e8b612232",
   "claims": [
     {
       "id": "claim_30147bf0c651aea37df8b5d0f6dc6e7f",
@@ -142,7 +142,7 @@
       "evidence": [
         {
           "resource": "repo://internal/portfolio/portfolio_test.go",
-          "version": "repo-file-v1:sha256:722c0cbe4d96144053a9cd9d49553a51fcb7b40aa4c4786412e1bc9682c51c1a"
+          "version": "repo-file-v1:sha256:c61313b309fac9c5e0b54fa013a7546d03c7ac8c22cff82ae9771ed8731e9e2c"
         }
       ]
     },
@@ -161,14 +161,24 @@
       "statement": "TestWikiIDChange checks that an adopted wiki component still resolves, with its drift, after owcli changes the wiki's ID, and that Normalize records the root.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio_test.go#L58-L96",
+          "resource": "repo://internal/portfolio/portfolio_test.go#L103-L141",
           "version": "repo-lines-v1:sha256:5b497c1b4859b7027fd3994c726da37483fdde07ba10668bb30083df89fa3ff8:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkYjcyODU5ZTc4ZmM4MWFlMzcxOGI4MzY5MGExY2UxZDhiNTdiYzVmZWFjNTUwMTQ2NmUxZmJjNDQxOTFkNmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5Y2Q5N2ZhMWVlMmNiNDgzYWVlNDk1MGU5MzZmYjQxNmU0MDJmYjQwMzRiMjU3M2FjMGRmZTQ1ZjNhMDM0ZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJhODlmMTc1NjQwMDdlZTY4ODYxYWEwNGRiNWVjNmZiMWE2MDI5ZDI1ZjVkZGFmN2Y3MDcwZDkzYTQyNTdhYTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ede3cc240e5d253b9db0d2a27ac1a90e",
+      "statement": "TestRelocate checks that after a relocate, git and the wiki resolve at the new path and sessions recorded under the old path still belong to the project.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio_test.go#L58-L101",
+          "version": "repo-lines-v1:sha256:296f125935d8a8c8a8d769959ef6c78fd5f20585cfdafcde45a1e268e50975eb:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2ZmQzOTdlNzY3Y2E2ODY0NTAxYmVkMjUxYjhiYzE0NWJmNDA3OTYwNzM5MGVlZGFiYTBjOTRjMWJmN2VlNjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5Y2Q5N2ZhMWVlMmNiNDgzYWVlNDk1MGU5MzZmYjQxNmU0MDJmYjQwMzRiMjU3M2FjMGRmZTQ1ZjNhMDM0ZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQzYTQwZDk0N2NmMjQ1ZWI1ZmQ4MTE0Y2EyN2EzNjdjOWNmNTllZDQ0ZjE5YWViMGFiNThmNjZkZDQ5N2IwYzQifQ"
         }
       ]
     }
   ],
   "verification": {
-    "by": "owcli/v0.2.0",
-    "at": "2026-10-05T08:22:47.007Z"
+    "by": "owcli/v0.2.0-1-g3d84f34",
+    "at": "2026-10-05T08:34:27.225Z"
   }
 }

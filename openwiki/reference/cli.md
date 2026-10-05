@@ -4,8 +4,8 @@ title: CLI Reference
 description: Every goatlassian command and flag, grouped as the help groups them, with what each reads and writes.
 tags: [cli, reference, commands]
 verified:
-  - by: owcli/ff31f70
-    at: "2026-10-02T20:24:19.254Z"
+  - by: owcli/v0.2.0-1-g3d84f34
+    at: "2026-10-05T08:35:11.856Z"
 sources:
   - id: openwiki-source-da21f52d07ab623ce6a4f0a7
     resource: repo://internal/cli/cli.go
@@ -15,7 +15,7 @@ sources:
     resource: repo://internal/cli/projects.go
   - id: openwiki-source-664966ddac5a292f452c8dc3
     resource: repo://internal/cli/report.go
-generated: { by: "owcli/ff31f70", at: "2026-10-02T20:25:09.016Z" }
+generated: { by: "owcli/v0.2.0-1-g3d84f34", at: "2026-10-05T08:35:12.025Z" }
 ---
 
 # CLI Reference
@@ -57,6 +57,7 @@ The `status`, `show`, and history logic is described in
 | `project rm <slug>` | `--yes` required | deletes the project's record, components, log, and snapshots; artifacts untouched |
 | `attach <slug> <kind> <ref>` *(collects unless --raw)* | `-l/--label` · `--attr k=v` (repeatable) · `--raw` | attaches a component after normalizing the ref (absolute paths, kata UID, wiki ID, full session key) |
 | `detach <slug> <id>` or `detach <slug> <kind> <ref>` | | removes a component |
+| `relocate <old> <new>` *(collects)* | `--dry-run` | after repositories moved: rewrites git refs and wiki roots under `old`, keeps each sessions directory and adds the new one, in every project; run before `owcli relocate` |
 | `note <slug> <text…>` | `-` reads stdin | adds a note to the log |
 | `log <slug>` | `-n/--limit N` (50; 0 = all) | the project log, newest first |
 

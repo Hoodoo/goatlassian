@@ -4,14 +4,14 @@ title: Portfolio Analysis
 description: How goatlassian turns projects and a World into per-component status, per-project metrics, last activity, session ownership, health flags, unassigned sessions, and snapshots.
 tags: [analysis, metrics, flags, health, sessions]
 verified:
-  - by: owcli/v0.2.0
-    at: "2026-10-05T08:22:47.007Z"
+  - by: owcli/v0.2.0-1-g3d84f34
+    at: "2026-10-05T08:34:27.225Z"
 sources:
   - id: openwiki-source-eebd91804ebf511b7b315be6
     resource: repo://internal/portfolio/portfolio.go
   - id: openwiki-source-127e8e798f871db6d31266f6
     resource: repo://internal/portfolio/portfolio_test.go
-generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:23:11.755Z" }
+generated: { by: "owcli/v0.2.0-1-g3d84f34", at: "2026-10-05T08:35:12.025Z" }
 ---
 
 # Portfolio Analysis
@@ -111,5 +111,7 @@ repositories, a kata project bound by git remote, stuck/needs-human/overdue
 issues, wiki drift, and a pinned session, then checks discovery, ownership,
 metrics, flags, unassigned sessions, and snapshots. `TestWikiIDChange`
 adopts a repository, renames its wiki's ID the way joining a workspace does,
-and checks the component still resolves. `TestMissingTools` checks
+and checks the component still resolves. `TestRelocate` adopts a repository,
+relocates it, and checks that git and the wiki resolve at the new path while
+sessions recorded under the old path still count. `TestMissingTools` checks
 that tools that cannot be run surface as alert-level problems.

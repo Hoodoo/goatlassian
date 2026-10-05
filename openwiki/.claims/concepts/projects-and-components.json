@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:10afc208140b02fa0eff862d368182a155d571190f17ddc01f3c6308cbf2d94b",
+  "pageVersion": "sha256:603328a79cca5f1ffeec91de1e39948e87eec61450527d8aa28937377d5a7312",
   "claims": [
     {
       "id": "claim_e5989110b44a183105565cd97dadcd7d",
@@ -139,10 +139,68 @@
           "version": "repo-lines-v1:sha256:f02a9a84543f89c18c73d70cca12b77509eb93f68134724b7341148033757ee1:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjAyYTlhODQ1NDNmODljMThjNzNkNzBjY2ExMmI3NzUwOWViOTNmNjgxMzQ3MjRiNzM0MTE0ODAzMzc1N2VlMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjAyYTlhODQ1NDNmODljMThjNzNkNzBjY2ExMmI3NzUwOWViOTNmNjgxMzQ3MjRiNzM0MTE0ODAzMzc1N2VlMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmE4ZWU4ZTM0ZjVmYzljZTFlYjRkZjk5YWE0ZDk5MjM1NTY1OGE4Mzc2MWQ3Yzk0NTUwMDg5OTNlOWJhZDc0ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzI0OWFhYTIwM2NhMzlhMjM3OWFmNjIwYjRmYjQzNzRmODE1MzhlNGUwMTZhMWJlNGI3MjAzZDMyMmQzN2Q2OCJ9"
         }
       ]
+    },
+    {
+      "id": "claim_982245cebefac385d589960df63c1dbf",
+      "statement": "Relocate rewrites git refs under the old prefix and refuses the whole relocate when a project already has the new git path.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/relocate.go#L101-L107",
+          "version": "repo-lines-v1:sha256:0b347793111ffb1afb670de6500cdbfd7ca79b34e94080ba8873fac60e8b8ea4:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzJlYzFiYjRhNWVkNThkOTk2NWFjOGM2NTk0OTQ1M2EwZDRmNzRkYjBjNGY3MjY1NDhlMWE2M2JiNWQ1ZmE5YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTY4MDZmMTU1YzVhYzFhZTI3MjJjYTA2ZjJhYzljYWRjYjg4MWI5MTIzY2I2MjRhM2MxMDQ3NWI0NDQ5ZGMyZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2VmN2M2ODJhOTdjNWZiMjliMDhlZmY2ODYxYjZlM2IzOGE5YWJhMDU5ZjZjZTA4Zjg5Y2YwMTA3MDM0MThjOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDdmMzFiNjZiYzBmNjljYWE0NDVmYjU3MjBkZjI2MWI4NzUzZjAxN2FiZGE0YmRhM2M1ZTc2MGQxMDliM2Q0MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ad96857b5b71ce573a92ff14b1058bc2",
+      "statement": "Relocate rewrites an owcli-wiki component's attrs.root, falling back to the root of its current owcli wiki ID when none was recorded.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/relocate.go#L113-L120",
+          "version": "repo-lines-v1:sha256:b1c5877d4a5128d2f278d44279bb477247804685ae693173083de6ea62ae520d:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzYyNzc5ZTIyNTUzYjliYWYxNThiN2EwNThiMWE3N2MxMWViMWI2ZDUwYTY0YTg1YTYyOTRiOTc1ZmZhNzA4NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTY4MDZmMTU1YzVhYzFhZTI3MjJjYTA2ZjJhYzljYWRjYjg4MWI5MTIzY2I2MjRhM2MxMDQ3NWI0NDQ5ZGMyZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWM2N2Y0YTdiMTAyNjg5YTViNmVmYWE4YTc4NjY2NzUzNzhkNGYwZDYzZTkzMDEyZGE4YjdjMjY1ZDNiMDlhNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjY5ZGVhMjhkZjY3Y2U0OThlYmQ2ZWNlN2YyZDUzYmZkYzFkMTI0MzlmNmNlM2RjM2RlZmJlOTFhODlhMjZkMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bd649c50c4369f88adf23613aa79815f",
+      "statement": "Relocate keeps a sessions component's old directory and adds a sibling for the new directory with the same label and attributes.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/relocate.go#L108-L112",
+          "version": "repo-lines-v1:sha256:a78bfc09584041bf8b4cca22dde382ea8bb5ffe53c45e7d9d0c4b53c0ca8e3fa:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTYyMjgyYmFkOGJiNTdkZTcwYjYzYmFlYTg4YjkyZWRmMTQ2ZTRlZmI4NmQ5ODEyMDlhYzEwYzlmOTQyOWI1OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTY4MDZmMTU1YzVhYzFhZTI3MjJjYTA2ZjJhYzljYWRjYjg4MWI5MTIzY2I2MjRhM2MxMDQ3NWI0NDQ5ZGMyZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzZmZjczZTczOWMxYjE1YTAxYWZjNjc5NTUzY2Q2NTJlYjQ2Nzg4ZTg1Mjg1MzY2YmU3NGQ0M2Y1MTE2M2U3NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGU1ODFmM2ViZTFlODdjYTZlYWQ0ZTIyMjQ2YmU1ZTIyMjA0Y2IyOWMwYjljNDgzYmU5NWRjOTg1YTA0YTU1ZCJ9"
+        },
+        {
+          "resource": "repo://internal/store/relocate.go#L150-L154",
+          "version": "repo-lines-v1:sha256:075b53059cff4c180db9249437553e98a85f41ba018f2f6df007779af4f41ede:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDc3N2M4Yzk3NzQxYzEyMDEyNGYwZWUzNDhiYzAzNDlhNzIzNDdhYzg3NTJhODczYmVlZGFlZTFkM2ExNzBlMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRlZmM0OTQxOGQyNmRjZjEyOWIyMmE2YWEyMTEwOGNlZWMzNzY3N2EzMmQwOGU5ZDVmZWUzNWRkYTY2YmI5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjMwNzI1ZjQyNzc5NzQxYjc0MzJiNWE5M2JhZDlhNjVmZmRiNjcyMDZiNmNiMGY4ZTBmYTUyZjUxMWU0NzBiNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDQzYWRmNjRkYTVhMjFiMTZjMTZkNjJhYzMzZWMyMTJiN2YwYmJlNGM3M2U5NWI4OThmMTEzNjI0N2E0YzIyYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_19becdde056dfb19d7df8a3cbab3c84e",
+      "statement": "Each relocated path is logged as a relocate event in its project within one transaction.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/relocate.go#L10-L11",
+          "version": "repo-lines-v1:sha256:a6cc0251da88df3e6466af92984e2652924e27787e5a224a5d03814e804c1fb2:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTJiNWY0NzdjNGYzYTlmM2Q3NTMwZWQ3OWI3ZmExZmYzN2Y3NjJkOTAzZjM4NTkzNmEzMjliNmY5NzM3MmU5NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzViMzJhYjc3MjM5NWEyNWVlODJjZjMxM2VlMzc5YzEzYTYwMDZjZWFjOWE3YjRlZGI0NWFlMWVhZDY3ZTU5OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGQ1ZGU2NzM5MGNlMzJiZmZlZjBkZTk2NGMxYzcyMDA5OTVkNjhjYTNlZWNhZGViM2RkMDliODcyYTU0ZWI3NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmE1YWU2NDE1ZGRlMTA5MjY4ZWNkMmZiM2M3NGRmMTJhZmM2YTA1ZDFjMzVkYzg4NDA2ZWMwMzdjOTE2Mzg3NyJ9"
+        },
+        {
+          "resource": "repo://internal/store/relocate.go#L128-L175",
+          "version": "repo-lines-v1:sha256:390632583adc8388f518d3c1f300fc67c89df453479ac0b2143ef4e3f8d1df2d:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyNzUyOTE3NzEzM2YyZGVkZGYwNzQ3MDI4MmJkZDg5MTA3ZjJjNGRlMmJkZTY1MjMzOTBhMmU2MWRkMGEwYjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRjYTRlMzllZTAxN2I1ZTc5NGRjMWM3N2ZmY2RiZjc3NWU0Zjc1OWRkZWI4MDVlOTQwYzY1YjgyZWEwMTk2ZGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlNjhlNGY3OWNmMzQyNWRlNGIwN2RhNzEyNWI4YmY1NWE1YjMzYTU5NzAzNjJkNmIyOGYwZDkxNGY2YzJmMTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d8c2e0ae3e3ce04409e2bacf6283d3bc",
+      "statement": "The relocate CLI builds the wiki ID to root map from owcli wikis before relocating.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/projects.go",
+          "version": "repo-file-v1:sha256:85ba6ae97da351fbf35a38ecd501b0a2b1e6300590a60beca47329dba32a0d2c"
+        }
+      ]
     }
   ],
   "verification": {
-    "by": "owcli/v0.2.0",
-    "at": "2026-10-05T08:22:55.372Z"
+    "by": "owcli/v0.2.0-1-g3d84f34",
+    "at": "2026-10-05T08:34:54.657Z"
   }
 }

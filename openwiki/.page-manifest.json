@@ -23,18 +23,18 @@
       "sourceFingerprint": "sha256:86a87a9392f5633f0e1f158683138450510cdcd8a00f3a91007da0895d050e89"
     },
     "/openwiki/concepts/portfolio-analysis.md": {
-      "pageVersion": "sha256:d1eec6559ee1a86ad49f616124d9a16f7519c6a4839ccbd2c179596851c9408d",
-      "completedBy": "owcli/v0.2.0",
-      "completedRunId": "117129b7-745d-4e80-b39a-4ca2e673be1f",
-      "gitHead": "eeeba39901de78050000645747440fbabc0cab26",
-      "sourceFingerprint": "sha256:9e5a517ff5e91c26c8758c991eb0a494b82643437efa2146780a465f827cbcca"
+      "pageVersion": "sha256:05e4411a49824ff8aa0d3b0063ab420bcdb03a22e7eedfc6da8fb25e8b612232",
+      "completedBy": "owcli/v0.2.0-1-g3d84f34",
+      "completedRunId": "ba256325-5ca5-43ef-8cae-dd555526ad50",
+      "gitHead": "2290111a0b20157a903edbee0f9719184aff0e79",
+      "sourceFingerprint": "sha256:8f40d6371a7b01b8ac3abd1e155e09ca5ad8fc897dfaef1304dcd58ce5f5ca66"
     },
     "/openwiki/concepts/projects-and-components.md": {
-      "pageVersion": "sha256:10afc208140b02fa0eff862d368182a155d571190f17ddc01f3c6308cbf2d94b",
-      "completedBy": "owcli/v0.2.0",
-      "completedRunId": "117129b7-745d-4e80-b39a-4ca2e673be1f",
-      "gitHead": "eeeba39901de78050000645747440fbabc0cab26",
-      "sourceFingerprint": "sha256:9e5a517ff5e91c26c8758c991eb0a494b82643437efa2146780a465f827cbcca"
+      "pageVersion": "sha256:603328a79cca5f1ffeec91de1e39948e87eec61450527d8aa28937377d5a7312",
+      "completedBy": "owcli/v0.2.0-1-g3d84f34",
+      "completedRunId": "ba256325-5ca5-43ef-8cae-dd555526ad50",
+      "gitHead": "2290111a0b20157a903edbee0f9719184aff0e79",
+      "sourceFingerprint": "sha256:8f40d6371a7b01b8ac3abd1e155e09ca5ad8fc897dfaef1304dcd58ce5f5ca66"
     },
     "/openwiki/operations/configuration-and-services.md": {
       "pageVersion": "sha256:a3dc8f2cda826ab0e55a1a237a03ec8b31750470480afb9126faffe620e34856",
@@ -51,11 +51,11 @@
       "sourceFingerprint": "sha256:86a87a9392f5633f0e1f158683138450510cdcd8a00f3a91007da0895d050e89"
     },
     "/openwiki/reference/cli.md": {
-      "pageVersion": "sha256:d4c045015f6f3da01a178b2d9f6048ba6bdc05bd1000e26e31d2a9310105503c",
-      "completedBy": "owcli/ff31f70",
-      "completedRunId": "dcb95d8d-1dee-43ae-9432-9a4f06920fd3",
-      "gitHead": "c3e0ebf335ed5d5a11438a5b40566abcc5c989e4",
-      "sourceFingerprint": "sha256:43ac0e0eb7ea2b0e7df0be3cc2899e7506c30c2a3bd654b536a2f07bfe5ae673"
+      "pageVersion": "sha256:157b8c9fbb5c9a032728edb3344a86ba41d6cc10423341c2e70629afb290ca95",
+      "completedBy": "owcli/v0.2.0-1-g3d84f34",
+      "completedRunId": "ba256325-5ca5-43ef-8cae-dd555526ad50",
+      "gitHead": "2290111a0b20157a903edbee0f9719184aff0e79",
+      "sourceFingerprint": "sha256:8f40d6371a7b01b8ac3abd1e155e09ca5ad8fc897dfaef1304dcd58ce5f5ca66"
     },
     "/openwiki/workflows/adding-a-component-kind.md": {
       "pageVersion": "sha256:2175c5d41532b16b51c973815718dc5c64fbcd3272a40471568d0d54db9213d8",

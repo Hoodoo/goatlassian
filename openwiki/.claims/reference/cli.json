@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:d4c045015f6f3da01a178b2d9f6048ba6bdc05bd1000e26e31d2a9310105503c",
+  "pageVersion": "sha256:157b8c9fbb5c9a032728edb3344a86ba41d6cc10423341c2e70629afb290ca95",
   "claims": [
     {
       "id": "claim_f3a5bbc3dead84cfc416e46b857ab6f1",
@@ -28,7 +28,7 @@
       "evidence": [
         {
           "resource": "repo://internal/cli/cli.go#L72-L88",
-          "version": "repo-lines-v1:sha256:eebac117b411398bb0a1e1800c995e4caf8b7b59a815e8ba91e8695279c4f8d6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhOGE0MzdkNTg4YzhiZTVjMzY2NzkwOTEyYjU1M2M0YWFjZGRlMWFmYjlhNjNlM2I1NTJiZjJmOTVjNTE3ZjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3Y2RhODJkYTYwNjIzOGUwNWU2MjM5OTU2OWM1ZWUwMzk5MzQxOTY0OGFlNWQ0M2EyYmY4Y2Q2MzQ3ZjgyNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk5ZmNhNmM3NTJlNTQwYTAzYjVhNjRiZmZiM2QzOGY2Y2UyYTY2ZTFhOTFkNmE0NTQwZGJiZTVlNjdjZjI4MDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwOTViMzBiNzM0YzkyM2MzZjMyZGZiMzcxMjg3MTQxMmU2M2VkMDkxYmM4MTdlYTM5OWM2YzcxOWQyODU1NjUifQ"
+          "version": "repo-lines-v1:sha256:f14f5e3dc814a5832a256a817eedbb0b3bb04e414f218f66f269da4a7445e104:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhOGE0MzdkNTg4YzhiZTVjMzY2NzkwOTEyYjU1M2M0YWFjZGRlMWFmYjlhNjNlM2I1NTJiZjJmOTVjNTE3ZjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3Y2RhODJkYTYwNjIzOGUwNWU2MjM5OTU2OWM1ZWUwMzk5MzQxOTY0OGFlNWQ0M2EyYmY4Y2Q2MzQ3ZjgyNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk5ZmNhNmM3NTJlNTQwYTAzYjVhNjRiZmZiM2QzOGY2Y2UyYTY2ZTFhOTFkNmE0NTQwZGJiZTVlNjdjZjI4MDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwOTViMzBiNzM0YzkyM2MzZjMyZGZiMzcxMjg3MTQxMmU2M2VkMDkxYmM4MTdlYTM5OWM2YzcxOWQyODU1NjUifQ"
         }
       ]
     },
@@ -97,7 +97,7 @@
       "statement": "adopt takes --slug, --name, --description, --tag, and --dry-run.",
       "evidence": [
         {
-          "resource": "repo://internal/cli/projects.go#L354-L358",
+          "resource": "repo://internal/cli/projects.go#L409-L413",
           "version": "repo-lines-v1:sha256:0b866bba9edf7130670bc88a0104fbe9bba04a4adc951598129bc9aa46e49273:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjI1ODliYzkyMTRhNmQ4YWEwNzU0MGVhZjQwNjE5YWIxYzhmMjNkM2M3MDVkNThlN2IwYjljYmQ4MzM5NDIxNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzlkZjdlODhlMjA1NDlmOGU0YTk3NDlhZDExZWVlOWRjZjQ3OTI5MWUxODRlYjE0YmEzMjA5ZTMyYTg0NmMxNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmIyZTFkZTk5ZTUxNTlhMTc4NTFiOWM3YTFhZGNjMDg1ZjMwZjI3ODQ1ZGNhMDdkNDUyYWZiYmRhMjJkOGFjOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTgwODMzZWM1ZWYyOTdlYjkxYTZkYmMxOGU5OTBiYjlkZjYzNDZiMzgwNTAxNjBmNTRiM2FiZDM0YjAyYTAxMCJ9"
         }
       ]
@@ -107,7 +107,7 @@
       "statement": "discover takes --all, --missing, and --adopt.",
       "evidence": [
         {
-          "resource": "repo://internal/cli/projects.go#L417-L419",
+          "resource": "repo://internal/cli/projects.go#L472-L474",
           "version": "repo-lines-v1:sha256:77e854cc2dce13db90f1fddc97b1617e8b5b9c1ef4e92c2eda51046833f6acf9:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDExZDQ1N2Y2MzI4YTliZWI2YzkxYjA0Mjg4ZjRkNTA3MmRkZGNkZjc4MGNjNGE2MmVkYjMxNDIxMDhjZWI5ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzliN2MzYTYwODI1NGIyMzFiZDNlNWU5YjMzNzQxNzk2MGZhZTI4N2UzZGNiNGQwODdmZTc2NTNiNWY2M2M5NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWI4MWE4ODk3NGVmMWI4YTc4ZTg4OWNlYWM5NDUxYWQ4YmE3NGU5NDc1ZjQ0OWU4ODQzMGU0MTYxYzBjYTQwOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTkzN2ZlZTg5ZWFlNzFlZWVjZTI1YTk4ZTA2NWVkZWFiMzYyZWE2ZjVhNTYxNzBiNDZjMzgwYjE4M2Y4NzliMyJ9"
         }
       ]
@@ -117,7 +117,7 @@
       "statement": "log shows 50 entries by default.",
       "evidence": [
         {
-          "resource": "repo://internal/cli/projects.go#L320-L320",
+          "resource": "repo://internal/cli/projects.go#L375-L375",
           "version": "repo-lines-v1:sha256:68ed2eaef6c004aeef816e4d4f1fd23381cbff1dd51c14ad1ff91b7f1ffbba1b:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjhlZDJlYWVmNmMwMDRhZWVmODE2ZTRkNGYxZmQyMzM4MWNiZmYxZGQ1MWMxNGFkMWZmOTFiN2YxZmZiYmExYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjhlZDJlYWVmNmMwMDRhZWVmODE2ZTRkNGYxZmQyMzM4MWNiZmYxZGQ1MWMxNGFkMWZmOTFiN2YxZmZiYmExYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTM1OGEyYjdiYTdhM2JjNjFkY2JlN2UyN2E3YjllOWI5Nzg1MWE0YjIyZjhlNmJlZWNlNTQyMzhmMWM5YWIxMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTMzMDY2NGM0NzM1OTRjMzk2ZmFlYWQyOTRiY2I4ZmQ1YzcyYjM2MjliNTAzMzNiODY3NGNmMjMwNTkyYzNiMyJ9"
         }
       ]
@@ -141,10 +141,24 @@
           "version": "repo-lines-v1:sha256:5d4bbd6caaf307245009a9e345c90fb8dc1f4d1317fa1c92a4094d4e86414d49:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWViOTYwNTkzODhlZDExZTE4ZDg1ZmRkMDVhMGYyYjI5M2MxNDYyNzVmMWIxYzdlM2ZmZjYxOGZjZmU1MTJiNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDViNDIxOTAxZmRkMDQyNjM5MTA3MjZjMWNjYjM1NzViOTczZjcyYzlhYzc4YTU3ZDRlZDQ4NGU5NmFhOGQyNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2Q1ZTFhMGQxNmM0MmRmODI4ZGFmMDk5YTIyNWM2MzE3NDBlOTEyN2JjY2Q1YjRmYTQ3ZTlhNTI3MjgyYjMwOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjYzNTMwMzQzZTRjNDRiNDMyM2E1ZTU2MmQzM2RlZmNkOGMyN2RhY2JmOGM3ZWQxZTdiMjgyNDQxYmI3YWExNyJ9"
         }
       ]
+    },
+    {
+      "id": "claim_90072aaff00cfedaf1c8e089198bb8f7",
+      "statement": "relocate is registered among the project and component editing commands and takes --dry-run.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/cli.go#L81-L84",
+          "version": "repo-lines-v1:sha256:09788614c61ba1237fa8d0a133c22fd2000824afcd642831db522176df769832:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTViZTVkNmI5NWQ4MDk3ZWNiOTllOGRkMGE1MWNiNzA2NjU4MDNkNDhiNTVhMTc0NGM0OTVmNjEyYmI1NmJhOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdjZGE4MmRhNjA2MjM4ZTA1ZTYyMzk5NTY5YzVlZTAzOTkzNDE5NjQ4YWU1ZDQzYTJiZjhjZDYzNDdmODI2MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTE3Y2QwNmMzNWQzMTA4YTE4MWJlYWRmM2JiZDY0ODMwZDlhZmNiZjljMzU2YTE0NDA4MTQ1ODhkMDQyYWYwZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGYwYTY5MTFjMWJiOTgzN2UzMjQ1OTc3NGQ0ZjFlMGY4MTcyOGQwYzMwNDNiZjIyYWMxOTY2NjRlOWVhYTBkNSJ9"
+        },
+        {
+          "resource": "repo://internal/cli/projects.go",
+          "version": "repo-file-v1:sha256:85ba6ae97da351fbf35a38ecd501b0a2b1e6300590a60beca47329dba32a0d2c"
+        }
+      ]
     }
   ],
   "verification": {
-    "by": "owcli/ff31f70",
-    "at": "2026-10-02T20:24:19.254Z"
+    "by": "owcli/v0.2.0-1-g3d84f34",
+    "at": "2026-10-05T08:35:11.856Z"
   }
 }

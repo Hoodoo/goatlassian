@@ -4,14 +4,18 @@ title: Projects, Components, and the Store
 description: goatlassian's data model - projects, lifecycle states, tags, open-ended component kinds, the event log, snapshots - and the SQLite schema that holds them.
 tags: [data-model, store, sqlite, lifecycle]
 verified:
-  - by: owcli/v0.2.0
-    at: "2026-10-05T08:22:55.372Z"
+  - by: owcli/v0.2.0-1-g3d84f34
+    at: "2026-10-05T08:34:54.657Z"
 sources:
+  - id: openwiki-source-f03b05428a9d9452871a8dd0
+    resource: repo://internal/cli/projects.go
+  - id: openwiki-source-fecec150f494f58fc6e0ca2c
+    resource: repo://internal/store/relocate.go
   - id: openwiki-source-4a81fcd95533ed8ba5a77739
     resource: repo://internal/store/store.go
   - id: openwiki-source-6d8c1cdec697aee752bd7c32
     resource: repo://internal/store/store_test.go
-generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:23:11.755Z" }
+generated: { by: "owcli/v0.2.0-1-g3d84f34", at: "2026-10-05T08:35:12.025Z" }
 ---
 
 # Projects, Components, and the Store
@@ -69,10 +73,32 @@ today; it is stored, displayed, and linked when the ref is a URL. This keeps
 future artifact types from being locked out until an adapter exists; see
 [Adding a Component Kind](../workflows/adding-a-component-kind.md).
 
+## Relocating after a move
+
+Components store absolute paths, so moving repositories (or a home directory
+to a new machine) leaves them pointing nowhere. `Store.Relocate(old, new,
+wikiRoots, dryRun)` (`internal/store/relocate.go`, `goatlassian relocate`)
+rewrites every path at or under the old prefix, in all projects including
+archived ones:
+
+- `git` refs are rewritten; a project that already has the new path refuses
+  the whole relocate.
+- `owcli-wiki` components get `attrs.root` rewritten. One attached before
+  roots were recorded takes its root from `wikiRoots`, the current owcli wiki
+  IDs; the CLI builds that from `owcli wikis`, so relocate must run before
+  `owcli relocate` changes the hash IDs.
+- A `sessions` component keeps its old directory, because bossman records
+  where each past session ran, and gains a sibling for the new directory
+  (same label and attributes) so future sessions count too.
+
+Other kinds are left alone. Each change is logged as a `relocate` event in
+its project, all in one transaction; `--dry-run` reports without writing,
+and running it again finds nothing to change.
+
 ## The event log
 
 Every change writes an `Event` in the same transaction: `created`,
-`edited` (what changed), `state`, `note`, `attach`, `detach`. Each event
+`edited` (what changed), `state`, `note`, `attach`, `detach`, `relocate`. Each event
 records its actor, from `$GOATLASSIAN_ACTOR`, then `$KATA_AUTHOR`, then
 `$USER` (see [Configuration](../operations/configuration-and-services.md)).
 `LastEvents` gives each project's latest event time; analysis reports it as
