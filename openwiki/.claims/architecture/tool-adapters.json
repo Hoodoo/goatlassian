@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:ef54e5c6fb0d06387a7f4b04d5038a3ec1047175f6a1e616223ec45633a3c703",
+  "pageVersion": "sha256:e30c4a5c035a313f1ef075e283c14fb09a571bc3e5f8996229a575c6580cc39c",
   "claims": [
     {
       "id": "claim_91af4a6f6b9670419ff8bb149ccc4cae",
@@ -69,7 +69,7 @@
       "statement": "owcli is collected with owcli wikis --json.",
       "evidence": [
         {
-          "resource": "repo://internal/sources/sources.go#L290-L295",
+          "resource": "repo://internal/sources/sources.go#L309-L314",
           "version": "repo-lines-v1:sha256:27dd514c881718e20ed707b01fca27f23c24a23769d6667fe14c446611dd2f8f:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWM1NmI4NzE5NzRjODk4YzNjMjRkNDhkNzljNTY1YjBmMjBhZTdmYzVlMDQ1YzE0ZDNjNzNhZDc3MGJmZWY3ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTJjZjE5NmMzMjJhY2ZiNjMzNjdkZTU2Yzc3MzVjMzBmY2JhYzJkZWUzZDM2NmFmNTBlZTVlMmE1N2M5ODgyNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTYzMWI2ZTJjYTA3ZDhiYWYwZWI0NGU3NDlkYmY0OTBiMzkyZTNhNTM0ZWY2MTAyMjc3MTE0NmNkZjlhZjFhMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMThhMzA3OGUwMmUwNjdiYTU3Y2VjYzA3ZThjYzI0NDU2ZmNmNWQxNDI1ZWQyMzQzYzAyZTk1ODc1NzBmNzljYyJ9"
         }
       ]
@@ -79,7 +79,7 @@
       "statement": "bossman sessions are collected with bossman --json ls -n 0.",
       "evidence": [
         {
-          "resource": "repo://internal/sources/sources.go#L350-L355",
+          "resource": "repo://internal/sources/sources.go#L369-L374",
           "version": "repo-lines-v1:sha256:2b56beb272da04a4169ae5b025c4574ca3e9120c5efcaa45a3dfd1f3364fefd2:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ5ZTY5YTczMjJlYzEyODVhOTY1ZGQ4OTIxMDkwMTUyMzAyODk0M2U0ZWZmYzhiYjNlMGExNWY1M2Y1OGE0NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTAwNDgwYzNlOTI5MGI5ZjZiNzA2NjU0ZGQ2NTk1OGRhZjY2M2FiOTExYzFlOTFjYmJmMDY2NTE5NGIxZjdiZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzYyNmQyMDhjZTZmOTgyYmUzZDA5OTgyMjI5YjBiMjYwZmU1NjAxYjY1NjBjMTcxMDZhMDdmNjg3YmIwYTA2ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjg0YzI3MzQ1YTJlN2UyYzFjNjJiMzZiY2ZlNmNiMDc2MmE4MjYyNDBmYWFiMmQ0MzA0NzU4MGNmYTM5YTBjZiJ9"
         }
       ]
@@ -89,7 +89,7 @@
       "statement": "A session's token count is input plus cache write plus cache read plus output.",
       "evidence": [
         {
-          "resource": "repo://internal/sources/sources.go#L337-L337",
+          "resource": "repo://internal/sources/sources.go#L356-L356",
           "version": "repo-lines-v1:sha256:b092128e7f8ba47f39b527986dfab29c8a445b0737b9dd65546d7f6295c2f849:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjA5MjEyOGU3ZjhiYTQ3ZjM5YjUyNzk4NmRmYWIyOWM4YTQ0NWIwNzM3YjlkZDY1NTQ2ZDdmNjI5NWMyZjg0OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjA5MjEyOGU3ZjhiYTQ3ZjM5YjUyNzk4NmRmYWIyOWM4YTQ0NWIwNzM3YjlkZDY1NTQ2ZDdmNjI5NWMyZjg0OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWQ4M2E1NjEwNTk5Yzk5YTU4NTEwOTYxMTlhMTUwMzNlOWM5NWIyODQ4MTUzMzhhMDIwMzc1ZGM0ODMzYjQ3YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTYzNjMzMDNmMDcyNWM4YzU2MmJhMTJlMDcyNDYwNDZlY2QxMTAzNjY2NzQ0N2VkNjYxNzRlOWQyNDkzYmJlMiJ9"
         }
       ]
@@ -99,7 +99,7 @@
       "statement": "bossman links use #/s/<key> for one session and #/?project=<path> for a directory; owcli links use #scope=<kind>:<id>.",
       "evidence": [
         {
-          "resource": "repo://internal/sources/sources.go#L359-L371",
+          "resource": "repo://internal/sources/sources.go#L378-L390",
           "version": "repo-lines-v1:sha256:817027c576053b93e630a204a7a0d0608952736008a6e0bcf28c5f230b30cee1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkMTJkZDMyZGQ1YTJlNDk2MzE4NWVjNzQzMjYwZjdmY2ExNGRkNjBiMTY3YTJiYmVkNTRhOTkzNDc3ZDEzNmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY4NGMyNzM0NWEyZTdlMmMxYzYyYjM2YmNmZTZjYjA3NjJhODI2MjQwZmFhYjJkNDMwNDc1ODBjZmEzOWEwY2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI0MmRiMjkzYjY3YzgxZjZjM2IyYzA0Y2Y3MTAyMzYxNWI1MzY2MTM2NTgwYzMwOWFjZDg4M2RlZTc5ODFmYjEifQ"
         }
       ]
@@ -109,7 +109,7 @@
       "statement": "RemoteIdentity reduces git remote URLs to a lower-cased host/path form without credentials or .git suffix.",
       "evidence": [
         {
-          "resource": "repo://internal/sources/sources.go#L387-L404",
+          "resource": "repo://internal/sources/sources.go#L406-L423",
           "version": "repo-lines-v1:sha256:8a5eebb78a5b22fbfe6235194409ec5dd5c5d721e55a045e9ce3415f82626e8e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2OWI0MWQ1MzcxNDMzOThmZjdhNDUxNTQ2NDhjMDEyMDkzMTdjYmZmZGNmZjYzMTk2ZTJlMzRhMTVlNTZiYzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRiODA3OGYwMDEzNjBhYjFhNjdkYjBhMzA3NTU1ZTM1NWNjMTc4N2YyZGNhNGIxZjkzYTg2NTA2MjQ4NTQxZjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYzZTlkZDVkMjc0MDZhMTM1NTc1ZTQ4MzJmNjdlN2E2ZjZiOGIyMmQ1YzU3MDY5MDhjNjI0ZTAzNGU1MDUzZDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNlNzE3NTIzZjlhY2QzOTQ0NDM1YzEzNDA5NDI5YTJkMjM1MmYwYWNmMDFkNmE2MGUyYTQ4OWMyYjkwN2EyY2EifQ"
         },
         {
@@ -123,7 +123,7 @@
       "statement": "Git status counts dirty paths from status --porcelain and ahead/behind from rev-list --left-right --count against the upstream.",
       "evidence": [
         {
-          "resource": "repo://internal/sources/sources.go#L464-L480",
+          "resource": "repo://internal/sources/sources.go#L483-L499",
           "version": "repo-lines-v1:sha256:72a211f980661f2d1c99d258478deb8ae6ed5612f4ec2bccff878288b241601a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1ZmIyYjg4Njk5ZTQwZWYxZDk1MjQ3NDE3N2M2MDNkNmEzZGVkMTJhYjE3ZmIxMzMzMDU0OTk5YWNkNzUwODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3Y2RhODJkYTYwNjIzOGUwNWU2MjM5OTU2OWM1ZWUwMzk5MzQxOTY0OGFlNWQ0M2EyYmY4Y2Q2MzQ3ZjgyNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgwOWU5YzM3OTA3NGEzMjFjMTI2ZDc0MzgzYzNjNTRiZjQyNDAwZWU1MGE5MGM3ZGI2YmQ4OTJjMWZkZjA1ZDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFlNTdkMmNlNzZmNjNhMTZlYjExZGRhNGZhZmFjOGQ5NjIxZTVkYWQ3YjEwN2Q2Nzk4YmRiOGZmZjFjZjg4NjgifQ"
         }
       ]
@@ -133,7 +133,7 @@
       "statement": "Git status also reads the origin remote, recent commit count, local branch count, and branches not merged into HEAD.",
       "evidence": [
         {
-          "resource": "repo://internal/sources/sources.go#L481-L491",
+          "resource": "repo://internal/sources/sources.go#L500-L510",
           "version": "repo-lines-v1:sha256:c0d7631d063ca52abf3e0242c44e302b4bebc48a8df573005d8043d088561c63:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmNTM2ZTdjOTA2YmY2YzhmZTViOGNjNGYzNDk0NTEzM2IxNTM5ZTM4YjYwMmQ5NzMyZmRhMTgyNjcwYzZmYjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhMGM5MWQ1OGZhZWE1NmQ0NmIzMmU5ZDI2M2QxZmMxMGVmY2MxNGE5Njk4NzgxNDhkOGE2YWE0Mjk0MDdiZDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiMmY3MDU0MGU0MDY2N2ExY2ZkMDdiZjMwN2YxMWY0ZTBmMTE5ZTRmYWNmN2U1YjRiZjQwZDc3NDBjZWZiY2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3YWEzNTBlYmU4MjIyZmUyZTViYmIyYzhiMTc1NGEzNmViZGM3N2NkNzg0MzFmZGEyNzhmY2ExOWUxYzk2ODIifQ"
         }
       ]
@@ -143,7 +143,7 @@
       "statement": "CommitsSince returns -1 when the revision cannot be counted.",
       "evidence": [
         {
-          "resource": "repo://internal/sources/sources.go#L496-L508",
+          "resource": "repo://internal/sources/sources.go#L515-L527",
           "version": "repo-lines-v1:sha256:4a88c2be88dee7ae49d7e8a186bdca974d6d9e9aa7e8d638b6648ff6f3afe63c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViNjU0ZGU1OTY4NGJlNDU5ZDZkMTY3ZmY3NmRkN2NkOGIyODZjYzA2NGJkMjkyNTBmZmQ2ODdlMDRjYWEyYzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBhMWVmNjRmOGY5OTkyODRlZDA5YjVjZDQ3OTFlZTJlZDZmOTM3ZGQxY2QxYzFkNWNiMjYxNDAwYjkyYjdmNjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZlZjkxOTA1NWI3YTY4ODBmOGU0NDRjNGQ4ZWNjMGE4Y2RhMGIwY2YyZDNkYjI1ZWIzMDgxNWNlYWNjODRjZTAifQ"
         }
       ]
@@ -190,17 +190,37 @@
     },
     {
       "id": "claim_1a8a43978954f5a17b99c659e847ac4c",
-      "statement": "Normalize resolves git refs to the repository top level, kata names to UIDs, session prefixes to unique keys, and wiki or workspace names to IDs, failing on unknown references.",
+      "statement": "Normalize resolves git refs to the repository top level, kata names to UIDs, session prefixes to unique keys, and wiki or workspace names to IDs (recording a wiki's repository root in attrs.root), failing on unknown references.",
       "evidence": [
         {
-          "resource": "repo://internal/discover/discover.go#L211-L283",
-          "version": "repo-lines-v1:sha256:5f912c327d38c1a3d57ebeda123fcbf6b088af359e777499eef3d59c92b8434c:eyJzZWxlY3RlZExpbmVDb3VudCI6NzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxOTU4ZGNmMWE2ZWY1ZGJiYzg5YjIwMDYwMzNjMjEzMTU3NGM4YTc4ZDBiZjc4YTVlOTljZWY5NWMxOTI0MzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzMGFlOWIwNDQzN2E2ODRjY2YxNjBkZjU3ZGE3YWMxYjcyNmFkOTEyNGRjYjM4NzhlNDBjYTUxOWY4MmVmYTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjViYWVhMTI3OGU1MmUyMzBmOTFkMTRiZWJhMGMzYzQ4MTI5MjhiYzA5ZTVjYWYzOGRiZmE4YTNlYjUxMzFjMjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAxMmFmOGU0ZDhjZTE1ZjY1MWI0YzY3MmYyNzk3NWQ5MzFjZDA1YWM3ZWE2ZGU1NjE4MTQ4N2E1ODdmZDVkNDYifQ"
+          "resource": "repo://internal/discover/discover.go#L206-L288",
+          "version": "repo-lines-v1:sha256:544751d3c822e9fba70b4cf116f454ae2406a60474e566e30270a65d4e8e263c:eyJzZWxlY3RlZExpbmVDb3VudCI6ODMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmNmI4NGU2ZDgxY2MwMDQ1MWMzYjYyMGZjZmY0MmE3YjgzZDgzNzBjMDI4Njk5OGEyYjg2YThlZjk1NGMyNzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkwYTY2MDI1ZWQ3MWUyMTVjNDcxYjVhYzc3ZGU4MGU1NDg5N2Q4YzQzZmNlMDg1ZjYwY2VmMTJjNTM1YzMwYWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8fcb3671376a757b9bb74d9fbfc3b08e",
+      "statement": "ForDir proposes owcli-wiki components with the wiki's repository root in attrs.root.",
+      "evidence": [
+        {
+          "resource": "repo://internal/discover/discover.go#L85-L88",
+          "version": "repo-lines-v1:sha256:7c87f2e9cdbaaef92a8c4840f1a089bb85a4577fb454d9c5f85bde75aae440cd:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmNiYjY1OTliNzA2MzVkYWQ5YWJkNjA4ZTI0MzM5OTUzNjRiZTgzZDE3NDYyNjJlMmM0NThhNzY0MGY1ZjU0NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWQxMTI2ZjU5ZjZiMmI2ZTZiMTAwNWU2ZmRkMjc3OGY0MDYyMDgzYTc2MTUyYjMyNGZlNDZlMzgwNzI4Y2IzNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWJiNmNkYzkwY2Q0ZmNlZGQ0MWQ5YmMzMjgyYmY5ZmIxNTVmZWYzMGZhNjFlMzYwNWRmZWU3YjRhNzI5YWI1MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTZlNzU1MjgxM2RlMjM3M2Q5ZWZiZTNhOTczYjg3MjA0YjhjMTQ2NTM4MTU2M2VmNTMxZGQyOWIxYzhhOGE1YSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_70bd046939f9d608c8547b5a2cae0751",
+      "statement": "OwcliWorld.WikiFor finds a wiki by ID and falls back to matching the repository root, since owcli's wiki ID changes when a repository joins a workspace.",
+      "evidence": [
+        {
+          "resource": "repo://internal/sources/sources.go#L280-L298",
+          "version": "repo-lines-v1:sha256:bb0e7d561151726b207128f9ab5feaf8e26bb57bc69ada0ff854c5422cbc1cca:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkNDg1NDczZTAzNTI1YzU3MmFkYzU2MTBhYWEwZWY2MTk2OTRiYzFiMDc3MDVhMzFiNzYzOGEwMDUxOTEzMDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE2MzFiNmUyY2EwN2Q4YmFmMGViNDRlNzQ5ZGJmNDkwYjM5MmUzYTUzNGVmNjEwMjI3NzExNDZjZGY5YWYxYTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVkOWJkMzFjZWJjZWM1YmFkZjg2ZjcxYzRkOTNkODdmNTMzYzlmMThiODIwZGNjYjJkMjM3OGJiMjc5M2Q1YzYifQ"
         }
       ]
     }
   ],
   "verification": {
-    "by": "owcli/ff31f70",
-    "at": "2026-10-02T20:21:12.058Z"
+    "by": "owcli/v0.2.0",
+    "at": "2026-10-05T08:22:21.998Z"
   }
 }

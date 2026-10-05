@@ -4,9 +4,11 @@ title: Adding a Component Kind or Adapter
 description: How to give goatlassian a new artifact kind (for example Slack threads or GitHub PRs) or a new tool adapter, and how to develop and test changes without the real tools.
 tags: [extending, adapters, testing, development]
 verified:
-  - by: owcli/2d956c2
-    at: "2026-10-03T15:43:06.638Z"
+  - by: owcli/v0.2.0
+    at: "2026-10-05T08:23:11.602Z"
 sources:
+  - id: openwiki-source-60aa3cff97fd2a958231fb58
+    resource: repo://internal/discover/discover.go
   - id: openwiki-source-eebd91804ebf511b7b315be6
     resource: repo://internal/portfolio/portfolio.go
   - id: openwiki-source-af817f57994defe12ac57cfb
@@ -19,7 +21,7 @@ sources:
     resource: repo://internal/web/static/app.js
   - id: openwiki-source-012f2c78e3b1446dfc35803f
     resource: repo://Makefile
-generated: { by: "owcli/ff31f70", at: "2026-10-02T20:25:09.016Z" }
+generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:23:11.755Z" }
 ---
 
 # Adding a Component Kind or Adapter
@@ -54,7 +56,10 @@ attach form with a ref hint):
 3. Add a placeholder to `REF_HINT` in `internal/web/static/app.js`.
 4. If the ref needs canonicalizing (paths, names to IDs), add a case to
    `discover.Normalize`; return an error for references that do not exist so
-   `attach` can refuse them (the user can still `--raw`).
+   `attach` can refuse them (the user can still `--raw`). If the owning
+   tool's ref can change (a kata project's name, an owcli wiki's ID), also
+   record a stable identity in `attrs` (`uid`, `root`) and look it up first
+   or as a fallback, as `describeKata` and `describeWiki` do.
 
 ## Level 2: an adapter
 

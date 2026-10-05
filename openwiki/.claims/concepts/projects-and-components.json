@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:c1007d4ad28dcbf388cf5505da4d01789b609f80914af68375856c7d1c0b4947",
+  "pageVersion": "sha256:10afc208140b02fa0eff862d368182a155d571190f17ddc01f3c6308cbf2d94b",
   "claims": [
     {
       "id": "claim_e5989110b44a183105565cd97dadcd7d",
@@ -38,7 +38,7 @@
       "evidence": [
         {
           "resource": "repo://internal/store/store.go#L42-L57",
-          "version": "repo-lines-v1:sha256:35721fb052f8eb8b4b24fe7c4c31f5736a09fcb22b3c369aa1a80cf16ef4d20f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmMzQ1MDI1N2E5MjA5YWEwZWI1ZDk0OTdmZWM0MDIxMzU0NDU2Zjc4YzE0NjE1MmQ3ZmQ5NTk2NDE3NzBlYmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYzYjQ3NTMwNmY2ODFjNDI5NjE2NzMwZTg0ZGRiYmY3M2M5ODhmMzJmZjA4ZjhhYTk4ODVhZjA2YWNhODEwOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFjMzc1MTkyMmYwMjEwYThlNzA1NzBiNjIxY2NhMzc0NjhkZjE2ODFhYjdkMjBjODFlYmM5MDM5MmM3MDQwMjQifQ"
+          "version": "repo-lines-v1:sha256:28e5de45f488ca5eaaa8373221be6c7b6f0d237e870f174c95365e74ab8c8399:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmMzQ1MDI1N2E5MjA5YWEwZWI1ZDk0OTdmZWM0MDIxMzU0NDU2Zjc4YzE0NjE1MmQ3ZmQ5NTk2NDE3NzBlYmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYzYjQ3NTMwNmY2ODFjNDI5NjE2NzMwZTg0ZGRiYmY3M2M5ODhmMzJmZjA4ZjhhYTk4ODVhZjA2YWNhODEwOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFjMzc1MTkyMmYwMjEwYThlNzA1NzBiNjIxY2NhMzc0NjhkZjE2ODFhYjdkMjBjODFlYmM5MDM5MmM3MDQwMjQifQ"
         }
       ]
     },
@@ -129,10 +129,20 @@
           "version": "repo-file-v1:sha256:d7dd4bd90aea007410f7cc7d6722f497f34f970d6e645037ffb12c1fc771c310"
         }
       ]
+    },
+    {
+      "id": "claim_ff80c1f7b0ad439eddbdb4f246065c2c",
+      "statement": "An owcli-wiki component's ref is the owcli wiki ID, and attrs.root pins it across ID changes.",
+      "evidence": [
+        {
+          "resource": "repo://internal/store/store.go#L49-L49",
+          "version": "repo-lines-v1:sha256:f02a9a84543f89c18c73d70cca12b77509eb93f68134724b7341148033757ee1:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjAyYTlhODQ1NDNmODljMThjNzNkNzBjY2ExMmI3NzUwOWViOTNmNjgxMzQ3MjRiNzM0MTE0ODAzMzc1N2VlMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjAyYTlhODQ1NDNmODljMThjNzNkNzBjY2ExMmI3NzUwOWViOTNmNjgxMzQ3MjRiNzM0MTE0ODAzMzc1N2VlMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmE4ZWU4ZTM0ZjVmYzljZTFlYjRkZjk5YWE0ZDk5MjM1NTY1OGE4Mzc2MWQ3Yzk0NTUwMDg5OTNlOWJhZDc0ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzI0OWFhYTIwM2NhMzlhMjM3OWFmNjIwYjRmYjQzNzRmODE1MzhlNGUwMTZhMWJlNGI3MjAzZDMyMmQzN2Q2OCJ9"
+        }
+      ]
     }
   ],
   "verification": {
-    "by": "owcli/ff31f70",
-    "at": "2026-10-02T20:23:19.592Z"
+    "by": "owcli/v0.2.0",
+    "at": "2026-10-05T08:22:55.372Z"
   }
 }

@@ -4,14 +4,14 @@ title: Portfolio Analysis
 description: How goatlassian turns projects and a World into per-component status, per-project metrics, last activity, session ownership, health flags, unassigned sessions, and snapshots.
 tags: [analysis, metrics, flags, health, sessions]
 verified:
-  - by: owcli/2d956c2
-    at: "2026-10-03T15:43:01.209Z"
+  - by: owcli/v0.2.0
+    at: "2026-10-05T08:22:47.007Z"
 sources:
   - id: openwiki-source-eebd91804ebf511b7b315be6
     resource: repo://internal/portfolio/portfolio.go
   - id: openwiki-source-127e8e798f871db6d31266f6
     resource: repo://internal/portfolio/portfolio_test.go
-generated: { by: "owcli/ff31f70", at: "2026-10-02T20:25:09.016Z" }
+generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:23:11.755Z" }
 ---
 
 # Portfolio Analysis
@@ -41,7 +41,11 @@ it adds to the project's `Metrics`.
 | other | stored ref; linked when it is a URL |
 
 A kata component is matched by `attrs.uid` first and its name second, so a
-renamed kata project stays attached. Date-only deadlines count as passed at
+renamed kata project stays attached. An `owcli-wiki` component is matched by
+its ID first and `attrs.root` (the wiki's repository root) second, because
+owcli changes a wiki's ID when its repository joins a workspace; components
+attached before the root was recorded must be re-attached once their ID
+changes. Date-only deadlines count as passed at
 the end of that day.
 
 ## Last activity
@@ -105,5 +109,7 @@ table.
 `internal/portfolio/portfolio_test.go` builds a fake world with nested
 repositories, a kata project bound by git remote, stuck/needs-human/overdue
 issues, wiki drift, and a pinned session, then checks discovery, ownership,
-metrics, flags, unassigned sessions, and snapshots. `TestMissingTools` checks
+metrics, flags, unassigned sessions, and snapshots. `TestWikiIDChange`
+adopts a repository, renames its wiki's ID the way joining a workspace does,
+and checks the component still resolves. `TestMissingTools` checks
 that tools that cannot be run surface as alert-level problems.

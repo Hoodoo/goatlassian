@@ -4,8 +4,8 @@ title: Tool Adapters and Discovery
 description: The commands goatlassian runs against kata, owcli, bossman, and git, what it reads from each, how failures surface, the deep-link formats, and how discovery maps tool records onto projects.
 tags: [integration, kata, owcli, bossman, git, discovery]
 verified:
-  - by: owcli/ff31f70
-    at: "2026-10-02T20:21:12.058Z"
+  - by: owcli/v0.2.0
+    at: "2026-10-05T08:22:21.998Z"
 sources:
   - id: openwiki-source-60aa3cff97fd2a958231fb58
     resource: repo://internal/discover/discover.go
@@ -13,7 +13,7 @@ sources:
     resource: repo://internal/sources/sources.go
   - id: openwiki-source-8b7b5c9a0a9190a6b5b944cb
     resource: repo://internal/sources/sources_test.go
-generated: { by: "owcli/ff31f70", at: "2026-10-02T20:25:09.016Z" }
+generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:23:11.755Z" }
 ---
 
 # Tool Adapters and Discovery
@@ -90,7 +90,10 @@ directory when it is not a repository) and proposes components:
 - `kata` for every kata project bound to a path inside the root, or bound to
   a git remote equal to the repository's `origin` identity (the UID is stored
   in `attrs.uid`);
-- `owcli-wiki` for every wiki whose `repoRoot` is inside the root;
+- `owcli-wiki` for every wiki whose `repoRoot` is inside the root (the root
+  is stored in `attrs.root`, because owcli changes a wiki's ID when its
+  repository joins a workspace; `OwcliWorld.WikiFor` looks a wiki up by ID,
+  then by that root);
 - `sessions` for the root when it is a repository or has sessions, so future
   sessions are counted too.
 

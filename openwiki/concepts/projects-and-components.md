@@ -4,14 +4,14 @@ title: Projects, Components, and the Store
 description: goatlassian's data model - projects, lifecycle states, tags, open-ended component kinds, the event log, snapshots - and the SQLite schema that holds them.
 tags: [data-model, store, sqlite, lifecycle]
 verified:
-  - by: owcli/ff31f70
-    at: "2026-10-02T20:23:19.592Z"
+  - by: owcli/v0.2.0
+    at: "2026-10-05T08:22:55.372Z"
 sources:
   - id: openwiki-source-4a81fcd95533ed8ba5a77739
     resource: repo://internal/store/store.go
   - id: openwiki-source-6d8c1cdec697aee752bd7c32
     resource: repo://internal/store/store_test.go
-generated: { by: "owcli/ff31f70", at: "2026-10-02T20:25:09.016Z" }
+generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:23:11.755Z" }
 ---
 
 # Projects, Components, and the Store
@@ -58,7 +58,7 @@ Known kinds (`store.KnownKinds`):
 | --- | --- |
 | `git` | absolute repository top-level path |
 | `kata` | kata project name; `attrs.uid` pins the project UID |
-| `owcli-wiki` | owcli wiki ID |
+| `owcli-wiki` | owcli wiki ID; `attrs.root` pins the wiki's repository root, since owcli changes the ID when the repository joins a workspace |
 | `owcli-workspace` | owcli workspace ID |
 | `sessions` | a directory; sessions started in or under it (`attrs.agent` narrows to one agent) |
 | `session` | one bossman session key (`claude:<id>`, `codex:<id>`); overrides directory ownership |
