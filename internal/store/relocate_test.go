@@ -22,13 +22,13 @@ func TestRelocate(t *testing.T) {
 	attach("shop", Component{Kind: KindSessions, Ref: "/src/shop", Attrs: map[string]string{"agent": "codex"}})
 	attach("shop", Component{Kind: KindOwcliWiki, Ref: "shop-1a2b", Attrs: map[string]string{"root": "/src/shop"}})
 	attach("shop", Component{Kind: KindLink, Ref: "/src/shop/notes"}) // not a path kind
-	attach("old", Component{Kind: KindGit, Ref: "/src"})               // the prefix itself
-	attach("other", Component{Kind: KindGit, Ref: "/srcx/other"})      // shares a string prefix only
+	attach("old", Component{Kind: KindGit, Ref: "/src"})              // the prefix itself
+	attach("other", Component{Kind: KindGit, Ref: "/srcx/other"})     // shares a string prefix only
 	if _, err := st.SetState("old", StateArchived, ""); err != nil {
 		t.Fatal(err)
 	}
 
-	changes, err := st.Relocate("/src", "/work", true)
+	changes, err := st.Relocate("/src", "/work", nil, true)
 	if err != nil || len(changes) != 4 {
 		t.Fatalf("dry run: %+v, %v", changes, err)
 	}
@@ -38,7 +38,7 @@ func TestRelocate(t *testing.T) {
 		}
 	}
 
-	changes, err = st.Relocate("/src", "/work", false)
+	changes, err = st.Relocate("/src", "/work", nil, false)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -78,8 +78,26 @@ func TestRelocate(t *testing.T) {
 		t.Errorf("shop has %d relocate events, want 3", n)
 	}
 
-	if changes, err := st.Relocate("/src", "/work", false); err != nil || len(changes) != 0 {
+	if changes, err := st.Relocate("/src", "/work", nil, false); err != nil || len(changes) != 0 {
 		t.Errorf("second relocate: %+v, %v", changes, err)
+	}
+}
+
+func TestRelocateBackfillsWikiRoot(t *testing.T) {
+	st := open(t)
+	if _, err := st.CreateProject("a", "", "", nil); err != nil {
+		t.Fatal(err)
+	}
+	// Attached before goatlassian recorded wiki roots.
+	if _, err := st.Attach("a", Component{Kind: KindOwcliWiki, Ref: "a-1234"}); err != nil {
+		t.Fatal(err)
+	}
+	changes, err := st.Relocate("/src", "/work", map[string]string{"a-1234": "/src/a"}, false)
+	if err != nil || len(changes) != 1 || changes[0].From != "/src/a" {
+		t.Fatalf("changes %+v, %v", changes, err)
+	}
+	if r := mustComponents(t, st)[0].Attrs["root"]; r != "/work/a" {
+		t.Errorf("root %q", r)
 	}
 }
 
@@ -102,10 +120,10 @@ func TestRelocateRefusesGitCollision(t *testing.T) {
 			t.Fatal(err)
 		}
 	}
-	if _, err := st.Relocate("/old", "/new", false); err == nil || !strings.Contains(err.Error(), "already has git") {
+	if _, err := st.Relocate("/old", "/new", nil, false); err == nil || !strings.Contains(err.Error(), "already has git") {
 		t.Fatalf("want collision, got %v", err)
 	}
-	if _, err := st.Relocate("/x", "/x", false); err == nil {
+	if _, err := st.Relocate("/x", "/x", nil, false); err == nil {
 		t.Fatal("same prefix accepted")
 	}
 }

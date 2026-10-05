@@ -308,14 +308,25 @@ the project's log.
   goatlassian relocate ~/src ~/work
   goatlassian relocate /home/me /Users/me     # a new machine
 
-Paths in config.toml ([bin], [services]) are not touched. Nothing is written
+Run it before "owcli relocate": wikis attached before goatlassian recorded
+their repository roots are matched by their current owcli ID, which owcli
+changes when it relocates. Paths in config.toml ([bin], [services]) are not
+touched. Nothing is written
 with --dry-run, or when a project would end up with the same git repository
 twice.`,
 		Args: cobra.ExactArgs(2),
 	}
 	cmd.Flags().BoolVar(&dryRun, "dry-run", false, "show what would change without writing")
 	cmd.RunE = a.withStore(func(st *store.Store, args []string) error {
-		changes, err := st.Relocate(args[0], args[1], dryRun)
+		// Wikis attached before goatlassian recorded their roots are found
+		// by their current owcli ID.
+		roots := map[string]string{}
+		if w := a.collect(); w.Owcli.Problem == "" {
+			for _, wk := range w.Owcli.Wikis {
+				roots[wk.ID] = wk.RepoRoot
+			}
+		}
+		changes, err := st.Relocate(args[0], args[1], roots, dryRun)
 		if err != nil {
 			return err
 		}

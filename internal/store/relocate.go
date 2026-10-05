@@ -60,7 +60,10 @@ func RelocatePrefixes(oldPrefix, newPrefix string) (string, string, error) {
 //
 //   - git refs are rewritten;
 //   - owcli-wiki components get their attrs.root rewritten (their ID is
-//     owcli's to change, and they resolve through the root);
+//     owcli's to change, and they resolve through the root); a component
+//     attached before roots were recorded takes its root from wikiRoots
+//     (owcli wiki ID to repository root), so run this before owcli
+//     relocates its own registry and its hash IDs change;
 //   - a sessions component keeps its old directory, because bossman records
 //     where each past session ran, and gains a sibling for the new directory
 //     so future sessions count too.
@@ -68,7 +71,7 @@ func RelocatePrefixes(oldPrefix, newPrefix string) (string, string, error) {
 // Each change is logged in its project. Nothing is written with dryRun, and
 // nothing at all when a rewritten git ref would collide with one the project
 // already has.
-func (s *Store) Relocate(oldPrefix, newPrefix string, dryRun bool) ([]PathChange, error) {
+func (s *Store) Relocate(oldPrefix, newPrefix string, wikiRoots map[string]string, dryRun bool) ([]PathChange, error) {
 	from, to, err := RelocatePrefixes(oldPrefix, newPrefix)
 	if err != nil {
 		return nil, err
@@ -108,8 +111,12 @@ func (s *Store) Relocate(oldPrefix, newPrefix string, dryRun bool) ([]PathChange
 				changes = append(changes, PathChange{slug, c.ID, c.Kind, "added", c.Ref, moved})
 			}
 		case KindOwcliWiki:
-			if moved, ok := underPrefix(c.Attrs["root"], from, to); ok && c.Attrs["root"] != "" {
-				changes = append(changes, PathChange{slug, c.ID, c.Kind, "attrs.root", c.Attrs["root"], moved})
+			root := c.Attrs["root"]
+			if root == "" {
+				root = wikiRoots[c.Ref]
+			}
+			if moved, ok := underPrefix(root, from, to); ok && root != "" {
+				changes = append(changes, PathChange{slug, c.ID, c.Kind, "attrs.root", root, moved})
 			}
 		}
 	}

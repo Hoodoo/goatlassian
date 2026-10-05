@@ -72,7 +72,7 @@ func TestRelocate(t *testing.T) {
 	if _, err := discover.Adopt(st, c, "", "", "", nil); err != nil {
 		t.Fatal(err)
 	}
-	if _, err := st.Relocate("/src/shop", "/work/shop", false); err != nil {
+	if _, err := st.Relocate("/src/shop", "/work/shop", nil, false); err != nil {
 		t.Fatal(err)
 	}
 
