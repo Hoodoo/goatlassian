@@ -4,8 +4,8 @@ title: CLI Reference
 description: Every goatlassian command and flag, grouped as the help groups them, with what each reads and writes.
 tags: [cli, reference, commands]
 verified:
-  - by: owcli/v0.2.0-1-g3d84f34
-    at: "2026-10-05T08:35:11.856Z"
+  - by: owcli/v0.4.0
+    at: "2026-10-09T16:06:41.222Z"
 sources:
   - id: openwiki-source-da21f52d07ab623ce6a4f0a7
     resource: repo://internal/cli/cli.go
@@ -15,7 +15,7 @@ sources:
     resource: repo://internal/cli/projects.go
   - id: openwiki-source-664966ddac5a292f452c8dc3
     resource: repo://internal/cli/report.go
-generated: { by: "owcli/v0.2.0-1-g3d84f34", at: "2026-10-05T08:35:12.025Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-09T16:06:41.345Z" }
 ---
 
 # CLI Reference
@@ -36,7 +36,7 @@ stderr.
 
 | Command | Flags | Does |
 | --- | --- | --- |
-| `status` *(collects)* | `--all` include archived · `--state S` · `-t/--tag T` · `-s/--sort` `health` (default), `activity`, `cost`, `recent-cost`, `tokens`, `open`, `idle`, `slug` · `--record` also snapshot | portfolio table: state, health, last activity, open, attention (stuck + needs-human + overdue), closed in window, sessions (recent/all), cost, recent cost, tokens, wiki drift, flag codes; then totals and unassigned sessions |
+| `status` *(collects)* | `--all` include archived · `--state S` · `-t/--tag T` · `-s/--sort` `health` (default), `activity`, `cost`, `recent-cost`, `tokens`, `open`, `idle`, `slug` · `--record` also snapshot | portfolio table: state, health, last activity, open, attention (stuck + needs-human + overdue), closed in window, sessions (recent/all), cost, recent cost, tokens, wiki drift, flag codes; then totals, unassigned sessions, and a `sinks:` line (name, sessions, cost per sink) when any exist |
 | `show <slug>` *(collects)* | | one project: state, health, flags with messages, every component with problem, summary, items, and links; metrics; last 10 log entries |
 | `history <slug>` | `--days N` (90) | recorded snapshots as a table |
 | `snapshot` *(collects)* | | records a snapshot of every project |

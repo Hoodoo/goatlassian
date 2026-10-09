@@ -4,8 +4,8 @@ title: Web UI and JSON API
 description: How goatlassian serve works - its JSON API, request guards, World caching, the snapshot loop, and the embedded single-page client.
 tags: [web, api, ui, serve]
 verified:
-  - by: owcli/v0.3.0
-    at: "2026-10-05T09:12:59.169Z"
+  - by: owcli/v0.4.0
+    at: "2026-10-09T16:05:54.595Z"
 sources:
   - id: openwiki-source-bc7eae14d3b20f2f098061ac
     resource: repo://internal/cli/env.go
@@ -17,7 +17,7 @@ sources:
     resource: repo://internal/web/web.go
   - id: openwiki-source-eb4688fc0fba2b62687b137d
     resource: repo://internal/web/web_test.go
-generated: { by: "owcli/v0.3.0", at: "2026-10-05T09:12:59.364Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-09T16:06:41.345Z" }
 ---
 
 # Web UI and JSON API
@@ -84,9 +84,12 @@ sibling UIs before serving.
 `static/app.js` is a hash-routed single page:
 
 - `#/` — portfolio: tiles (projects, open issues, closed, sessions, cost,
-  tokens, unassigned sessions), filters (text, state, health, include
+  tokens, unassigned sessions, sinks), filters (text, state, health, include
   archived), and a table sortable by any column (`COLUMNS`), with health
   badges whose flags show on hover. Sort, filter, and search live in the hash.
+  When the portfolio has sinks, a Sinks card below the table lists each one
+  (sessions, cost, tokens, last activity) linking to bossman filtered by its
+  tag; the Sinks tile and card are absent otherwise.
 - `#/p/<slug>` — project: header with health, state selector (asks for a
   reason, logged), edit dialog; metric tiles; flags; components with summary,
   problem, items (kata attention issues, recent sessions, unmerged branches)

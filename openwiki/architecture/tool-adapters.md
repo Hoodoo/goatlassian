@@ -4,8 +4,8 @@ title: Tool Adapters and Discovery
 description: The commands goatlassian runs against kata, owcli, bossman, and git, what it reads from each, how failures surface, the deep-link formats, and how discovery maps tool records onto projects.
 tags: [integration, kata, owcli, bossman, git, discovery]
 verified:
-  - by: owcli/v0.2.0
-    at: "2026-10-05T08:22:21.998Z"
+  - by: owcli/v0.4.0
+    at: "2026-10-09T16:05:40.224Z"
 sources:
   - id: openwiki-source-60aa3cff97fd2a958231fb58
     resource: repo://internal/discover/discover.go
@@ -13,7 +13,7 @@ sources:
     resource: repo://internal/sources/sources.go
   - id: openwiki-source-8b7b5c9a0a9190a6b5b944cb
     resource: repo://internal/sources/sources_test.go
-generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:23:11.755Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-09T16:06:41.345Z" }
 ---
 
 # Tool Adapters and Discovery
@@ -64,7 +64,8 @@ wiki and is slow. Links go to `owcli serve`:
 agent, timing, prompts, interventions, tool errors, token counts, and cost.
 `Session.Tokens()` is input + cache write + cache read + output. Links go to
 `bossman serve`: one session is `<bossman_url>/#/s/<key>`, a directory's
-sessions are `#/?project=<path>`.
+sessions are `#/?project=<path>`, and a tag's sessions (used for sinks) are
+`#/?tag=<tag>` (`TagURL`).
 
 ## git
 

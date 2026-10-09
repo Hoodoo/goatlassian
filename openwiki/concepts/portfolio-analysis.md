@@ -4,21 +4,21 @@ title: Portfolio Analysis
 description: How goatlassian turns projects and a World into per-component status, per-project metrics, last activity, session ownership, health flags, unassigned sessions, and snapshots.
 tags: [analysis, metrics, flags, health, sessions]
 verified:
-  - by: owcli/v0.2.0-1-g3d84f34
-    at: "2026-10-05T08:34:27.225Z"
+  - by: owcli/v0.4.0
+    at: "2026-10-09T16:06:18.958Z"
 sources:
   - id: openwiki-source-eebd91804ebf511b7b315be6
     resource: repo://internal/portfolio/portfolio.go
   - id: openwiki-source-127e8e798f871db6d31266f6
     resource: repo://internal/portfolio/portfolio_test.go
-generated: { by: "owcli/v0.2.0-1-g3d84f34", at: "2026-10-05T08:35:12.025Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-09T16:06:41.345Z" }
 ---
 
 # Portfolio Analysis
 
 `internal/portfolio` is where goatlassian's opinions live. `Analyze` takes
 the store and a `World` (see [Tool Adapters](../architecture/tool-adapters.md))
-and returns a `Portfolio`: one `Report` per project, totals, unassigned
+and returns a `Portfolio`: one `Report` per project, totals, sinks, unassigned
 sessions, and each tool's problem. `status`, `show`, the web API, and
 snapshots all consume it.
 
@@ -68,7 +68,32 @@ session, so a session is never counted twice:
 
 Sessions no component owns are summed into `Unassigned` (count, cost, and
 directories ordered by session count); `status` prints the busiest three and
-the UI shows a tile.
+the UI shows a tile. Sink sessions (below) are left out of it.
+
+## Sinks
+
+A sink is a bucket for work that belongs to no project, such as a throwaway
+prototype or an agent cleaning up a config. It is a bossman tag:
+`sink:<name>` (`SinkPrefix`), set by hand with `bossman tag`. goatlassian
+reads tags from `bossman --json ls`, so a sink needs no goatlassian state.
+
+After ownership is decided, each session no component owns that has a sink
+tag is summed into `Portfolio.Sinks` instead of `Unassigned`:
+
+- A `Sink` holds the name (the tag without the prefix), the tag, sessions,
+  cost, tokens, the latest session end (or start), and `URL`, bossman's list
+  filtered by the tag (`sources.TagURL`).
+- Ownership always wins: a sink tag never takes a session from a project
+  that pins it or whose `sessions` directory contains it.
+- A session with several sink tags goes to the lexicographically first
+  (`sinkTag`). A bare `sink:` tag is ignored.
+- Sinks are sorted by cost, highest first, then by name. They are not
+  projects: they get no flags, health, or snapshots.
+- Discovery still lists the directories of sink sessions, which keeps where
+  the work happened visible.
+
+`status` prints a `sinks:` line after the unassigned one, and the web UI
+shows a Sinks tile and table (see [Web UI](../architecture/web-ui.md)).
 
 ## Metrics
 
@@ -108,8 +133,9 @@ table.
 
 `internal/portfolio/portfolio_test.go` builds a fake world with nested
 repositories, a kata project bound by git remote, stuck/needs-human/overdue
-issues, wiki drift, and a pinned session, then checks discovery, ownership,
-metrics, flags, unassigned sessions, and snapshots. `TestWikiIDChange`
+issues, wiki drift, a pinned session, and sink-tagged sessions, then checks
+discovery, ownership, metrics, flags, sinks, unassigned sessions, and
+snapshots. `TestWikiIDChange`
 adopts a repository, renames its wiki's ID the way joining a workspace does,
 and checks the component still resolves. `TestRelocate` adopts a repository,
 relocates it, and checks that git and the wiki resolve at the new path while

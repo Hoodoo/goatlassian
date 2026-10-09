@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:05e4411a49824ff8aa0d3b0063ab420bcdb03a22e7eedfc6da8fb25e8b612232",
+  "pageVersion": "sha256:4b32add1ac68b4ffb50a0333e49fbb7b2522bbb4bdff7d15d5408a7180df73b8",
   "claims": [
     {
       "id": "claim_30147bf0c651aea37df8b5d0f6dc6e7f",
       "statement": "A project's last activity is the latest last activity of its components, labelled by the component kind it came from.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio.go#L162-L170",
+          "resource": "repo://internal/portfolio/portfolio.go#L193-L201",
           "version": "repo-lines-v1:sha256:a072d637d193befa8a0d95c79c92958ca252596268e6243ae2a80eaa9574dc59:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2ZlNjBlYTU4NjI4OGY0MmI5NWUxN2I4ZGVmODQ2ZTRlYTM1NWZiNTlkYmEzMzUyZDM1YzFjZTNkYzdkMmZiOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRlZmM0OTQxOGQyNmRjZjEyOWIyMmE2YWEyMTEwOGNlZWMzNzY3N2EzMmQwOGU5ZDVmZWUzNWRkYTY2YmI5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmJkZDMxZjRmMjZmNTQyMmFjNTkyZGVkNGU4ZTEyZmNkZDAyZDczZDYxN2U2NzQ4OTc4OTA0NTkyM2FlMTBmYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzBjZTU3Y2RhZTc2NDFjN2FhODk4ZWEzMmJhYjYyMGI2M2YzNDFjOWM0ZTRmNmFlMjgwYzFiYTdmOWFiZTlhYiJ9"
         }
       ]
@@ -17,7 +17,7 @@
       "statement": "goatlassian's own log entries are recorded as LastTouched and do not count as activity.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio.go#L171-L171",
+          "resource": "repo://internal/portfolio/portfolio.go#L202-L202",
           "version": "repo-lines-v1:sha256:2efa5de417470850a094d25c1addb21e3e58d918834045c31f831e5a56eb3018:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmVmYTVkZTQxNzQ3MDg1MGEwOTRkMjVjMWFkZGIyMWUzZTU4ZDkxODgzNDA0NWMzMWY4MzFlNWE1NmViMzAxOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmVmYTVkZTQxNzQ3MDg1MGEwOTRkMjVjMWFkZGIyMWUzZTU4ZDkxODgzNDA0NWMzMWY4MzFlNWE1NmViMzAxOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDljNGViMDAwYjY1NWIyNGU5NGQ2MGVkMDczZjA1NzRmZWMwZjkzYTg1YzY0ZmIzODQ3NjZkY2RmZTY3ZGM4ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDI5ODRkMzE4MTMxNDdkMTgwNTgyMDEzM2E3MmNiYzNmZWZlYjY0ZmU3ZWJiMjZhMGRkN2Q2ZjNkMzEwYjVlOSJ9"
         }
       ]
@@ -27,7 +27,7 @@
       "statement": "A project's health is the most severe level among its flags, starting from ok.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio.go#L173-L178",
+          "resource": "repo://internal/portfolio/portfolio.go#L204-L209",
           "version": "repo-lines-v1:sha256:1c7e3b567152e7ad702c7e45834dc58e20fbddf144f04521e13b7af976f2a77d:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTdlZTQ2MGE3MTI4OTgzZTdjNWFlZmIwYTNiMGI4ZjczYjIyMTg3MzFlZDIyZmUwYzc5MTQ2MDZjODZkYjA3MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRlZmM0OTQxOGQyNmRjZjEyOWIyMmE2YWEyMTEwOGNlZWMzNzY3N2EzMmQwOGU5ZDVmZWUzNWRkYTY2YmI5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDcyOWY1MmIzZDFjYjZjZDQyMzQ2NjIyOWYyYWY3ZGJiZTc1YTcxZDAwMzQ0MmI4OTlmMmU4OGRhZWEzOTNjNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmJmZmEzYTY5NGY0YzAzOGExNTRmMzBjNTA2OTExZDVkNmU3OWJjYTc5NjJlYTNiOTU1MWM4YjQwNjAyN2Y4MSJ9"
         },
         {
@@ -41,7 +41,7 @@
       "statement": "Sessions pinned by a session component are owned by it regardless of directory.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio.go#L233-L246",
+          "resource": "repo://internal/portfolio/portfolio.go#L296-L309",
           "version": "repo-lines-v1:sha256:0460a148616c2cc24a83b3b33aa44e064973a86138564a538483d03d656722e8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQxZmY4MDJmYjlhMDQ0OThjNDhiZTk2NGM1YjU4ODk0MmI2NDNkMzdiNGFiNjFjYTJmMjhmNTNjMWNhYTBjNmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3Y2RhODJkYTYwNjIzOGUwNWU2MjM5OTU2OWM1ZWUwMzk5MzQxOTY0OGFlNWQ0M2EyYmY4Y2Q2MzQ3ZjgyNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYzZDY5NzUxNDM5MWJjMzUzNDdkMTdkNmMwYTNhZDI5ODBlZTViOGEyOGQxZjE5MjEyNGEwNjZhNTM3ZWZiMjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE2YzM3MGUyYWEyYmVhYTIwNGU3YTU4NTg5MTdhZTE3NGZlYmQ5YWJlNzhmYWI3ZTkyOWUyYjZmZWNlZWE0ZGMifQ"
         }
       ]
@@ -51,18 +51,18 @@
       "statement": "Otherwise a session belongs to the sessions component with the longest directory containing it, optionally restricted by an agent attribute.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio.go#L247-L266",
+          "resource": "repo://internal/portfolio/portfolio.go#L310-L329",
           "version": "repo-lines-v1:sha256:5e4a190a6ffb8f7802bf372a5920405da3d33c2073493b3219fbbef6014bce5f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyNzUyOTE3NzEzM2YyZGVkZGYwNzQ3MDI4MmJkZDg5MTA3ZjJjNGRlMmJkZTY1MjMzOTBhMmU2MWRkMGEwYjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI3NzZkNDc2NGM1YzNmODRjYzk4M2M2MDc5OWU1ZDhhODM1YWJjNjQyMDU5M2MyNjcyMzYwYzAzZTg0ZGZhOTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhlNWVlNDNlMzNmNmM3NjExYWMxYThmMTcwNWZhY2IzNjAyY2Y2MTRhYTgyNTY0Zjc1YmQxMGVlNzAzNGUxMmMifQ"
         }
       ]
     },
     {
       "id": "claim_149f66c399fe75eeebbde05d77516921",
-      "statement": "Sessions owned by no component are reported as unassigned, with directories ordered by session count.",
+      "statement": "Sessions owned by no component and without a sink tag are reported as unassigned, with directories ordered by session count.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio.go#L182-L200",
-          "version": "repo-lines-v1:sha256:22e9d6db171da8c591f7d84ea6c07791770448d6e3a5d81b3d722fde4eae8e53:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3OTI0MWQzOGQwOWM4ZWQwNDc1NzgxNjQxMTFjNTNiYmI2ZTdiYjk2ZGU4ZTMwMmNjZjljZTlhZDY4YmI1MTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlYmI4MGQ4M2E2YmU1YzE2MzU5YWRhZDQ2MzNlODUxYWFjY2Q3MjA4MWJmZDE2NzA0ODgzMjc1ZDMzYjc3ODMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZiZmZhM2E2OTRmNGMwMzhhMTU0ZjMwYzUwNjkxMWQ1ZDZlNzliY2E3OTYyZWEzYjk1NTFjOGI0MDYwMjdmODEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZlODM5YmQ0Mzk1MjczZWI3M2VhOTYwZTJhMDY0ZjkxNTA3ZmQzNjExNzU5Zjk4NTA0NWYxOGYxN2RhNjhhZDAifQ"
+          "resource": "repo://internal/portfolio/portfolio.go#L213-L254",
+          "version": "repo-lines-v1:sha256:74f8549012789c5a5c342c76d1decc323381464af0cd7e011ef6616b58d8f657:eyJzZWxlY3RlZExpbmVDb3VudCI6NDIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3OTI0MWQzOGQwOWM4ZWQwNDc1NzgxNjQxMTFjNTNiYmI2ZTdiYjk2ZGU4ZTMwMmNjZjljZTlhZDY4YmI1MTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRlNmJiZTgwMzg4OGIxODkzMDU0YWJlNzRlZWZiNDc0MDMwOTM0YWVmNTk2ZTQ5YzIzZTczNzlmM2U0MjIyMTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZiZmZhM2E2OTRmNGMwMzhhMTU0ZjMwYzUwNjkxMWQ1ZDZlNzliY2E3OTYyZWEzYjk1NTFjOGI0MDYwMjdmODEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNlZDFkN2YyZjEzNjY5Yzg4MWFiNWJhNjE2YzdhM2FjMjI4ZTEyZTQ2YTc3YTJlNTE1NzUwOTBiNTM3NzBiMTMifQ"
         }
       ]
     },
@@ -71,7 +71,7 @@
       "statement": "Kata issues with work.attention stuck or needs-human, and open issues past their deadline, become alert-level items.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio.go#L407-L419",
+          "resource": "repo://internal/portfolio/portfolio.go#L470-L482",
           "version": "repo-lines-v1:sha256:dbe75feda1f3354d60d30941af0466a889919e6c7a34469641111179ca8c0aec:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxOTMyNDQwNDEzYThiOTM3M2FiZDllNmFmNjU2ZTg3ZmY5YWNlMmE5M2EwZmRhYTVjZTcyMWM4OWQ5NGU0NjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0ZWZjNDk0MThkMjZkY2YxMjliMjJhNmFhMjExMDhjZWVjMzc2NzdhMzJkMDhlOWQ1ZmVlMzVkZGE2NmJiOWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4MDkyNDRjZjZmNjUyYTlkN2E0ZWZhOTY3M2M0MWFlNDZjYjI0YjZmNTQxOTY0YWY4MTk5ZDI0YWVkZDUxOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVhZTZjZmI2NDU3NDU1ODc3YzIxMTMxNDczYWRmOTJkNjk4MzBmMWI4OGQwY2MxNGY4MGU1YWI5NzJiYzk1MTEifQ"
         }
       ]
@@ -81,7 +81,7 @@
       "statement": "Closed issues count as recently closed when closed within the recent window.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio.go#L390-L396",
+          "resource": "repo://internal/portfolio/portfolio.go#L453-L459",
           "version": "repo-lines-v1:sha256:2df953fedf80afb51bfc9a3688936fe72d487c501da72a11f83228992e0fb3d4:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzRmZmY3OTNmZDkzYzE3ZjAzZmM4OThmNjBiMmQ5NWE2NGY0OTE2YmIxMmE1OWJiNmE3YmFlYTdlMmMzNDYyOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTY4MDZmMTU1YzVhYzFhZTI3MjJjYTA2ZjJhYzljYWRjYjg4MWI5MTIzY2I2MjRhM2MxMDQ3NWI0NDQ5ZGMyZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDBiY2NkYWYyOWQ2MDc4ZmE1NjA2ZGY4ODA5NWExODVmNWQzZjMxNjIwZTViZTM4Zjg2YjY3OWFkZDdmZmEwZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODAzNGNiOTA0NTVjNjdlY2Q4YjFkNjczODUyNmQ4OTM0YTAzYjRlNjg4ZjYxN2MxYmIxZTNiNTExN2U5ZDU4ZSJ9"
         }
       ]
@@ -91,7 +91,7 @@
       "statement": "A date-only kata deadline counts as passed at the end of that day.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio.go#L442-L453",
+          "resource": "repo://internal/portfolio/portfolio.go#L505-L516",
           "version": "repo-lines-v1:sha256:b35fe9d9f5637a5b54131557672ceb87fa534295255b9e198dffc1d1d06ff0aa:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhNDEyNDY2ZDA5MjZhYjVkMjY0Mzk2MTRhY2VmMGM3M2UwMGI2YjJiMDU2MWZlYThhN2Q4YWVlNDU2YTRhZGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwYjFmZTJmYmFjYTc0ZDEwOGJmZGUxYTgzOGIyYTBjOTE5Nzg0NTI1YTYwZmZlN2YxZGM0ZmY4NzdiNWZhM2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg2NTk5MjM4YWU2NTc2YjNjMGY3ODA1ZGRiZmQyYTZlMjhjMjNkMDlmYmI3MzJmODNmY2VlNDQzOWE0NDE1OGEifQ"
         }
       ]
@@ -101,7 +101,7 @@
       "statement": "Wiki drift is the number of commits from the wiki's last-update git head to HEAD, or -1 when unknown.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio.go#L456-L461",
+          "resource": "repo://internal/portfolio/portfolio.go#L519-L524",
           "version": "repo-lines-v1:sha256:1634294981ff584ee9c54331325e0587f501379dad5c3c902ba4f3e1e69104a7:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmEyODFmMjQ0YzRkOTU0ZmM0NjY5ZWM5YjlhYmViZDI1OGNhYTBkZjMxYzAxZTY2NzdmYzE3NTY5MmVlM2M5OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWU0YTU0Njc5ODE0MTlhYmJhMTIzMjdkODM0NDBmNGVmZmEyZmM4NDJjZmY0ZGFhZGY0NGFlM2VmY2M2ZWZjMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODk2MDBhNzk1NzU0ZGU1ZDFiNDdkMjIzMmVkMzcxOTk0YWE4ZTEwZjBlMzk2OTg0Y2QyNjY2NGUzZmEwNTA2NyJ9"
         }
       ]
@@ -111,7 +111,7 @@
       "statement": "A sessions component lists at most eight recent sessions as items.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio.go#L586-L596",
+          "resource": "repo://internal/portfolio/portfolio.go#L649-L659",
           "version": "repo-lines-v1:sha256:aaf73aeb70a3ffd80a39263de93db02df0c647116c64a39ef58bb771e75e25e8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ5MjM3ZGVhM2FmNzFlNWE3N2ZkYTJhNzhkNjJlMzQ2YzcxMTY0YTMzYWM2Njg2MThkZGM3MjA2OTFkZjViN2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3Y2RhODJkYTYwNjIzOGUwNWU2MjM5OTU2OWM1ZWUwMzk5MzQxOTY0OGFlNWQ0M2EyYmY4Y2Q2MzQ3ZjgyNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiYmQ1MWY4MmZhZjg1NmYyNDlmNzM3NmM0YWMzYWNjZTlmNWQ3NWFjNzdhMDBjZTZlMWE2Y2QyNmY3YTk5OTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg0ODA5ZDFlYjQxNjU4MTdkNjljNDVlMDhhYjBiYjlhNTRhY2M1N2JjMTRmOTY1OTMxNGVhYWEzOGE4MWEzNzgifQ"
         }
       ]
@@ -121,7 +121,7 @@
       "statement": "Flags cover component problems, stuck, needs-human, overdue, stale active projects, activity on paused or finished projects within 72 hours, open issues on done or archived projects, wiki drift, dirty trees, and unpushed commits.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio.go#L632-L680",
+          "resource": "repo://internal/portfolio/portfolio.go#L695-L743",
           "version": "repo-lines-v1:sha256:a03261b25b96f0b524414e34e377d8fd7caf35a1558dba1123502a5cd60bca84:eyJzZWxlY3RlZExpbmVDb3VudCI6NDksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg3MDU3M2U4ODc5YzFkMDg0ZTA4YzA4MTI3MGQzOWY1YTg5NTE2MmI0MGUyN2VlOWY2YTc5ODhlNzEwZjljOGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ2M2ZhMDhiN2E4NzkxOTg3NGM2M2FkMmJkYzgyYzJiMDZiNzdhYjRiN2I2NDQ2ODg3ODIwNDJlNzlmYTIzODciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU4YzEwZjFiMTZhMmI4M2U0Y2EzZjI1NGI2MTIzZDI2YWExMGM0N2YxZDNhMWVkNmEwZDg4NGYxMTFiZDU0ZGYifQ"
         }
       ]
@@ -131,18 +131,18 @@
       "statement": "Record stores each report's metrics, health, flag codes, and state as a snapshot.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio.go#L702-L721",
+          "resource": "repo://internal/portfolio/portfolio.go#L765-L784",
           "version": "repo-lines-v1:sha256:9b93da30888d0eaeb4cd04cbfce1b707e4bf16ae805e9bbbdddc663d0a77bb1c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlMDJiNDUzMjJiM2ZhYWE5NGUxYWYxZTc1NTE2NmNlNDllMzkyM2RjZjExZjE3YmE3MjM0Y2RiZDAzOWIzNWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE1ZTc4MDIzNWI4NWUxNmI4NGM4NjQzZTNiYTc5ODNlMGQ5MzM4YmFiNmRmZjkyNmI5ZWJhYTdkMTgzYjU0NTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
     },
     {
       "id": "claim_889e1edee001df862918da09c65f1e83",
-      "statement": "Tests verify nested-repository and pinned-session ownership, kata matching by remote, flags, unassigned sessions, and snapshots against a fake world.",
+      "statement": "Tests verify nested-repository and pinned-session ownership, kata matching by remote, flags, sinks, unassigned sessions, and snapshots against a fake world.",
       "evidence": [
         {
           "resource": "repo://internal/portfolio/portfolio_test.go",
-          "version": "repo-file-v1:sha256:c61313b309fac9c5e0b54fa013a7546d03c7ac8c22cff82ae9771ed8731e9e2c"
+          "version": "repo-file-v1:sha256:989738592b48cfda6a8640cfb786b5471e5f214db60daa5df4b01f3c15467135"
         }
       ]
     },
@@ -151,7 +151,7 @@
       "statement": "describeWiki resolves an owcli-wiki component with WikiFor, by ID first and attrs.root second.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio.go#L463-L472",
+          "resource": "repo://internal/portfolio/portfolio.go#L526-L535",
           "version": "repo-lines-v1:sha256:21d75558259328459669eca5de4334f632eedeb1428793371ef8d9cf86265261:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5ZTdhOThmMTY1ZWZiNzNlMjI0MjM3NzAxN2JjZjRjYTMxNzhkYzNmYWM0MmI3NWJkZTVjZDMwNTZiZWUwYmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3Y2RhODJkYTYwNjIzOGUwNWU2MjM5OTU2OWM1ZWUwMzk5MzQxOTY0OGFlNWQ0M2EyYmY4Y2Q2MzQ3ZjgyNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk0Nzk2YzliZTNjMTljNWNiYmY3OTFlNzhlMmJjMzYwNzk0NzQ0MDQ2MGU2OTA5NWFiYzg3MjEyMDRmNmExYzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFkN2IwOWNiYTA4OTAwYWM3YWJkMzFhZmZmODMxMzJhNzY5MmE1MWU1MzlmYmUyMmJlNmVlN2U1YzY3NGI5ODAifQ"
         }
       ]
@@ -161,7 +161,7 @@
       "statement": "TestWikiIDChange checks that an adopted wiki component still resolves, with its drift, after owcli changes the wiki's ID, and that Normalize records the root.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio_test.go#L103-L141",
+          "resource": "repo://internal/portfolio/portfolio_test.go#L105-L143",
           "version": "repo-lines-v1:sha256:5b497c1b4859b7027fd3994c726da37483fdde07ba10668bb30083df89fa3ff8:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkYjcyODU5ZTc4ZmM4MWFlMzcxOGI4MzY5MGExY2UxZDhiNTdiYzVmZWFjNTUwMTQ2NmUxZmJjNDQxOTFkNmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5Y2Q5N2ZhMWVlMmNiNDgzYWVlNDk1MGU5MzZmYjQxNmU0MDJmYjQwMzRiMjU3M2FjMGRmZTQ1ZjNhMDM0ZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJhODlmMTc1NjQwMDdlZTY4ODYxYWEwNGRiNWVjNmZiMWE2MDI5ZDI1ZjVkZGFmN2Y3MDcwZDkzYTQyNTdhYTAifQ"
         }
       ]
@@ -171,14 +171,62 @@
       "statement": "TestRelocate checks that after a relocate, git and the wiki resolve at the new path and sessions recorded under the old path still belong to the project.",
       "evidence": [
         {
-          "resource": "repo://internal/portfolio/portfolio_test.go#L58-L101",
+          "resource": "repo://internal/portfolio/portfolio_test.go#L60-L103",
           "version": "repo-lines-v1:sha256:296f125935d8a8c8a8d769959ef6c78fd5f20585cfdafcde45a1e268e50975eb:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2ZmQzOTdlNzY3Y2E2ODY0NTAxYmVkMjUxYjhiYzE0NWJmNDA3OTYwNzM5MGVlZGFiYTBjOTRjMWJmN2VlNjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5Y2Q5N2ZhMWVlMmNiNDgzYWVlNDk1MGU5MzZmYjQxNmU0MDJmYjQwMzRiMjU3M2FjMGRmZTQ1ZjNhMDM0ZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQzYTQwZDk0N2NmMjQ1ZWI1ZmQ4MTE0Y2EyN2EzNjdjOWNmNTllZDQ0ZjE5YWViMGFiNThmNjZkZDQ5N2IwYzQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_666484dabccc7df02deb34666ea3895b",
+      "statement": "A sink is a bossman tag with the sink: prefix; unowned sessions carrying one are summed per sink into Portfolio.Sinks with name, tag, sessions, cost, tokens, last activity, and a bossman tag URL.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L119-L148",
+          "version": "repo-lines-v1:sha256:1ca67af4ba58c3ec4f139f13866184fdc7a557ca1d881447fc48d89471c113b7:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhN2EyNmUxYzMxMDRiZWRkZGI5NGExNWNjNmE3YjZjZGI2MzlhNjNkNGJlNzMxMDcxOGNmZWZmNmYxYjFkZjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiMWY3OWEwMjdmNTYzY2ExOGZlMjAzM2Q5YmNlNGExMjJkODc5MjA1YmQ3ZGJkNGI4MDk5ODRkMTYwYzRkMzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM0MGFjYWIyOGQ2MjhiMzM1MDhjMDE4NWFkMGI3MGFjMDU5ZGY1YTMwMzBhNjY5YzU3ZTUyZWMyYzk5MDZlYjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRhYzU1NzYwM2U2OWNhNGI4YzhlMmU4NGE2NzQ2ZWE2NGRmMWMyMmIzNjFlODZhZTYwOWFlMTIyOGZmOWIzODEifQ"
+        },
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L213-L237",
+          "version": "repo-lines-v1:sha256:07a9ab8b84ef7014a8dcc97ec3075ba525fb739d8196ae8f82c273622af12823:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3OTI0MWQzOGQwOWM4ZWQwNDc1NzgxNjQxMTFjNTNiYmI2ZTdiYjk2ZGU4ZTMwMmNjZjljZTlhZDY4YmI1MTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYTU3MDgxMDUxZjQ2ODJhN2RiM2U1OTBiNGRkNTQxM2Q1M2RjOWEwMTU1MTI3NmRhY2I1MjFhN2UxZGI5YTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZiZmZhM2E2OTRmNGMwMzhhMTU0ZjMwYzUwNjkxMWQ1ZDZlNzliY2E3OTYyZWEzYjk1NTFjOGI0MDYwMjdmODEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIwMjNkMTljODNkYmI3YjcxY2FhOGEwNmE0N2QxN2YwNmEzYzQ5OWVhOTRiOTE4MTZmNmVlMTQ2YTdlYTMwN2UifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_56c3eb52aa3f1f17bd8a279d21cd55f4",
+      "statement": "A session with several sink tags goes to the lexicographically first, and a bare sink: tag is ignored.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L148-L159",
+          "version": "repo-lines-v1:sha256:1cc5d2ca80af0cf78ca36a6b40688fe81bb7fc87a112498ca17c2b6fa984518e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiMWY3OWEwMjdmNTYzY2ExOGZlMjAzM2Q5YmNlNGExMjJkODc5MjA1YmQ3ZGJkNGI4MDk5ODRkMTYwYzRkMzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZkN2IzMzRlNGY1Zjc3MWUxOGM0N2E5YjM2Njc3NzZiNTliODMxZmU0MGIxZjM3ZmQ2OThlMmQxZTBiYzlmNjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJhODIzYmU4MDNiMWM1MDlkMjAxNzMwY2MxMjI2ODRmY2UxZDgzNzIzMWY4NDZhYmRiYmZmYmFjYTFkMDA0MDUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bdc3f7dcd72af799163ee903784409fc",
+      "statement": "Sinks are sorted by cost descending, then name.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L253-L263",
+          "version": "repo-lines-v1:sha256:c4ac391e77724b1fc28c7649b04d36b5ca8c91017c8a194830efaf716fd8cb02:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhNzI2ZjNkNzY4NmIwZDJhNDUwZjBiZGEyZWU5YjdhZDY1OWNhNmFlZTdmMzZiZjk5NjQ1OGEzMWVkZjkyZDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlYmI4MGQ4M2E2YmU1YzE2MzU5YWRhZDQ2MzNlODUxYWFjY2Q3MjA4MWJmZDE2NzA0ODgzMjc1ZDMzYjc3ODMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY3MzA5YjVmNTE1NTI4NDQwMTNiZGUzMDYxYjg5NDMxMzRmM2FhNGJjNDMyZmVhMDAzZGEwMTZiNDI4NmY1ZWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZlODM5YmQ0Mzk1MjczZWI3M2VhOTYwZTJhMDY0ZjkxNTA3ZmQzNjExNzU5Zjk4NTA0NWYxOGYxN2RhNjhhZDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5ff6a7ac5134787c157e1b001d112bfa",
+      "statement": "Ownership is decided before sinks, so a sink tag never moves a session a project owns.",
+      "evidence": [
+        {
+          "resource": "repo://internal/portfolio/portfolio.go#L216-L219",
+          "version": "repo-lines-v1:sha256:533d5e79494d5c43ba297f3764c0ac57f09cce736b6f5d76d000cbf9fb5c488b:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODlhYjgxNDVlYTVkNTdhNzZmZDQ0ZmYxNGMyNGNjYWVlMmE5MTA2YzUzZTY3MjA4ZjAxMTg1ZmNiYTFjOGIyZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRlZmM0OTQxOGQyNmRjZjEyOWIyMmE2YWEyMTEwOGNlZWMzNzY3N2EzMmQwOGU5ZDVmZWUzNWRkYTY2YmI5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWZhMjk5ZWYwNTcwYTZhOTdmOTc0NzRjNGU1NjcyYmE1NDM0ZGQxYzU3NjlkOTg4MDc3MzA1NjVjZjE2MTNlNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmNmNzAxZGZlMzdlNGZiNTA5OWE5YmU0OTBjOWIxNDI5OWYxY2Q4NWYwMjYzY2M1MTU3M2M5ZTEyZmRmMzcxMCJ9"
+        },
+        {
+          "resource": "repo://internal/portfolio/portfolio_test.go",
+          "version": "repo-file-v1:sha256:989738592b48cfda6a8640cfb786b5471e5f214db60daa5df4b01f3c15467135"
         }
       ]
     }
   ],
   "verification": {
-    "by": "owcli/v0.2.0-1-g3d84f34",
-    "at": "2026-10-05T08:34:27.225Z"
+    "by": "owcli/v0.4.0",
+    "at": "2026-10-09T16:06:18.958Z"
   }
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:e30c4a5c035a313f1ef075e283c14fb09a571bc3e5f8996229a575c6580cc39c",
+  "pageVersion": "sha256:5d4ba374e40909fb347cf6b26dfaefb04513ad8bd918e1c8fe94f113a9f47ab8",
   "claims": [
     {
       "id": "claim_91af4a6f6b9670419ff8bb149ccc4cae",
@@ -96,11 +96,11 @@
     },
     {
       "id": "claim_a009b33d9c251c99fdf21401efc36122",
-      "statement": "bossman links use #/s/<key> for one session and #/?project=<path> for a directory; owcli links use #scope=<kind>:<id>.",
+      "statement": "bossman links use #/s/<key> for one session, #/?project=<path> for a directory, and #/?tag=<tag> for a tag; owcli links use #scope=<kind>:<id>.",
       "evidence": [
         {
-          "resource": "repo://internal/sources/sources.go#L378-L390",
-          "version": "repo-lines-v1:sha256:817027c576053b93e630a204a7a0d0608952736008a6e0bcf28c5f230b30cee1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkMTJkZDMyZGQ1YTJlNDk2MzE4NWVjNzQzMjYwZjdmY2ExNGRkNjBiMTY3YTJiYmVkNTRhOTkzNDc3ZDEzNmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY4NGMyNzM0NWEyZTdlMmMxYzYyYjM2YmNmZTZjYjA3NjJhODI2MjQwZmFhYjJkNDMwNDc1ODBjZmEzOWEwY2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI0MmRiMjkzYjY3YzgxZjZjM2IyYzA0Y2Y3MTAyMzYxNWI1MzY2MTM2NTgwYzMwOWFjZDg4M2RlZTc5ODFmYjEifQ"
+          "resource": "repo://internal/sources/sources.go#L378-L395",
+          "version": "repo-lines-v1:sha256:54d221e253b89580112a67023ab17142883ba3f9d96fed57a507f1cb4efd93e7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkMTJkZDMyZGQ1YTJlNDk2MzE4NWVjNzQzMjYwZjdmY2ExNGRkNjBiMTY3YTJiYmVkNTRhOTkzNDc3ZDEzNmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY4NGMyNzM0NWEyZTdlMmMxYzYyYjM2YmNmZTZjYjA3NjJhODI2MjQwZmFhYjJkNDMwNDc1ODBjZmEzOWEwY2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI0MmRiMjkzYjY3YzgxZjZjM2IyYzA0Y2Y3MTAyMzYxNWI1MzY2MTM2NTgwYzMwOWFjZDg4M2RlZTc5ODFmYjEifQ"
         }
       ]
     },
@@ -109,7 +109,7 @@
       "statement": "RemoteIdentity reduces git remote URLs to a lower-cased host/path form without credentials or .git suffix.",
       "evidence": [
         {
-          "resource": "repo://internal/sources/sources.go#L406-L423",
+          "resource": "repo://internal/sources/sources.go#L411-L428",
           "version": "repo-lines-v1:sha256:8a5eebb78a5b22fbfe6235194409ec5dd5c5d721e55a045e9ce3415f82626e8e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2OWI0MWQ1MzcxNDMzOThmZjdhNDUxNTQ2NDhjMDEyMDkzMTdjYmZmZGNmZjYzMTk2ZTJlMzRhMTVlNTZiYzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRiODA3OGYwMDEzNjBhYjFhNjdkYjBhMzA3NTU1ZTM1NWNjMTc4N2YyZGNhNGIxZjkzYTg2NTA2MjQ4NTQxZjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYzZTlkZDVkMjc0MDZhMTM1NTc1ZTQ4MzJmNjdlN2E2ZjZiOGIyMmQ1YzU3MDY5MDhjNjI0ZTAzNGU1MDUzZDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNlNzE3NTIzZjlhY2QzOTQ0NDM1YzEzNDA5NDI5YTJkMjM1MmYwYWNmMDFkNmE2MGUyYTQ4OWMyYjkwN2EyY2EifQ"
         },
         {
@@ -123,7 +123,7 @@
       "statement": "Git status counts dirty paths from status --porcelain and ahead/behind from rev-list --left-right --count against the upstream.",
       "evidence": [
         {
-          "resource": "repo://internal/sources/sources.go#L483-L499",
+          "resource": "repo://internal/sources/sources.go#L488-L504",
           "version": "repo-lines-v1:sha256:72a211f980661f2d1c99d258478deb8ae6ed5612f4ec2bccff878288b241601a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1ZmIyYjg4Njk5ZTQwZWYxZDk1MjQ3NDE3N2M2MDNkNmEzZGVkMTJhYjE3ZmIxMzMzMDU0OTk5YWNkNzUwODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3Y2RhODJkYTYwNjIzOGUwNWU2MjM5OTU2OWM1ZWUwMzk5MzQxOTY0OGFlNWQ0M2EyYmY4Y2Q2MzQ3ZjgyNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgwOWU5YzM3OTA3NGEzMjFjMTI2ZDc0MzgzYzNjNTRiZjQyNDAwZWU1MGE5MGM3ZGI2YmQ4OTJjMWZkZjA1ZDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFlNTdkMmNlNzZmNjNhMTZlYjExZGRhNGZhZmFjOGQ5NjIxZTVkYWQ3YjEwN2Q2Nzk4YmRiOGZmZjFjZjg4NjgifQ"
         }
       ]
@@ -133,7 +133,7 @@
       "statement": "Git status also reads the origin remote, recent commit count, local branch count, and branches not merged into HEAD.",
       "evidence": [
         {
-          "resource": "repo://internal/sources/sources.go#L500-L510",
+          "resource": "repo://internal/sources/sources.go#L505-L515",
           "version": "repo-lines-v1:sha256:c0d7631d063ca52abf3e0242c44e302b4bebc48a8df573005d8043d088561c63:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmNTM2ZTdjOTA2YmY2YzhmZTViOGNjNGYzNDk0NTEzM2IxNTM5ZTM4YjYwMmQ5NzMyZmRhMTgyNjcwYzZmYjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhMGM5MWQ1OGZhZWE1NmQ0NmIzMmU5ZDI2M2QxZmMxMGVmY2MxNGE5Njk4NzgxNDhkOGE2YWE0Mjk0MDdiZDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiMmY3MDU0MGU0MDY2N2ExY2ZkMDdiZjMwN2YxMWY0ZTBmMTE5ZTRmYWNmN2U1YjRiZjQwZDc3NDBjZWZiY2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3YWEzNTBlYmU4MjIyZmUyZTViYmIyYzhiMTc1NGEzNmViZGM3N2NkNzg0MzFmZGEyNzhmY2ExOWUxYzk2ODIifQ"
         }
       ]
@@ -143,7 +143,7 @@
       "statement": "CommitsSince returns -1 when the revision cannot be counted.",
       "evidence": [
         {
-          "resource": "repo://internal/sources/sources.go#L515-L527",
+          "resource": "repo://internal/sources/sources.go#L520-L532",
           "version": "repo-lines-v1:sha256:4a88c2be88dee7ae49d7e8a186bdca974d6d9e9aa7e8d638b6648ff6f3afe63c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViNjU0ZGU1OTY4NGJlNDU5ZDZkMTY3ZmY3NmRkN2NkOGIyODZjYzA2NGJkMjkyNTBmZmQ2ODdlMDRjYWEyYzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBhMWVmNjRmOGY5OTkyODRlZDA5YjVjZDQ3OTFlZTJlZDZmOTM3ZGQxY2QxYzFkNWNiMjYxNDAwYjkyYjdmNjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZlZjkxOTA1NWI3YTY4ODBmOGU0NDRjNGQ4ZWNjMGE4Y2RhMGIwY2YyZDNkYjI1ZWIzMDgxNWNlYWNjODRjZTAifQ"
         }
       ]
@@ -220,7 +220,7 @@
     }
   ],
   "verification": {
-    "by": "owcli/v0.2.0",
-    "at": "2026-10-05T08:22:21.998Z"
+    "by": "owcli/v0.4.0",
+    "at": "2026-10-09T16:05:40.224Z"
   }
 }

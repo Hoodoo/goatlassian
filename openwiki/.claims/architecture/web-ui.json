@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:f0bf6d5a61052548478f0a16682fbce0e009053094076c258c5ba6c86453d882",
+  "pageVersion": "sha256:8827beca5d8ceb88d84d6d5435d840dba88f5599fb98db5f03ea839f873ee1b6",
   "claims": [
     {
       "id": "claim_f38c4e50ec1266058bad4f3288f32933",
@@ -125,7 +125,7 @@
       "statement": "When normalization rejects an attach, the client offers to attach the component as given.",
       "evidence": [
         {
-          "resource": "repo://internal/web/static/app.js#L449-L449",
+          "resource": "repo://internal/web/static/app.js#L463-L463",
           "version": "repo-lines-v1:sha256:c36f2f308d45d050f87791376bbd28b238b94489c120e63ea5b25841685e570e:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzM2ZjJmMzA4ZDQ1ZDA1MGY4Nzc5MTM3NmJiZDI4YjIzOGI5NDQ4OWMxMjBlNjNlYTViMjU4NDE2ODVlNTcwZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzM2ZjJmMzA4ZDQ1ZDA1MGY4Nzc5MTM3NmJiZDI4YjIzOGI5NDQ4OWMxMjBlNjNlYTViMjU4NDE2ODVlNTcwZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmZhYjM0Mjk1NGQ2NjJlNDRiYjUzZjZhODM5OWMzYTU2YzM2NjE5NmM1M2Y3YWVkZGY2ODIxMDE1YTY0OTNiYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTM4MmU0OGE4MDEyZmRhMmQzOGY1ZGIwN2UzNzU4OGZlZTQ4NTFjYTg2OTEzZWY4ODY4ZjFiOGE4NDQ3ZGEyYiJ9"
         }
       ]
@@ -135,7 +135,7 @@
       "statement": "History is drawn as small multiples of open issues, closed issues, sessions, and total cost.",
       "evidence": [
         {
-          "resource": "repo://internal/web/static/app.js#L459-L473",
+          "resource": "repo://internal/web/static/app.js#L473-L487",
           "version": "repo-lines-v1:sha256:7e95f717e3d9be33aa6b8fb124791e165a37fd8892570f9f7bc48f64f3e7a3e2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2YTYwYThmOGNhODFjYWY4ODM5ZjdhOTRjN2U1M2I3YTU1MDA2ZTYxYTViMTdlNDhhYjJlZTU0ZmZkNmQ3YjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMyOTgzNjk4MmQ2ZmUxYTY5NDg4ZDJjODI3ZjE4ODU4Y2E5NDNiNDMwZTQzMjdlZWE2NWE1NWJhOWNhOGQ0OWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgzMzA2NGM1NzdhZjFiMDY4MzM4OWEyYWY1ZWI3YzBhMWEwYmU2ODRkOGRlOWQ0YjJhNjk0NTQxMTg0NzU1MzQifQ"
         }
       ]
@@ -187,10 +187,24 @@
           "version": "repo-lines-v1:sha256:f0f20c360c4f044d7afffb5aae39679280d8d993678c68b35a9c1862b1ed5770:eyJzZWxlY3RlZExpbmVDb3VudCI6NTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2MTIwZTEzNzY1YmRhOGI0YzA3NTUxNGMzMTFlOTBlMmI4NDViYjRjZDdmNWFkZjhiMDI2NjlhOTdlODg1ZWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyOTY0MDc5YzNjNWM4MTUyMGVmMzNhMmI5ZDJlMTVhMWI4NGQ3MjgwZGI4NTkwZGNkNjU3NDdlM2UwMTJhNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
+    },
+    {
+      "id": "claim_f1116418b96cac01fabbd4c32ad13f0f",
+      "statement": "The portfolio page shows a Sinks tile and a Sinks table, linking each sink to bossman, only when the portfolio has sinks.",
+      "evidence": [
+        {
+          "resource": "repo://internal/web/static/app.js#L242-L256",
+          "version": "repo-lines-v1:sha256:17c9b22140871f96f109d9af1ada52cb6a76d4e786e1eb1a3d0e46564af33de6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc0OTRlZDk3M2Q2OTJkNzUyNDZmNmMyZTQwNGQ1ZGJjNGQzOTQxMmVjZDQzMmMyNjVhNzVhZTEwZDkxZGZkNDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2NzdiMjY5YTRjMTc4MWRhZWZjYjViZmI2YjU5ZDQ5ZWZlMWU1NmZkNTA2MTM1ZDhkNWNhYTM0MjE5YjBkMGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVhZTAwOGQyYjA3NmNkZjk3Y2YwNTJmOWVjMWMyMzJmMTQ5ZTVkYzk3MGI3YTQ1NjYxNzgzY2U5N2VhN2FiODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI4M2E4NjM0Y2JkOTU1YTkxNGI2ZTBkNTcxMTYxYzk4NDRkNjNkZTBkMWY3ZjI4ZTA3YzI4MjBkZjE5YjY1NDMifQ"
+        },
+        {
+          "resource": "repo://internal/web/static/app.js#L307-L307",
+          "version": "repo-lines-v1:sha256:b7ef159a569cfec463679174a869068e594f6ed1a32562311b387c4ccbce1649:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjdlZjE1OWE1NjljZmVjNDYzNjc5MTc0YTg2OTA2OGU1OTRmNmVkMWEzMjU2MjMxMWIzODdjNGNjYmNlMTY0OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjdlZjE1OWE1NjljZmVjNDYzNjc5MTc0YTg2OTA2OGU1OTRmNmVkMWEzMjU2MjMxMWIzODdjNGNjYmNlMTY0OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWM0ZTY0YWI3YTc3NmZmNWFmNzA0OWQ5ZjJlZWRlNjIzZmY4ZTlmOTMwYTg4MDBiNjNjYTBhMjdjNGU1MjgwNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYThmMzFhNjAyNDRlZTc2ZTU3M2RiMTAyNWY1YWFjOWUzMGEyOTlhYzA0N2ZkODA0OTBhYjgzODM4MDcxMmFjMiJ9"
+        }
+      ]
     }
   ],
   "verification": {
-    "by": "owcli/v0.3.0",
-    "at": "2026-10-05T09:12:59.169Z"
+    "by": "owcli/v0.4.0",
+    "at": "2026-10-09T16:05:54.595Z"
   }
 }

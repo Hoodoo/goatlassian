@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:157b8c9fbb5c9a032728edb3344a86ba41d6cc10423341c2e70629afb290ca95",
+  "pageVersion": "sha256:934945815a3689729bf84a44ba8cb71c90f81bf6233cf33152b1a8bf13414ce3",
   "claims": [
     {
       "id": "claim_f3a5bbc3dead84cfc416e46b857ab6f1",
@@ -127,7 +127,7 @@
       "statement": "history looks back 90 days by default.",
       "evidence": [
         {
-          "resource": "repo://internal/cli/report.go#L254-L254",
+          "resource": "repo://internal/cli/report.go#L261-L261",
           "version": "repo-lines-v1:sha256:4c346e148498fb327e7486fd1df0896a4458783afaa59f13de220d369ba2c211:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGMzNDZlMTQ4NDk4ZmIzMjdlNzQ4NmZkMWRmMDg5NmE0NDU4NzgzYWZhYTU5ZjEzZGUyMjBkMzY5YmEyYzIxMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGMzNDZlMTQ4NDk4ZmIzMjdlNzQ4NmZkMWRmMDg5NmE0NDU4NzgzYWZhYTU5ZjEzZGUyMjBkMzY5YmEyYzIxMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmJmYTA3MDllNTQzYjU2YTA2MDg3NTc4YTY2NjYzNTk3YmFmZTM3NmQzNDUxZTY0NmJhMDMwZmFlNjQ1ZjhmMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTMzMDY2NGM0NzM1OTRjMzk2ZmFlYWQyOTRiY2I4ZmQ1YzcyYjM2MjliNTAzMzNiODY3NGNmMjMwNTkyYzNiMyJ9"
         }
       ]
@@ -137,7 +137,7 @@
       "statement": "serve takes --addr (default 127.0.0.1:7799), --open, --services, and --snapshot-every (default 6h).",
       "evidence": [
         {
-          "resource": "repo://internal/cli/env.go#L75-L78",
+          "resource": "repo://internal/cli/env.go#L86-L89",
           "version": "repo-lines-v1:sha256:5d4bbd6caaf307245009a9e345c90fb8dc1f4d1317fa1c92a4094d4e86414d49:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWViOTYwNTkzODhlZDExZTE4ZDg1ZmRkMDVhMGYyYjI5M2MxNDYyNzVmMWIxYzdlM2ZmZjYxOGZjZmU1MTJiNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDViNDIxOTAxZmRkMDQyNjM5MTA3MjZjMWNjYjM1NzViOTczZjcyYzlhYzc4YTU3ZDRlZDQ4NGU5NmFhOGQyNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2Q1ZTFhMGQxNmM0MmRmODI4ZGFmMDk5YTIyNWM2MzE3NDBlOTEyN2JjY2Q1YjRmYTQ3ZTlhNTI3MjgyYjMwOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjYzNTMwMzQzZTRjNDRiNDMyM2E1ZTU2MmQzM2RlZmNkOGMyN2RhY2JmOGM3ZWQxZTdiMjgyNDQxYmI3YWExNyJ9"
         }
       ]
@@ -155,10 +155,20 @@
           "version": "repo-file-v1:sha256:85ba6ae97da351fbf35a38ecd501b0a2b1e6300590a60beca47329dba32a0d2c"
         }
       ]
+    },
+    {
+      "id": "claim_3458b633208ae9b007888b13768687ec",
+      "statement": "status prints a sinks line with each sink's name, sessions, and cost after the unassigned line when the portfolio has sinks.",
+      "evidence": [
+        {
+          "resource": "repo://internal/cli/report.go#L132-L145",
+          "version": "repo-lines-v1:sha256:a670bf5fcbbeef1f8aaa7ab9f9b1d026dce80ebe4af561c0e5fd47cc322968a1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQxNjJmNDZkYTgyZWY4Yjg5ZWI1ZDM0NDdhYmI0YTdkNDcwZDU3YzQ1NTg5NGU3ZjkxY2M2YzA2YjJkZDVlNDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0ZWZjNDk0MThkMjZkY2YxMjliMjJhNmFhMjExMDhjZWVjMzc2NzdhMzJkMDhlOWQ1ZmVlMzVkZGE2NmJiOWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUyMWFjN2VhMWIyODQwM2Y2MDczNDU2NTg4NmNhMDVjYzRkNjEyYzlkMDI2NmYxOTgwMmI2NjFhOGJkNDVjYjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlmNGYzZjEzZjQ2OTA1NWYyZGUxNDBmZmMwMGFkNjZkMzgyOGQ1MzFjZDI4N2MwMGQ0NzViNTMzOTNkZGNjOGYifQ"
+        }
+      ]
     }
   ],
   "verification": {
-    "by": "owcli/v0.2.0-1-g3d84f34",
-    "at": "2026-10-05T08:35:11.856Z"
+    "by": "owcli/v0.4.0",
+    "at": "2026-10-09T16:06:41.222Z"
   }
 }
