@@ -111,12 +111,16 @@ type Report struct {
 
 // Portfolio is every project's report plus what belongs to no project.
 type Portfolio struct {
-	CollectedAt time.Time      `json:"collected_at"`
-	RecentDays  int            `json:"recent_days"`
-	Reports     []*Report      `json:"reports"`
-	Totals      Metrics        `json:"totals"`
-	Unassigned  Unassigned     `json:"unassigned"`
-	Tools       map[string]any `json:"tools"`
+	CollectedAt time.Time  `json:"collected_at"`
+	RecentDays  int        `json:"recent_days"`
+	Reports     []*Report  `json:"reports"`
+	Totals      Metrics    `json:"totals"`
+	Unassigned  Unassigned `json:"unassigned"`
+	// Sinks hold sessions no project claims that carry a sink tag; they
+	// are left out of Unassigned. Projects still win: a sink tag never
+	// takes a session away from the project that owns it.
+	Sinks []Sink         `json:"sinks"`
+	Tools map[string]any `json:"tools"`
 }
 
 // Unassigned summarizes sessions no project claims.
@@ -124,6 +128,33 @@ type Unassigned struct {
 	Sessions int      `json:"sessions"`
 	CostUSD  float64  `json:"cost_usd"`
 	Paths    []string `json:"paths"` // the busiest unclaimed directories
+}
+
+// SinkPrefix marks a bossman tag as a sink: a bucket for sessions that
+// belong to no project, such as a throwaway prototype.
+const SinkPrefix = "sink:"
+
+// Sink summarizes the unclaimed sessions tagged with one sink.
+type Sink struct {
+	Name         string    `json:"name"` // the tag without SinkPrefix
+	Tag          string    `json:"tag"`
+	Sessions     int       `json:"sessions"`
+	CostUSD      float64   `json:"cost_usd"`
+	Tokens       int64     `json:"tokens"`
+	LastActivity time.Time `json:"last_activity,omitempty"`
+	URL          string    `json:"url"` // bossman's list filtered by the tag
+}
+
+// sinkTag returns the session's sink tag, the first in order when it has
+// several, or "".
+func sinkTag(s sources.Session) string {
+	tag := ""
+	for _, t := range s.Tags {
+		if strings.HasPrefix(t, SinkPrefix) && len(t) > len(SinkPrefix) && (tag == "" || t < tag) {
+			tag = t
+		}
+	}
+	return tag
 }
 
 // Analyze builds the portfolio. Only projects for which keep returns true
@@ -180,12 +211,34 @@ func Analyze(ctx context.Context, st *store.Store, w *sources.World, keep func(*
 		addMetrics(&pf.Totals, r.Metrics)
 	}
 	paths := map[string]int{}
+	sinks := map[string]*Sink{}
+	pf.Sinks = []Sink{}
 	for i, s := range w.Bossman.Sessions {
-		if owner[i] == 0 {
-			pf.Unassigned.Sessions++
-			pf.Unassigned.CostUSD += s.CostUSD
-			paths[s.Project]++
+		if owner[i] != 0 {
+			continue
 		}
+		if tag := sinkTag(s); tag != "" {
+			k := sinks[tag]
+			if k == nil {
+				k = &Sink{Name: strings.TrimPrefix(tag, SinkPrefix), Tag: tag,
+					URL: sources.TagURL(cfg.Services.BossmanURL, tag)}
+				sinks[tag] = k
+			}
+			k.Sessions++
+			k.CostUSD += s.CostUSD
+			k.Tokens += s.Tokens()
+			end := s.EndedAt
+			if end.IsZero() {
+				end = s.StartedAt
+			}
+			if end.After(k.LastActivity) {
+				k.LastActivity = end
+			}
+			continue
+		}
+		pf.Unassigned.Sessions++
+		pf.Unassigned.CostUSD += s.CostUSD
+		paths[s.Project]++
 	}
 	for p := range paths {
 		pf.Unassigned.Paths = append(pf.Unassigned.Paths, p)
@@ -196,6 +249,16 @@ func Analyze(ctx context.Context, st *store.Store, w *sources.World, keep func(*
 			return paths[a] > paths[b]
 		}
 		return a < b
+	})
+	for _, k := range sinks {
+		pf.Sinks = append(pf.Sinks, *k)
+	}
+	sort.Slice(pf.Sinks, func(i, j int) bool {
+		a, b := pf.Sinks[i], pf.Sinks[j]
+		if a.CostUSD != b.CostUSD {
+			return a.CostUSD > b.CostUSD
+		}
+		return a.Name < b.Name
 	})
 	return pf, nil
 }

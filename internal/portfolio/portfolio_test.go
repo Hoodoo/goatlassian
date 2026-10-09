@@ -39,8 +39,10 @@ func fakeRunner() testutil.Runner {
 			{"key":"claude:s1","agent":"claude","id":"s1","project":"/src/shop","started_at":"` + day(2) + `","ended_at":"` + day(2) + `","cost_usd":10,"input":100,"output":50},
 			{"key":"codex:s2","agent":"codex","id":"s2","project":"/src/shop/nested/x","started_at":"` + day(3) + `","ended_at":"` + day(3) + `","cost_usd":5},
 			{"key":"claude:s3","agent":"claude","id":"s3","project":"/src/other","started_at":"` + day(50) + `","ended_at":"` + day(50) + `","cost_usd":2},
-			{"key":"claude:s4","agent":"claude","id":"s4","project":"/src/shop","started_at":"` + day(1) + `","ended_at":"` + day(1) + `","cost_usd":7},
-			{"key":"claude:s5","agent":"claude","id":"s5","project":"/elsewhere","started_at":"` + day(1) + `","cost_usd":1}]`,
+			{"key":"claude:s4","agent":"claude","id":"s4","project":"/src/shop","started_at":"` + day(1) + `","ended_at":"` + day(1) + `","cost_usd":7,"tags":["sink:proto"]},
+			{"key":"claude:s5","agent":"claude","id":"s5","project":"/elsewhere","started_at":"` + day(1) + `","cost_usd":1},
+			{"key":"codex:s6","agent":"codex","id":"s6","project":"/scratch","started_at":"` + day(4) + `","ended_at":"` + day(4) + `","cost_usd":3,"input":10,"output":5,"tags":["keep","sink:proto"]},
+			{"key":"claude:s7","agent":"claude","id":"s7","project":"/elsewhere","started_at":"` + day(2) + `","cost_usd":4,"tags":["sink:zzz","sink:cfg"]}]`,
 	}
 	for _, repo := range []string{"/src/shop", "/src/shop/nested", "/src/other"} {
 		r["git -C "+repo+" rev-parse --show-toplevel"] = repo
@@ -230,8 +232,20 @@ func TestDiscoverAdoptAnalyze(t *testing.T) {
 			t.Errorf("other flagged stale: %s", f.Message)
 		}
 	}
-	if pf.Unassigned.Sessions != 1 || pf.Unassigned.Paths[0] != "/elsewhere" {
-		t.Errorf("unassigned %+v", pf.Unassigned)
+	if pf.Unassigned.Sessions != 1 || pf.Unassigned.CostUSD != 1 || pf.Unassigned.Paths[0] != "/elsewhere" {
+		t.Errorf("unassigned %+v: sink sessions must not count", pf.Unassigned)
+	}
+	// s4 is pinned to other, so its sink tag does not move it. s7 has two
+	// sink tags and goes to the first; sinks are ordered by cost.
+	if len(pf.Sinks) != 2 {
+		t.Fatalf("sinks %+v", pf.Sinks)
+	}
+	if k := pf.Sinks[0]; k.Name != "cfg" || k.Tag != "sink:cfg" || k.Sessions != 1 || k.CostUSD != 4 {
+		t.Errorf("first sink %+v", k)
+	}
+	if k := pf.Sinks[1]; k.Name != "proto" || k.Sessions != 1 || k.CostUSD != 3 || k.Tokens != 15 ||
+		k.LastActivity.IsZero() || !strings.HasSuffix(k.URL, "/#/?tag=sink:proto") {
+		t.Errorf("proto sink %+v", k)
 	}
 
 	// Done with open issues and paused-but-moving are flagged.

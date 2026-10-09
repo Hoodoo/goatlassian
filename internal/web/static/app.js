@@ -229,6 +229,7 @@ async function renderPortfolio(params) {
   const attention = m.issues_stuck + m.issues_needs_human + m.issues_overdue;
   const maxCost = Math.max(...rows.map((r) => r.metrics.cost_usd), 0.01);
   const toolProblems = Object.entries(pf.tools || {}).filter(([, v]) => v.problem);
+  const sinks = pf.sinks || [];
 
   const tiles = h("div", { class: "tiles" },
     tile("Projects", pf.reports.length, `${pf.reports.filter((r) => r.health === "alert").length} need attention`),
@@ -238,7 +239,19 @@ async function renderPortfolio(params) {
     tile(`Cost · ${N}d`, money(m.cost_recent_usd), `${money(m.cost_usd)} in all`),
     tile(`Tokens · ${N}d`, compact(m.tokens_recent), `${compact(m.tokens)} in all`),
     pf.unassigned.sessions ? tile("Unassigned sessions", pf.unassigned.sessions, `${money(pf.unassigned.cost_usd)} · see Discover`) : null,
+    sinks.length ? tile("Sinks", sinks.reduce((n, k) => n + k.sessions, 0) + " sessions",
+      `${money(sinks.reduce((c, k) => c + k.cost_usd, 0))} in ${sinks.length} sink${sinks.length === 1 ? "" : "s"}`) : null,
   );
+  // Sessions tagged sink:<name> in bossman that no project claims.
+  const sinkCard = sinks.length ? h("div", { class: "card" }, h("h2", {}, "Sinks"),
+    h("div", { class: "table-wrap" }, h("table", {},
+      h("thead", {}, h("tr", {}, ["Sink", "Sessions", "Cost", "Tokens", "Last activity"].map((l, i) => h("th", { scope: "col", class: i && i < 4 ? "num" : "" }, l)))),
+      h("tbody", {}, sinks.map((k) => h("tr", {},
+        h("td", {}, h("a", { href: k.url, target: "_blank", rel: "noopener", title: "Open in bossman" }, k.name + " ↗")),
+        h("td", { class: "num" }, k.sessions),
+        h("td", { class: "num" }, money(k.cost_usd)),
+        h("td", { class: "num" }, k.tokens ? compact(k.tokens) : "–"),
+        h("td", { title: when(k.last_activity) }, ago(k.last_activity)))))))) : null;
 
   const searchBox = h("input", { type: "search", placeholder: "Filter by name, tag, path…", value: search });
   searchBox.addEventListener("input", debounce(() => go({ q: searchBox.value }), 250));
@@ -291,6 +304,7 @@ async function renderPortfolio(params) {
         ? h("div", { class: "table-wrap" }, h("table", {}, h("thead", {}, head), h("tbody", {}, body)))
         : h("div", { class: "card empty" },
             pf.reports.length ? "No project matches these filters." : h("span", {}, "No projects yet. ", h("a", { href: "#/discover" }, "Discover"), " what kata, owcli, and bossman already know, or create one.")),
+      sinkCard,
     ),
   );
   if (search) { searchBox.focus(); searchBox.setSelectionRange(search.length, search.length); }

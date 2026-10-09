@@ -72,7 +72,10 @@ Every command takes `--json`.
   update, session end. goatlassian's own log does not count.
 - **Sessions** belong to the innermost project whose `sessions` directory
   contains them, unless a `session` component pins them elsewhere. A session
-  is never counted twice; the rest are reported as unassigned.
+  is never counted twice. Of the rest, sessions tagged `sink:<name>` in
+  bossman are listed per sink (sessions, cost, tokens, last activity, a
+  link to bossman); a sink tag never takes a session from a project. What
+  remains is reported as unassigned.
 - **Flags** set a project's health (worst wins):
   `problem` (a component its tool cannot resolve), `stuck` / `needs-human`
   (kata `work.attention`), `overdue` (kata deadline), `stale` (active but

@@ -136,6 +136,13 @@ open issues), wiki-behind, dirty, unpushed, empty.`,
 			}
 			fmt.Fprintf(a.out, "%d sessions (%s) belong to no project, mostly in %s\n", u.Sessions, money(u.CostUSD), strings.Join(top, ", "))
 		}
+		if len(pf.Sinks) > 0 {
+			var parts []string
+			for _, k := range pf.Sinks {
+				parts = append(parts, fmt.Sprintf("%s %d (%s)", k.Name, k.Sessions, money(k.CostUSD)))
+			}
+			fmt.Fprintf(a.out, "sinks: %s\n", strings.Join(parts, " · "))
+		}
 		return nil
 	})
 	return cmd

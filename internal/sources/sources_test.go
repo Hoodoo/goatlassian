@@ -20,6 +20,9 @@ func TestURLs(t *testing.T) {
 	if got := SessionsURL("http://b/", "/home/me/my repo"); got != "http://b/#/?project=/home/me/my%20repo" {
 		t.Error(got)
 	}
+	if got := TagURL("http://b/", "sink:proto"); got != "http://b/#/?tag=sink:proto" {
+		t.Error(got)
+	}
 	if got := WikiURL("http://o", "ws", "a b"); got != "http://o/#scope=ws:a%20b" {
 		t.Error(got)
 	}

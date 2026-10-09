@@ -384,6 +384,11 @@ func SessionsURL(base, path string) string {
 	return strings.TrimRight(base, "/") + "/#/?project=" + urlEscape(path)
 }
 
+// TagURL links to bossman's session list filtered by a tag.
+func TagURL(base, tag string) string {
+	return strings.TrimRight(base, "/") + "/#/?tag=" + urlEscape(tag)
+}
+
 // WikiURL links to a wiki or workspace ("wiki" or "ws") in owcli's viewer.
 func WikiURL(base, kind, id string) string {
 	return strings.TrimRight(base, "/") + "/#scope=" + urlEscape(kind+":"+id)
